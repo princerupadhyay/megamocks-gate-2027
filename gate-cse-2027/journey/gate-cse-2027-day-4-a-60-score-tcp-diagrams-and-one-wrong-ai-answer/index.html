@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Day 4 of My GATE CSE 2027 Journey: A 60% Score, TCP Diagrams, and One
+      Wrong AI Answer | MegaMocks
+    </title>
+    <meta
+      name="description"
+      content="Revised TCP state transition diagrams for three hours, scored 60% on a Digital Logic test, and used AI mid-test on a stuck question — only to get the wrong answer anyway. Also: pushing my syllabus deadline to 31 October."
+    />
+    <link
+      rel="canonical"
+      href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-4-a-60-score-tcp-diagrams-and-one-wrong-ai-answer/"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Day 4 of My GATE CSE 2027 Journey: A 60% Score, TCP Diagrams, and One Wrong AI Answer | MegaMocks"
+    />
+    <meta
+      property="og:description"
+      content="Revised TCP state transition diagrams for three hours, scored 60% on a Digital Logic test, and used AI mid-test on a stuck question — only to get the wrong answer anyway. Also: pushing my syllabus deadline to 31 October."
+    />
+    <meta
+      property="og:url"
+      content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-4-a-60-score-tcp-diagrams-and-one-wrong-ai-answer/"
+    />
+    <meta property="og:site_name" content="MegaMocks" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Day 4 of My GATE CSE 2027 Journey: A 60% Score, TCP Diagrams, and One Wrong AI Answer | MegaMocks"
+    />
+    <meta
+      name="twitter:description"
+      content="Revised TCP state transition diagrams for three hours, scored 60% on a Digital Logic test, and used AI mid-test on a stuck question — only to get the wrong answer anyway. Also: pushing my syllabus deadline to 31 October."
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script src="/assets/journey-status.js" defer></script>
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Day 4: A 60% Score, TCP Diagrams, and One Wrong AI Answer",
+        "description": "Revised TCP state transition diagrams for three hours, scored 60% on a Digital Logic test, and used AI mid-test on a stuck question — only to get the wrong answer anyway.",
+        "author": {
+          "@type": "Person",
+          "name": "Prince",
+          "url": "https://megamocks.com/about/"
+        },
+        "datePublished": "2026-09-17",
+        "dateModified": "2026-09-17",
+        "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-4-a-60-score-tcp-diagrams-and-one-wrong-ai-answer/"
+      }
+    </script>
+    <script type="application/ld+json">
+      {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://megamocks.com/"}, {"@type": "ListItem", "position": 2, "name": "GATE CSE 2027",("item"):("https://megamocks.com/gate-cse-2027/")}, {"@type":("ListItem",("position"): 3,("name"):("Journey"),("item"):("https://megamocks.com/gate-cse-2027/journey/"}, {"@type":("ListItem",("position"): 4,("name"):("Day 4"),("item"):("https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-4-a-60-score-tcp-diagrams-and-one-wrong-ai-answer/")}]}
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap nav-row">
+        <a href="/" class="wordmark"
+          ><span
+            style="
+              background-color: #9a4b34;
+              border-radius: 5px;
+              color: white;
+              padding: 0px 5px;
+            "
+            >M</span
+          >egaMocks<span class="dot">.</span></a
+        >
+        <nav class="primary" aria-label="Primary">
+          <a href="/gate-cse-2027/journey/">Journey</a>
+          <a href="/gate-cse-2027/subjects/">Subjects</a>
+          <a href="/blog/">Blog</a>
+          <a href="/about/">About</a>
+        </nav>
+        <span class="day-badge">Day 4 of prep</span>
+        <button
+          class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          id="navToggle"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="wrap crumb-wrap">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a><span class="crumb-sep">/</span
+          ><a href="/gate-cse-2027/">GATE CSE 2027</a
+          ><span class="crumb-sep">/</span
+          ><a href="/gate-cse-2027/journey/">Journey</a
+          ><span class="crumb-sep">/</span
+          ><span aria-current="page">Day 4</span>
+        </nav>
+      </div>
+      <section class="page-hero">
+        <div class="wrap page-hero-inner">
+          <span class="kicker mono"
+            >Day 4 of my GATE CSE 2027 prep &middot; 17 September 2026</span
+          >
+          <h1>A 60% Score, TCP Diagrams, and One Wrong AI Answer</h1>
+          <span class="mood-chip"
+            >Feeling: mixed, self-aware, still resetting the deadline</span
+          >
+          <div class="tag-row">
+            <a class="tag" href="/gate-cse-2027/subjects/computer-networks/"
+              >Computer Networks</a
+            >
+            <a class="tag" href="/gate-cse-2027/subjects/digital-logic/"
+              >Digital Logic</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="article-body">
+        <div class="wrap">
+          <div class="prose">
+            <p>
+              Today was a little different from my usual workday. I had to
+              attend the Engineering Excellence Expo at TCS, and I had already
+              planned to leave the office early so that I could use the extra
+              time for my GATE CSE 2027 preparation.
+            </p>
+            <p>
+              I managed to leave around 3 PM and reached home by 5 PM after a
+              commute of approximately two hours. So, at least that part of
+              yesterday's plan worked exactly as expected.
+            </p>
+            <p>
+              But how much of that extra time did I actually use for studying?
+              Let's get into it.
+            </p>
+
+            <h2>What I Studied Today</h2>
+            <p>
+              After reaching home, I spent approximately three hours, from 5:30
+              PM to 8:30 PM, working on Computer Networks.
+            </p>
+            <p>
+              My main focus was revising TCP state transition diagrams and
+              understanding the different cases of connection establishment and
+              termination.
+            </p>
+            <img
+              src="/assets//state-transition-diagram-megamocks.webp"
+              alt="State Transition Diagram for TCP Connection Establishment and Termination made by myself"
+              style="
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin-bottom: 15px;
+              "
+            />
+            <p>
+              I went through the normal three-way handshake for connection
+              establishment, the usual four-way connection termination, and the
+              cases where both the client and server try to close the connection
+              simultaneously.
+            </p>
+            <p>
+              I also revised the three-way closing case, where the server can
+              combine its acknowledgment and FIN into a single segment instead
+              of sending them separately.
+            </p>
+            <p>
+              I worked on these diagrams digitally and went through the
+              different transitions and states involved.
+            </p>
+            <p>
+              Computer Networks took up most of my study session, and I was able
+              to make progress on the notes. However, I couldn't work on the
+              pending TOC notes or Digital Logic notes as I had originally
+              planned.
+            </p>
+            <p>
+              So, although I used the extra time for studying, I didn't manage
+              to complete everything on my list.
+            </p>
+
+            <h2>Digital Logic Test: 15 Out of 25</h2>
+            <p>
+              Today, I also took my Digital Logic combinational circuits test.
+            </p>
+            <p>I scored 15 out of 25, which is 60%.</p>
+            <p>
+              I would call it a decent score, although there are definitely
+              things I need to work on.
+            </p>
+            <p>
+              One of the concepts I encountered was static hazards. I wasn't
+              familiar with this concept before the test, so that's something I
+              need to study properly.
+            </p>
+            <img
+              src="/assets/dl-combination-test-megamocks.webp"
+              alt="Rough copy used during Digital Logic Test"
+              style="
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin-bottom: 15px;
+              "
+            />
+            <p>
+              I also got stuck on some questions involving basic concepts such
+              as encoders and decoders. I hadn't revised those lectures before
+              taking the test, and that showed up when I started solving the
+              questions.
+            </p>
+            <p>
+              There were also a couple of lengthy questions. I found myself
+              avoiding or struggling with some of them because of their length.
+            </p>
+            <p>
+              The interesting thing is that I wasn't completely unfamiliar with
+              the topics. I just didn't have the fundamentals fresh enough to
+              solve certain questions efficiently.
+            </p>
+
+            <h2>The Question That Cost Me 8&ndash;10 Minutes</h2>
+            <p>
+              There's one particular mistake I want to record because it's
+              something I've been trying to avoid over my last few tests.
+            </p>
+            <p>I used my phone to get help from AI during the test.</p>
+            <p>
+              This wasn't because I wanted to check whether my answer was
+              correct. I had already spent around 8&ndash;10 minutes on one
+              question and was still nowhere near the solution.
+            </p>
+            <p>
+              The question itself was relatively easy, but I was missing the
+              basic understanding needed to solve it quickly.
+            </p>
+            <p>
+              So I took a picture of the question and asked AI for the answer. I
+              got a response, marked the answer, and moved on.
+            </p>
+            <p>Unfortunately, the answer was incorrect.</p>
+            <p>
+              In the end, I spent several minutes struggling with the question,
+              used my phone to get help, and still didn't get the right answer.
+            </p>
+            <p>Not exactly the most useful application of technology.</p>
+            <p>
+              But the bigger issue isn't that AI gave me a wrong answer. It's
+              that I used it during a test when I should have been working
+              through the question myself.
+            </p>
+            <p>
+              I have been trying to avoid this habit, and today I repeated it. I
+              want to do better in the next test.
+            </p>
+
+            <h2>What I Realized About Revision</h2>
+            <p>
+              During our conversation, I realized that my problem wasn't really
+              test anxiety.
+            </p>
+            <p>
+              I knew that I had missed revising one or two subtopics. I hadn't
+              completely forgotten the concepts, but my understanding of some
+              fundamentals wasn't strong enough to solve the questions
+              efficiently.
+            </p>
+            <p>
+              For example, a question that should have taken around one or two
+              minutes ended up consuming eight to ten minutes.
+            </p>
+            <p>That difference matters.</p>
+            <p>
+              At the same time, I don't want to start revising everything on the
+              day of a test. Personally, I prefer revising at least a day or two
+              before taking a test.
+            </p>
+            <p>
+              My thinking is that giving concepts some time before applying them
+              helps me retain them better. I don't want to simply read my
+              revision sheet immediately before a test, use the information, and
+              then forget it.
+            </p>
+            <p>However, I also need to be honest about my current schedule.</p>
+            <p>
+              Revision isn't a separate, fixed part of my daily routine right
+              now. Most of my schedule is focused on completing the syllabus,
+              and I revise through questions and tests whenever possible.
+            </p>
+            <p>That's the reality of my preparation at the moment.</p>
+
+            <h2>My October Deadline</h2>
+            <p>
+              Initially, my target was to complete the GATE CSE syllabus by the
+              end of September.
+            </p>
+            <p>
+              But September is almost over, and I'm nowhere near finishing the
+              entire syllabus. So I've extended the deadline by one month.
+            </p>
+            <p>My new target is to complete the syllabus by 31 October 2026.</p>
+            <p>
+              I'm confident that I can achieve this, although I know there are
+              still several subjects and portions remaining.
+            </p>
+            <p>
+              The remaining syllabus includes Computer Networks, Computer
+              Organization and Architecture, Theory of Computation, Compiler
+              Design, portions of Discrete Mathematics, and some Engineering
+              Mathematics topics.
+            </p>
+            <p>
+              I'm also planning to leave Engineering Mathematics and Aptitude
+              towards the later part of my preparation because I feel relatively
+              comfortable with these subjects. I've already looked at
+              Engineering Mathematics PYQs, which gives me some confidence about
+              revisiting it later.
+            </p>
+            <p>For Aptitude, I'm considering keeping it towards January.</p>
+            <p>
+              Starting 1 November, I want to switch completely to revision,
+              tests, and test analysis.
+            </p>
+            <p>No new subjects. No new concepts.</p>
+            <p>
+              Just revision, practice, and identifying the areas where I need
+              improvement.
+            </p>
+            <p>That's the plan, at least.</p>
+
+            <h2>What Keeps Me Going</h2>
+            <p>
+              When I think about the next few months, I'm not particularly
+              worried about maintaining my energy.
+            </p>
+            <p>
+              I've been following this preparation routine for the last couple
+              of months, and I know why I'm doing it.
+            </p>
+            <p>
+              My goal is to secure a single-digit rank in GATE CSE 2027 and work
+              towards getting into NIC.
+            </p>
+            <p>
+              By this time next year, I hope to be working there, earning
+              &#8377;1 lakh or more per month, having some money saved in my
+              bank account, and maintaining a healthy relationship with my
+              girlfriend and my parents.
+            </p>
+            <p>
+              These are the things I think about when I need to remind myself
+              why I started this journey.
+            </p>
+            <p>
+              I know that completing the syllabus, taking tests, and revising
+              everything won't always be exciting. Some days will be productive,
+              and some days will involve getting stuck on a question that should
+              have taken two minutes.
+            </p>
+            <p>Today was a bit of both.</p>
+            <p>
+              I made progress in Computer Networks, took a Digital Logic test,
+              discovered a concept I need to learn, and repeated a habit I'm
+              trying to break.
+            </p>
+            <p>But I also know what I need to work on.</p>
+
+            <h2>Tomorrow</h2>
+            <p>
+              I still have pending notes in Computer Networks, Digital Logic,
+              and TOC.
+            </p>
+            <p>
+              I haven't finalized a specific plan for tomorrow yet, but my
+              bigger target remains unchanged: finish the syllabus by the end of
+              October and begin the dedicated revision and mock-test phase in
+              November.
+            </p>
+            <p>
+              For now, the focus is on making progress without losing sight of
+              that deadline.
+            </p>
+            <p>Day 4 complete.</p>
+          </div>
+          <nav class="article-nav" aria-label="Article navigation">
+            <a
+              class="prev"
+              href="/gate-cse-2027/journey/gate-cse-2027-day-3-one-test-one-lecture-and-a-little-more-self-control/"
+              ><span class="label">&larr; Previous</span>Day 3: One Test, One
+              Lecture, and a Little More Self-Control</a
+            >
+            <a
+              class="next"
+              href="/gate-cse-2027/journey/gate-cse-2027-day-5-tcp-timers-a-data-structures-test-and-an-unexpected-algorithm-revision/"
+              ><span class="label">Next &rarr;</span>Day 5: TCP Timers, a Data
+              Structures Test, and an Unexpected Algorithm Revision</a
+            >
+          </nav>
+          <section class="comments-section" id="comments">
+            <div class="comments-header">
+              <h2>What do you think?</h2>
+              <p>
+                Studying for GATE is less lonely when we're all figuring it out
+                together.
+              </p>
+            </div>
+
+            <div id="comment-auth">
+              <button id="google-signin" class="google-signin-btn">
+                Continue with Google
+              </button>
+            </div>
+
+            <div id="comment-form" hidden>
+              <div class="comment-user">
+                <img id="user-photo" src="" alt="" class="comment-avatar" />
+                <div>
+                  <strong id="user-name"></strong>
+                  <button id="signout-btn" type="button">Sign out</button>
+                </div>
+              </div>
+
+              <textarea
+                id="comment-text"
+                placeholder="Share your thoughts..."
+                maxlength="1000"
+                rows="4"
+              ></textarea>
+
+              <button id="post-comment" class="post-comment-btn">
+                Post comment
+              </button>
+            </div>
+
+            <div id="comments-list">
+              <p class="comments-loading">Loading comments...</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="footer-row">
+          <div class="footer-links">
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/disclaimer/">Disclaimer</a>
+          </div>
+          <span class="copyright"
+            >&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span
+          >
+        </div>
+        <p class="footer-note">
+          Everything on this site reflects one student's personal preparation
+          experience. For official GATE CSE information &mdash; eligibility,
+          syllabus, exam dates &mdash; always check the official GATE authority
+          website.
+        </p>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("navToggle")
+        .addEventListener("click", function () {
+          var nav = document.querySelector("nav.primary");
+          var expanded = this.getAttribute("aria-expanded") === "true";
+          this.setAttribute("aria-expanded", String(!expanded));
+          if (!expanded) {
+            nav.style.cssText =
+              "display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;";
+          } else {
+            nav.style.cssText = "";
+          }
+        });
+    </script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        signInWithPopup,
+        signOut,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        query,
+        where,
+        orderBy,
+        onSnapshot,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+      // ==========================================
+      // FIREBASE CONFIG
+      // ==========================================
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+        authDomain: "megamocks.firebaseapp.com",
+        projectId: "megamocks",
+        storageBucket: "megamocks.firebasestorage.app",
+        messagingSenderId: "45418531344",
+        appId: "1:45418531344:web:cd6747bb79ca7840661895",
+      };
+
+      // ==========================================
+      // INITIALIZE FIREBASE
+      // ==========================================
+
+      const app = initializeApp(firebaseConfig);
+
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      const googleProvider = new GoogleAuthProvider();
+
+      // ==========================================
+      // CURRENT ARTICLE
+      // ==========================================
+
+      const articleSlug =
+        "gate-cse-2027-day-4-a-60-score-tcp-diagrams-and-one-wrong-ai-answer";
+
+      // ==========================================
+      // ELEMENTS
+      // ==========================================
+
+      const signInButton = document.getElementById("google-signin");
+      const authSection = document.getElementById("comment-auth");
+      const commentForm = document.getElementById("comment-form");
+
+      const userPhoto = document.getElementById("user-photo");
+      const userName = document.getElementById("user-name");
+
+      const signOutButton = document.getElementById("signout-btn");
+
+      const commentText = document.getElementById("comment-text");
+      const postButton = document.getElementById("post-comment");
+
+      const commentsList = document.getElementById("comments-list");
+
+      // ==========================================
+      // GOOGLE SIGN IN
+      // ==========================================
+
+      signInButton.addEventListener("click", async () => {
+        try {
+          await signInWithPopup(auth, googleProvider);
+        } catch (error) {
+          console.error("Google sign-in error:", error);
+
+          alert("Unable to sign in with Google. Please try again.");
+        }
+      });
+
+      // ==========================================
+      // SIGN OUT
+      // ==========================================
+
+      signOutButton.addEventListener("click", async () => {
+        try {
+          await signOut(auth);
+        } catch (error) {
+          console.error("Sign-out error:", error);
+        }
+      });
+
+      // ==========================================
+      // AUTH STATE
+      // ==========================================
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is logged in
+
+          authSection.hidden = true;
+          commentForm.hidden = false;
+
+          userName.textContent = user.displayName || "Google User";
+
+          userPhoto.src =
+            user.photoURL || "https://ui-avatars.com/api/?name=User";
+
+          userPhoto.alt = user.displayName || "User";
+        } else {
+          // User is logged out
+
+          authSection.hidden = false;
+          commentForm.hidden = true;
+        }
+      });
+
+      // ==========================================
+      // POST COMMENT
+      // ==========================================
+
+      postButton.addEventListener("click", async () => {
+        const user = auth.currentUser;
+
+        if (!user) {
+          alert("Please sign in first.");
+          return;
+        }
+
+        const text = commentText.value.trim();
+
+        if (!text) {
+          alert("Please write a comment first.");
+          return;
+        }
+
+        if (text.length > 1000) {
+          alert("Comment is too long.");
+          return;
+        }
+
+        postButton.disabled = true;
+        postButton.textContent = "Posting...";
+
+        try {
+          await addDoc(collection(db, "comments"), {
+            articleSlug: articleSlug,
+
+            uid: user.uid,
+
+            name: user.displayName || "Google User",
+
+            photoURL: user.photoURL || "",
+
+            text: text,
+
+            createdAt: serverTimestamp(),
+          });
+
+          commentText.value = "";
+        } catch (error) {
+          console.error("Comment error:", error);
+
+          alert("Could not post your comment. Please try again.");
+        }
+
+        postButton.disabled = false;
+        postButton.textContent = "Post comment";
+      });
+
+      // ==========================================
+      // LOAD COMMENTS
+      // ==========================================
+
+      const commentsQuery = query(
+        collection(db, "comments"),
+        where("articleSlug", "==", articleSlug),
+        orderBy("createdAt", "desc"),
+      );
+
+      function formatTimeAgo(date) {
+        const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+        if (seconds < 60) return "just now";
+
+        const minutes = Math.floor(seconds / 60);
+        if (minutes < 60)
+          return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+        const hours = Math.floor(minutes / 60);
+        if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+        const days = Math.floor(hours / 24);
+        if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+        const weeks = Math.floor(days / 7);
+        if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+        return date.toLocaleDateString("en-IN", {
+          day: "numeric",
+          month: "short",
+          year: "numeric",
+        });
+      }
+
+      onSnapshot(
+        commentsQuery,
+        (snapshot) => {
+          commentsList.innerHTML = "";
+
+          if (snapshot.empty) {
+            commentsList.innerHTML =
+              '<p class="no-comments">No comments yet. Be the first.</p>';
+
+            return;
+          }
+
+          snapshot.forEach((doc) => {
+            const comment = doc.data();
+
+            const articleComment = document.createElement("article");
+
+            articleComment.className = "comment";
+
+            const avatar = document.createElement("img");
+
+            avatar.className = "comment-avatar";
+
+            avatar.src =
+              comment.photoURL || "https://ui-avatars.com/api/?name=User";
+
+            avatar.alt = comment.name || "User";
+
+            const content = document.createElement("div");
+
+            content.className = "comment-content";
+
+            const name = document.createElement("strong");
+            name.textContent = comment.name || "Google User";
+
+            const timestamp = document.createElement("time");
+            timestamp.className = "comment-time";
+
+            if (comment.createdAt) {
+              timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+            }
+
+            const text = document.createElement("p");
+            text.textContent = comment.text;
+
+            content.appendChild(name);
+            content.appendChild(timestamp);
+            content.appendChild(text);
+
+            articleComment.appendChild(avatar);
+            articleComment.appendChild(content);
+
+            commentsList.appendChild(articleComment);
+          });
+        },
+        (error) => {
+          console.error("Could not load comments:", error);
+
+          commentsList.innerHTML =
+            '<p class="comments-error">Comments could not be loaded.</p>';
+        },
+      );
+    </script>
+  </body>
+</html>

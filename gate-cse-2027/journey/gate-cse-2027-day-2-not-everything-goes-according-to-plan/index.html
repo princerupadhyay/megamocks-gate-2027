@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Day 2 of My GATE CSE 2027 Journey: DFA Done, But Not Everything Goes
+      According to Plan | MegaMocks
+    </title>
+    <meta
+      name="description"
+      content="I completed the DFA chapter in TOC and moved on to NFA, but my day didn't go exactly according to plan. I also started a Data Structures Linked List test but had to stop after around 15 minutes because I wasn't feeling well. It wasn't a perfect study day, but it was an honest one."
+    />
+    <link
+      rel="canonical"
+      href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-2-not-everything-goes-according-to-plan/"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Day 2 of My GATE CSE 2027 Journey: DFA Done, But Not Everything Goes According to Plan | MegaMocks"
+    />
+    <meta
+      property="og:description"
+      content="I completed the DFA chapter in TOC and moved on to NFA, but my day didn't go exactly according to plan. I also started a Data Structures Linked List test but had to stop after around 15 minutes because I wasn't feeling well. It wasn't a perfect study day, but it was an honest one."
+    />
+    <meta
+      property="og:url"
+      content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-2-not-everything-goes-according-to-plan/"
+    />
+    <meta property="og:site_name" content="MegaMocks" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Day 2 of My GATE CSE 2027 Journey: DFA Done, But Not Everything Goes According to Plan | MegaMocks"
+    />
+    <meta
+      name="twitter:description"
+      content="I completed the DFA chapter in TOC and moved on to NFA, but my day didn't go exactly according to plan. I also started a Data Structures Linked List test but had to stop after around 15 minutes because I wasn't feeling well. It wasn't a perfect study day, but it was an honest one."
+    />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script src="/assets/journey-status.js" defer></script>
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Day 2: DFA Done, But Not Everything Goes According to Plan",
+        "description": "I completed the DFA chapter in TOC and moved on to NFA, but my day didn't go exactly according to plan. I also started a Data Structures Linked List test but had to stop after around 15 minutes because I wasn't feeling well.",
+        "author": {
+          "@type": "Person",
+          "name": "Prince",
+          "url": "https://megamocks.com/about/"
+        },
+        "datePublished": "2026-09-15",
+        "dateModified": "2026-09-15",
+        "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-2-not-everything-goes-according-to-plan/"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://megamocks.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "GATE CSE 2027",
+            "item": "https://megamocks.com/gate-cse-2027/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Journey",
+            "item": "https://megamocks.com/gate-cse-2027/journey/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Day 2",
+            "item": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-2-not-everything-goes-according-to-plan/"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap nav-row">
+        <a href="/" class="wordmark"
+          ><span
+            style="
+              background-color: #9a4b34;
+              border-radius: 5px;
+              color: white;
+              padding: 0px 5px;
+            "
+            >M</span
+          >egaMocks<span class="dot">.</span></a
+        >
+        <nav class="primary" aria-label="Primary">
+          <a href="/gate-cse-2027/journey/">Journey</a>
+          <a href="/gate-cse-2027/subjects/">Subjects</a>
+          <a href="/blog/">Blog</a>
+          <a href="/about/">About</a>
+        </nav>
+        <span class="day-badge">Day 2 of prep</span>
+        <button
+          class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          id="navToggle"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="wrap crumb-wrap">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a><span class="crumb-sep">/</span
+          ><a href="/gate-cse-2027/">GATE CSE 2027</a
+          ><span class="crumb-sep">/</span
+          ><a href="/gate-cse-2027/journey/">Journey</a
+          ><span class="crumb-sep">/</span
+          ><span aria-current="page">Day 2</span>
+        </nav>
+      </div>
+      <section class="page-hero">
+        <div class="wrap page-hero-inner">
+          <span class="kicker mono"
+            >Day 2 of my GATE CSE 2027 prep &middot; 15 September 2026</span
+          >
+          <h1>DFA Done, But Not Everything Goes According to Plan</h1>
+          <span class="mood-chip"
+            >Feeling: honest, a little under the weather, counting the small
+            wins</span
+          >
+          <div class="tag-row">
+            <a class="tag" href="/gate-cse-2027/subjects/theory-of-computation/"
+              >Theory of Computation</a
+            >
+            <a
+              class="tag"
+              href="/gate-cse-2027/subjects/data-structures-algorithms/"
+              >Data Structures & Algorithms</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="article-body">
+        <div class="wrap">
+          <div class="prose">
+            <p>
+              Yesterday was one of those days where my GATE preparation did move
+              forward, but not exactly in the way I had planned.
+            </p>
+            <p>
+              My main focus right now is Theory of Computation, or TOC. I had
+              decided to concentrate particularly on TOC this week, and I
+              finally completed one important chapter: DFA, or Deterministic
+              Finite Automata.
+            </p>
+            <p>That was probably the biggest academic win of the day.</p>
+
+            <h2>What I Studied</h2>
+            <p>
+              I completed the DFA chapter in TOC and am now moving forward to
+              NFA, or Nondeterministic Finite Automata.
+            </p>
+            <p>
+              The next chapter is considerably longer. The NFA portion itself is
+              around 22 hours of lectures, so I already know that it isn't
+              something I am going to finish in a day or two. It will take some
+              time.
+            </p>
+            <p>
+              My plan is to keep progressing through it steadily. Since my
+              office schedule takes up most of the day, I am also trying to use
+              my commute intelligently. Even getting one lecture done during the
+              commute can make a difference when the available study time is
+              limited.
+            </p>
+            <p>For now, the goal is simply to keep TOC moving.</p>
+
+            <h2>The Test I Couldn't Finish</h2>
+            <p>
+              There was also a Data Structures Linked List topic test scheduled
+              for yesterday. I actually sat down and started it. This is
+              important because initially I thought I simply hadn't given the
+              test. But that's not exactly what happened. </p><p> I did start the test
+              and attempted it for around 15 minutes. The problem was that I
+              wasn't feeling well. I was continuously sneezing and dealing with
+              a cold, and eventually I just couldn't sit through the test
+              properly. So I stopped it midway.
+            </p>
+
+            <p>Later, I had that annoying feeling of:</p>
+            <p>
+              "Maybe I should have just pushed myself for another 30 minutes."
+            </p>
+            <p>
+              I had scheduled the test myself, so naturally, there was some
+              regret attached to not completing it. At the same time, I know
+              that I had already tried. I wasn't sitting around avoiding the
+              test. I actually started it while I wasn't feeling well, but
+              eventually my health got in the way. There were also some other
+              commitments that took up time during the day. So the day ended up
+              being less productive than I had originally planned.
+            </p>
+
+            <h2>The Part That Bothered Me</h2>
+            <p>The unfinished test did bother me a little.</p>
+            <p>
+              Not because I think missing one test is some massive disaster. It
+              isn't.
+              It was more because I had planned it myself and then couldn't
+              follow through with it.
+              That creates a different kind of regret. You start thinking about
+              what you could have done differently. Maybe I could have pushed
+              through another 30 minutes. Maybe I should have attempted it at
+              another time.
+            </p>
+            <p>
+              But there is also a point where pushing harder stops being
+              productive and simply becomes stubbornness.
+              I wasn't feeling well, and I had already tried to give the test.
+            </p>
+            <p>So I'm counting that as a small win too.</p>
+            <p>
+              Not completing the test isn't a win, obviously. But sitting down
+              and attempting it for 15 minutes despite feeling unwell is
+              something I can give myself credit for.
+            </p>
+
+            <h2>Today's Actual Win</h2>
+            <p>
+              The biggest win from the academic side was definitely completing
+              DFA.
+            </p>
+            <p>
+              That matters because TOC is one of the subjects I'm deliberately
+              focusing on right now, and finishing DFA means I'm moving through
+              the subject rather than just planning to study it.
+            </p>
+            <p>The next challenge is NFA.</p>
+            <p>
+              Twenty-two hours of lectures sounds intimidating when I look at
+              the number, but I don't need to finish all 22 hours at once. I
+              just need to keep moving through it.
+            That's the current approach to my GATE CSE 2027 preparation.
+              Study what I can, practice what I can, take tests, make mistakes,
+              and keep moving.
+            </p>
+            <p>Some days will obviously be cleaner than others.
+              Yesterday wasn't a perfect preparation day. I didn't complete the
+              Data Structures test, I didn't get as much study time as I wanted,
+              and I wasn't feeling well.
+            </p>
+            <p>But DFA is done. And NFA has started.</p>
+            <p>That's enough for Day 2.</p>
+
+            <h2>What I Realized</h2>
+            <p>
+              One thing I am trying to get better at during this GATE
+              preparation journey is being honest about what actually happened.
+            
+              It would be very easy to write something like "I completed my
+              planned tasks and stayed productive throughout the day."
+            </p>
+            <p>That would also be completely false.</p>
+            <p>I didn't.</p>
+            <p>
+              I had other commitments, I wasn't feeling well, and I couldn't
+              finish the test.
+              But I also didn't completely abandon the day. I completed DFA and
+              made an attempt at the Linked List test.
+            </p>
+            <p>
+              So I think that's what yesterday really was: a partially
+              productive day that didn't go according to plan.
+              And that's probably a more useful record of GATE preparation than
+              pretending every day is perfectly productive.
+            </p>
+            <p>
+              Tomorrow, the plan is to continue with NFA and keep TOC moving
+              forward.
+            </p>
+            <p>One lecture at a time. One test at a time. And hopefully, slightly fewer sneezes. &#x1F927;</p>
+          </div>
+          <nav class="article-nav" aria-label="Article navigation">
+            <a
+              class="prev"
+              href="/gate-cse-2027/journey/gate-cse-2027-day-1-learning-to-trust-my-own-answers/"
+              ><span class="label">&larr; Back</span>Day 1 of My GATE CSE 2027
+              Journey: Learning to Trust My Own Answers</a
+            >
+            <a
+              class="next"
+              href="/gate-cse-2027/journey/gate-cse-2027-day-3-one-test-one-lecture-and-a-little-more-self-control/"
+              ><span class="label">Next &rarr;</span>Day 3: One Test, One
+              Lecture, and a Little More Self-Control</a
+            >
+          </nav>
+          <section class="comments-section" id="comments">
+            <div class="comments-header">
+              <h2>What do you think?</h2>
+              <p>
+                Studying for GATE is less lonely when we're all figuring it out
+                together.
+              </p>
+            </div>
+
+            <div id="comment-auth">
+              <button id="google-signin" class="google-signin-btn">
+                Continue with Google
+              </button>
+            </div>
+
+            <div id="comment-form" hidden>
+              <div class="comment-user">
+                <img id="user-photo" src="" alt="" class="comment-avatar" />
+                <div>
+                  <strong id="user-name"></strong>
+                  <button id="signout-btn" type="button">Sign out</button>
+                </div>
+              </div>
+
+              <textarea
+                id="comment-text"
+                placeholder="Share your thoughts..."
+                maxlength="1000"
+                rows="4"
+              ></textarea>
+
+              <button id="post-comment" class="post-comment-btn">
+                Post comment
+              </button>
+            </div>
+
+            <div id="comments-list">
+              <p class="comments-loading">Loading comments...</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="footer-row">
+          <div class="footer-links">
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/disclaimer/">Disclaimer</a>
+          </div>
+          <span class="copyright"
+            >&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span
+          >
+        </div>
+        <p class="footer-note">
+          Everything on this site reflects one student's personal preparation
+          experience. For official GATE CSE information &mdash; eligibility,
+          syllabus, exam dates &mdash; always check the official GATE authority
+          website.
+        </p>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("navToggle")
+        .addEventListener("click", function () {
+          var nav = document.querySelector("nav.primary");
+          var expanded = this.getAttribute("aria-expanded") === "true";
+          this.setAttribute("aria-expanded", String(!expanded));
+          if (!expanded) {
+            nav.style.cssText =
+              "display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;";
+          } else {
+            nav.style.cssText = "";
+          }
+        });
+    </script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        signInWithPopup,
+        signOut,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        query,
+        where,
+        orderBy,
+        onSnapshot,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+      // ==========================================
+      // FIREBASE CONFIG
+      // ==========================================
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+        authDomain: "megamocks.firebaseapp.com",
+        projectId: "megamocks",
+        storageBucket: "megamocks.firebasestorage.app",
+        messagingSenderId: "45418531344",
+        appId: "1:45418531344:web:cd6747bb79ca7840661895",
+      };
+
+      // ==========================================
+      // INITIALIZE FIREBASE
+      // ==========================================
+
+      const app = initializeApp(firebaseConfig);
+
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      const googleProvider = new GoogleAuthProvider();
+
+      // ==========================================
+      // CURRENT ARTICLE
+      // ==========================================
+
+      const articleSlug = "gate-cse-2027-journey-day-2";
+
+      // ==========================================
+      // ELEMENTS
+      // ==========================================
+
+      const signInButton = document.getElementById("google-signin");
+      const authSection = document.getElementById("comment-auth");
+      const commentForm = document.getElementById("comment-form");
+
+      const userPhoto = document.getElementById("user-photo");
+      const userName = document.getElementById("user-name");
+
+      const signOutButton = document.getElementById("signout-btn");
+
+      const commentText = document.getElementById("comment-text");
+      const postButton = document.getElementById("post-comment");
+
+      const commentsList = document.getElementById("comments-list");
+
+      // ==========================================
+      // GOOGLE SIGN IN
+      // ==========================================
+
+      signInButton.addEventListener("click", async () => {
+        try {
+          await signInWithPopup(auth, googleProvider);
+        } catch (error) {
+          console.error("Google sign-in error:", error);
+
+          alert("Unable to sign in with Google. Please try again.");
+        }
+      });
+
+      // ==========================================
+      // SIGN OUT
+      // ==========================================
+
+      signOutButton.addEventListener("click", async () => {
+        try {
+          await signOut(auth);
+        } catch (error) {
+          console.error("Sign-out error:", error);
+        }
+      });
+
+      // ==========================================
+      // AUTH STATE
+      // ==========================================
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is logged in
+
+          authSection.hidden = true;
+          commentForm.hidden = false;
+
+          userName.textContent = user.displayName || "Google User";
+
+          userPhoto.src =
+            user.photoURL || "https://ui-avatars.com/api/?name=User";
+
+          userPhoto.alt = user.displayName || "User";
+        } else {
+          // User is logged out
+
+          authSection.hidden = false;
+          commentForm.hidden = true;
+        }
+      });
+
+      // ==========================================
+      // POST COMMENT
+      // ==========================================
+
+      postButton.addEventListener("click", async () => {
+        const user = auth.currentUser;
+
+        if (!user) {
+          alert("Please sign in first.");
+          return;
+        }
+
+        const text = commentText.value.trim();
+
+        if (!text) {
+          alert("Please write a comment first.");
+          return;
+        }
+
+        if (text.length > 1000) {
+          alert("Comment is too long.");
+          return;
+        }
+
+        postButton.disabled = true;
+        postButton.textContent = "Posting...";
+
+        try {
+          await addDoc(collection(db, "comments"), {
+            articleSlug: articleSlug,
+
+            uid: user.uid,
+
+            name: user.displayName || "Google User",
+
+            photoURL: user.photoURL || "",
+
+            text: text,
+
+            createdAt: serverTimestamp(),
+          });
+
+          commentText.value = "";
+        } catch (error) {
+          console.error("Comment error:", error);
+
+          alert("Could not post your comment. Please try again.");
+        }
+
+        postButton.disabled = false;
+        postButton.textContent = "Post comment";
+      });
+
+      // ==========================================
+      // LOAD COMMENTS
+      // ==========================================
+
+      const commentsQuery = query(
+        collection(db, "comments"),
+        where("articleSlug", "==", articleSlug),
+        orderBy("createdAt", "desc"),
+      );
+
+      function formatTimeAgo(date) {
+        const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+        if (seconds < 60) return "just now";
+
+        const minutes = Math.floor(seconds / 60);
+        if (minutes < 60)
+          return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+        const hours = Math.floor(minutes / 60);
+        if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+        const days = Math.floor(hours / 24);
+        if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+        const weeks = Math.floor(days / 7);
+        if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+        return date.toLocaleDateString("en-IN", {
+          day: "numeric",
+          month: "short",
+          year: "numeric",
+        });
+      }
+
+      onSnapshot(
+        commentsQuery,
+        (snapshot) => {
+          commentsList.innerHTML = "";
+
+          if (snapshot.empty) {
+            commentsList.innerHTML =
+              '<p class="no-comments">No comments yet. Be the first.</p>';
+
+            return;
+          }
+
+          snapshot.forEach((doc) => {
+            const comment = doc.data();
+
+            const articleComment = document.createElement("article");
+
+            articleComment.className = "comment";
+
+            const avatar = document.createElement("img");
+
+            avatar.className = "comment-avatar";
+
+            avatar.src =
+              comment.photoURL || "https://ui-avatars.com/api/?name=User";
+
+            avatar.alt = comment.name || "User";
+
+            const content = document.createElement("div");
+
+            content.className = "comment-content";
+
+            const name = document.createElement("strong");
+            name.textContent = comment.name || "Google User";
+
+            const timestamp = document.createElement("time");
+            timestamp.className = "comment-time";
+
+            if (comment.createdAt) {
+              timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+            }
+
+            const text = document.createElement("p");
+            text.textContent = comment.text;
+
+            content.appendChild(name);
+            content.appendChild(timestamp);
+            content.appendChild(text);
+
+            articleComment.appendChild(avatar);
+            articleComment.appendChild(content);
+
+            commentsList.appendChild(articleComment);
+          });
+        },
+        (error) => {
+          console.error("Could not load comments:", error);
+
+          commentsList.innerHTML =
+            '<p class="comments-error">Comments could not be loaded.</p>';
+        },
+      );
+    </script>
+  </body>
+</html>
