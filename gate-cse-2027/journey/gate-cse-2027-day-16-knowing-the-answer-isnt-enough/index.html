@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 16 of My GATE CSE 2027 Journey: Knowing the Answer Isn't Enough | MegaMocks</title>
+<meta name="description" content="I completed the Switching chapter in Computer Networks, worked on pending TCP Timer Management notes, and solved 11 mixed Data Structures questions, scoring 9/11 — the two misses were silly mistakes, not conceptual gaps. With October approaching, the schedule is about to get a lot more rigid.">
+<link rel="canonical" href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-16-knowing-the-answer-isnt-enough/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 16 of My GATE CSE 2027 Journey: Knowing the Answer Isn't Enough | MegaMocks">
+<meta property="og:description" content="I completed the Switching chapter in Computer Networks, worked on pending TCP Timer Management notes, and solved 11 mixed Data Structures questions, scoring 9/11 — the two misses were silly mistakes, not conceptual gaps. With October approaching, the schedule is about to get a lot more rigid.">
+<meta property="og:url" content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-16-knowing-the-answer-isnt-enough/">
+<meta property="og:site_name" content="MegaMocks">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day 16 of My GATE CSE 2027 Journey: Knowing the Answer Isn't Enough | MegaMocks">
+<meta name="twitter:description" content="I completed the Switching chapter in Computer Networks, worked on pending TCP Timer Management notes, and solved 11 mixed Data Structures questions, scoring 9/11 — the two misses were silly mistakes, not conceptual gaps. With October approaching, the schedule is about to get a lot more rigid.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Day 16: Knowing the Answer Isn't Enough", "description": "Completing the Switching chapter in Computer Networks, working on pending TCP Timer Management notes, and 9/11 on mixed Data Structures practice — with two silly mistakes caused by overconfidence, not conceptual gaps.", "author": {"@type": "Person", "name": "Prince", "url": "https://megamocks.com/about/"}, "datePublished": "2026-09-29", "dateModified": "2026-09-29", "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-16-knowing-the-answer-isnt-enough/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://megamocks.com/"}, {"@type": "ListItem", "position": 2, "name": "GATE CSE 2027", "item": "https://megamocks.com/gate-cse-2027/"}, {"@type": "ListItem", "position": 3, "name": "Journey", "item": "https://megamocks.com/gate-cse-2027/journey/"}, {"@type": "ListItem", "position": 4, "name": "Day 16", "item": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-16-knowing-the-answer-isnt-enough/"}]}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="/" class="wordmark"><span style="background-color: #9A4B34; border-radius: 5px; color: white; padding: 0px 5px">M</span>egaMocks<span class="dot">.</span></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/gate-cse-2027/journey/">Journey</a>
+      <a href="/gate-cse-2027/subjects/">Subjects</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="day-badge">Day 16 of prep</span>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+<div class="wrap crumb-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/">GATE CSE 2027</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/journey/">Journey</a><span class="crumb-sep">/</span><span aria-current="page">Day 16</span></nav></div>
+<section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <span class="kicker mono">Day 16 of my GATE CSE 2027 prep &middot; 29 September 2026</span>
+      <h1>Knowing the Answer Isn't Enough</h1>
+      <span class="mood-chip">Feeling: reflective, a little annoyed at myself, ready for October</span>
+      <div class="tag-row">
+          <a class="tag" href="/gate-cse-2027/subjects/computer-networks/">Computer Networks</a>
+          <a class="tag" href="/gate-cse-2027/subjects/data-structures-algorithms/">Data Structures</a>
+        </div>
+    </div>
+  </section>
+  <section class="article-body">
+    <div class="wrap">
+      <div class="prose">
+        <p>Day 16 was a little different from the usual office-and-commute routine.</p>
+        <p>It was Tuesday, so I took leave from office. It was also my regular Tuesday fast and temple routine, which meant the day wasn't exactly following my normal schedule.</p>
+        <p>Still, I managed to make some progress with GATE preparation.</p>
+
+        <h2>Switching Chapter: Completed</h2>
+        <p>The main academic target for the day was to complete the Switching chapter in Computer Networks.</p>
+        <p>There were three lectures, and I completed all three.</p>
+        <p>Unlike the previous day, when I had used my commute to finish Routing Protocols, I wasn't going to the office on Tuesday. So this time, the Switching lectures were completed at home.</p>
+        <p>That distinction is worth mentioning because recently I've been relying quite heavily on my commute for lectures. Once I get home after office, watching lectures becomes much harder because I'm usually tired.</p>
+        <p>Since I had taken leave, I had the opportunity to complete them at home instead.</p>
+        <p>So, another Computer Networks chapter is now off the list.</p>
+        <p>Switching: done.</p>
+
+        <h2>TCP Timer Management Notes</h2>
+        <p>Along with the lectures, I also worked on the pending notes for TCP Timer Management.</p>
+        <p>I've been trying to keep my CN notes updated instead of leaving everything until the very end. There are still some pending notes from previous topics, so whenever I get the right opportunity in October, I want to clear those as well.</p>
+        <p>The actual syllabus completion is still the bigger priority right now, though. With October starting tomorrow, that priority is about to become considerably more serious.</p>
+
+        <h2>Mixed Practice: 9/11 in Data Structures</h2>
+        <p>I also did some mixed-question practice in Data Structures.</p>
+        <p>I solved 11 questions and got 9 correct, giving me an accuracy of roughly 82%.</p>
+        <p>The interesting part was that the two incorrect questions weren't really conceptual mistakes.</p>
+        <p>They were silly mistakes.</p>
+        <p>I didn't read the questions properly and interpreted them too quickly.</p>
+        <p>Basically, I saw the question, thought, "I know this. I'll finish this in a second," and then proceeded to prove that confidence is occasionally a very expensive emotion.</p>
+        <p>Those two marks were lost because of overconfidence, not because I didn't know the underlying concepts.</p>
+        <p>And honestly, that's useful information.</p>
+        <p>When I make a conceptual mistake, I know there is something I need to study again. But careless mistakes are slightly different. The solution isn't necessarily another lecture or another chapter.</p>
+        <p>Sometimes the solution is simply:</p>
+        <p>Read the damn question properly.</p>
+        <p>Especially for GATE, where a small word or condition can completely change what a question is asking, rushing through something just because it looks familiar is dangerous.</p>
+
+        <h2>A Different Kind of Study Day</h2>
+        <p>Since I was on leave, the day didn't follow my normal routine.</p>
+        <p>It was also my Tuesday fast. I hadn't eaten since morning, went to the temple in the evening, and later had Prasad.</p>
+        <p>So it wasn't one of those extremely structured, perfectly optimised study days.</p>
+        <p>But I still completed the Switching chapter, worked on TCP notes, and did some mixed Data Structures practice.</p>
+        <p>That's enough for me to consider the day productive.</p>
+        <p>The bigger thing I'm taking away from the DS practice is actually not the 9/11 score itself.</p>
+        <p>It's the reason behind the two mistakes.</p>
+        <p>I'm starting to notice that there are different kinds of errors in my preparation.</p>
+        <p>Sometimes I genuinely don't know something.</p>
+        <p>Sometimes I understand the concept but apply it incorrectly.</p>
+        <p>And sometimes I know exactly what I'm doing and still lose the mark because I didn't bother to read the question properly.</p>
+        <p>The third category is particularly annoying because there isn't much sympathy available for it. &#128517;</p>
+
+        <h2>Tomorrow: October Begins</h2>
+        <p>And now we're basically at the doorstep of October.</p>
+        <p>From 1 October, the preparation schedule becomes much more rigid. The target is still to complete the remaining GATE CSE syllabus by 31 October, after which November will be focused much more heavily on revision, tests, and analysis.</p>
+        <p>So September was largely about getting things moving again and building momentum.</p>
+        <p>October is going to be about execution.</p>
+        <p>No more vague "I'll finish this soon" planning.</p>
+        <p>There is a deadline.</p>
+        <p>There are chapters left.</p>
+        <p>And there are only so many days to fit them into.</p>
+        <p>For today, though:</p>
+        <p>Switching: completed.</p>
+        <p>TCP Timer Management notes: worked on.</p>
+        <p>DS: 9/11.</p>
+        <p>And two silly mistakes officially added to the growing collection of things I need to stop doing.</p>
+        <p>One day at a time.</p>
+      </div>
+      <nav class="article-nav" aria-label="Article navigation">
+        <a class="prev" href="/gate-cse-2027/journey/gate-cse-2027-day-15-sometimes-the-longer-route-is-the-productive-one/"><span class="label">&larr; Previous</span>Day 15: Sometimes the Longer Route Is the Productive One</a>
+        <a class="next" href="/gate-cse-2027/journey/gate-cse-2027-day-17-four-lectures-two-mistakes-and-a-different-kind-of-prioritisation/"><span class="label">Next &rarr;</span>Day 17: Four Lectures, Two Mistakes, and a Different Kind of Prioritisation</a>
+      </nav>
+      <section class="comments-section" id="comments">
+        <div class="comments-header">
+          <h2>What do you think?</h2>
+          <p>Studying for GATE is less lonely when we're all figuring it out together.</p>
+        </div>
+
+        <div id="comment-auth">
+          <button id="google-signin" class="google-signin-btn">
+            Continue with Google
+          </button>
+        </div>
+
+        <div id="comment-form" hidden>
+          <div class="comment-user">
+            <img id="user-photo" src="" alt="" class="comment-avatar">
+            <div>
+              <strong id="user-name"></strong>
+              <button id="signout-btn" type="button">Sign out</button>
+            </div>
+          </div>
+
+          <textarea
+            id="comment-text"
+            placeholder="Share your thoughts..."
+            maxlength="1000"
+            rows="4"
+          ></textarea>
+
+          <button id="post-comment" class="post-comment-btn">
+            Post comment
+          </button>
+        </div>
+
+        <div id="comments-list">
+          <p class="comments-loading">Loading comments...</p>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </div>
+      <span class="copyright">&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span>
+    </div>
+    <p class="footer-note">Everything on this site reflects one student's personal preparation experience. For official GATE CSE information &mdash; eligibility, syllabus, exam dates &mdash; always check the official GATE authority website.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.querySelector('nav.primary');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if (!expanded) {
+      nav.style.cssText = 'display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;';
+    } else {
+      nav.style.cssText = '';
+    }
+  });
+</script>
+<script type="module">
+
+  import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+  import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    where,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+
+  // ==========================================
+  // FIREBASE CONFIG
+  // ==========================================
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+  authDomain: "megamocks.firebaseapp.com",
+  projectId: "megamocks",
+  storageBucket: "megamocks.firebasestorage.app",
+  messagingSenderId: "45418531344",
+  appId: "1:45418531344:web:cd6747bb79ca7840661895"
+};
+
+
+  // ==========================================
+  // INITIALIZE FIREBASE
+  // ==========================================
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const googleProvider = new GoogleAuthProvider();
+
+
+  // ==========================================
+  // CURRENT ARTICLE
+  // ==========================================
+
+  const articleSlug = "gate-cse-2027-journey-day-16";
+
+
+  // ==========================================
+  // ELEMENTS
+  // ==========================================
+
+  const signInButton = document.getElementById("google-signin");
+  const authSection = document.getElementById("comment-auth");
+  const commentForm = document.getElementById("comment-form");
+
+  const userPhoto = document.getElementById("user-photo");
+  const userName = document.getElementById("user-name");
+
+  const signOutButton = document.getElementById("signout-btn");
+
+  const commentText = document.getElementById("comment-text");
+  const postButton = document.getElementById("post-comment");
+
+  const commentsList = document.getElementById("comments-list");
+
+
+  // ==========================================
+  // GOOGLE SIGN IN
+  // ==========================================
+
+  signInButton.addEventListener("click", async () => {
+
+    try {
+
+      await signInWithPopup(auth, googleProvider);
+
+    } catch (error) {
+
+      console.error("Google sign-in error:", error);
+
+      alert("Unable to sign in with Google. Please try again.");
+
+    }
+
+  });
+
+
+  // ==========================================
+  // SIGN OUT
+  // ==========================================
+
+  signOutButton.addEventListener("click", async () => {
+
+    try {
+
+      await signOut(auth);
+
+    } catch (error) {
+
+      console.error("Sign-out error:", error);
+
+    }
+
+  });
+
+
+  // ==========================================
+  // AUTH STATE
+  // ==========================================
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      // User is logged in
+
+      authSection.hidden = true;
+      commentForm.hidden = false;
+
+      userName.textContent = user.displayName || "Google User";
+
+      userPhoto.src =
+        user.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      userPhoto.alt = user.displayName || "User";
+
+    } else {
+
+      // User is logged out
+
+      authSection.hidden = false;
+      commentForm.hidden = true;
+
+    }
+
+  });
+
+
+  // ==========================================
+  // POST COMMENT
+  // ==========================================
+
+  postButton.addEventListener("click", async () => {
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Please sign in first.");
+      return;
+    }
+
+    const text = commentText.value.trim();
+
+    if (!text) {
+      alert("Please write a comment first.");
+      return;
+    }
+
+    if (text.length > 1000) {
+      alert("Comment is too long.");
+      return;
+    }
+
+
+    postButton.disabled = true;
+    postButton.textContent = "Posting...";
+
+
+    try {
+
+      await addDoc(collection(db, "comments"), {
+
+        articleSlug: articleSlug,
+
+        uid: user.uid,
+
+        name: user.displayName || "Google User",
+
+        photoURL: user.photoURL || "",
+
+        text: text,
+
+        createdAt: serverTimestamp()
+
+      });
+
+      commentText.value = "";
+
+    } catch (error) {
+
+      console.error("Comment error:", error);
+
+      alert("Could not post your comment. Please try again.");
+
+    }
+
+
+    postButton.disabled = false;
+    postButton.textContent = "Post comment";
+
+  });
+
+
+  // ==========================================
+  // LOAD COMMENTS
+  // ==========================================
+
+  const commentsQuery = query(
+    collection(db, "comments"),
+    where("articleSlug", "==", articleSlug),
+    orderBy("createdAt", "desc")
+  );
+
+  function formatTimeAgo(date) {
+    const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    if (seconds < 60) return "just now";
+
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+    const weeks = Math.floor(days / 7);
+    if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+  }
+
+
+  onSnapshot(commentsQuery, (snapshot) => {
+
+    commentsList.innerHTML = "";
+
+
+    if (snapshot.empty) {
+
+      commentsList.innerHTML =
+        '<p class="no-comments">No comments yet. Be the first.</p>';
+
+      return;
+
+    }
+
+
+    snapshot.forEach((doc) => {
+
+      const comment = doc.data();
+
+
+      const articleComment = document.createElement("article");
+
+      articleComment.className = "comment";
+
+
+      const avatar = document.createElement("img");
+
+      avatar.className = "comment-avatar";
+
+      avatar.src =
+        comment.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      avatar.alt = comment.name || "User";
+
+
+      const content = document.createElement("div");
+
+      content.className = "comment-content";
+
+
+      const name = document.createElement("strong");
+name.textContent = comment.name || "Google User";
+
+      const timestamp = document.createElement("time");
+      timestamp.className = "comment-time";
+
+      if (comment.createdAt) {
+        timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+      }
+
+      const text = document.createElement("p");
+      text.textContent = comment.text;
+
+      content.appendChild(name);
+      content.appendChild(timestamp);
+      content.appendChild(text);
+
+      articleComment.appendChild(avatar);
+      articleComment.appendChild(content);
+
+
+      commentsList.appendChild(articleComment);
+
+    });
+
+  }, (error) => {
+
+    console.error("Could not load comments:", error);
+
+    commentsList.innerHTML =
+      '<p class="comments-error">Comments could not be loaded.</p>';
+
+  });
+
+</script>
+</body>
+</html>

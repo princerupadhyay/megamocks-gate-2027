@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 22 of My GATE CSE 2027 Journey: Five Lectures, an Office Day, and Rethinking Short Notes | MegaMocks</title>
+<meta name="description" content="An office day didn't stop me from completing five lectures, including four DBMS lectures on normal forms and my first lecture on NFA in TOC. I also realized that the &quot;short notes&quot; I'm currently making aren't really short notes yet, and that's probably okay.">
+<link rel="canonical" href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-22-five-lectures-an-office-day-and-rethinking-short-notes/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 22 of My GATE CSE 2027 Journey: Five Lectures, an Office Day, and Rethinking Short Notes | MegaMocks">
+<meta property="og:description" content="An office day didn't stop me from completing five lectures, including four DBMS lectures on normal forms and my first lecture on NFA in TOC. I also realized that the &quot;short notes&quot; I'm currently making aren't really short notes yet, and that's probably okay.">
+<meta property="og:url" content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-22-five-lectures-an-office-day-and-rethinking-short-notes/">
+<meta property="og:site_name" content="MegaMocks">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day 22 of My GATE CSE 2027 Journey: Five Lectures, an Office Day, and Rethinking Short Notes | MegaMocks">
+<meta name="twitter:description" content="An office day didn't stop me from completing five lectures, including four DBMS lectures on normal forms and my first lecture on NFA in TOC. I also realized that the &quot;short notes&quot; I'm currently making aren't really short notes yet, and that's probably okay.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Day 22: Five Lectures, an Office Day, and Rethinking Short Notes", "description": "Five lectures on an office day: my first NFA lecture in TOC, four DBMS lectures on normal forms, and a realization that my so-called short notes are really detailed revision notes.", "author": {"@type": "Person", "name": "Prince", "url": "https://megamocks.com/about/"}, "datePublished": "2026-10-05", "dateModified": "2026-10-05", "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-22-five-lectures-an-office-day-and-rethinking-short-notes/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://megamocks.com/"}, {"@type": "ListItem", "position": 2, "name": "GATE CSE 2027", "item": "https://megamocks.com/gate-cse-2027/"}, {"@type": "ListItem", "position": 3, "name": "Journey", "item": "https://megamocks.com/gate-cse-2027/journey/"}, {"@type": "ListItem", "position": 4, "name": "Day 22", "item": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-22-five-lectures-an-office-day-and-rethinking-short-notes/"}]}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="/" class="wordmark"><span style="background-color: #9A4B34; border-radius: 5px; color: white; padding: 0px 5px">M</span>egaMocks<span class="dot">.</span></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/gate-cse-2027/journey/">Journey</a>
+      <a href="/gate-cse-2027/subjects/">Subjects</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="day-badge">Day 22 of prep</span>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+<div class="wrap crumb-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/">GATE CSE 2027</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/journey/">Journey</a><span class="crumb-sep">/</span><span aria-current="page">Day 22</span></nav></div>
+<section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <span class="kicker mono">Day 22 of my GATE CSE 2027 prep &middot; 5 October 2026</span>
+      <h1>Five Lectures, an Office Day, and Rethinking Short Notes</h1>
+      <span class="mood-chip">Feeling: reluctant at first, steady, a little tired</span>
+      <div class="tag-row">
+          <a class="tag" href="/gate-cse-2027/subjects/theory-of-computation/">Theory of Computation</a>
+          <a class="tag" href="/gate-cse-2027/subjects/dbms/">Database Management Systems</a>
+        </div>
+    </div>
+  </section>
+  <section class="article-body">
+    <div class="wrap">
+      <div class="prose">
+        <p>Monday started with one of those thoughts that probably visits most working people regularly:</p>
+        <p>I really don't feel like going to the office today.</p>
+        <p>Unfortunately, the office had not developed the ability to disappear based on my mood.</p>
+        <p>So I got up, freshened up, and decided to get some studying done before leaving. I completed one lecture in the morning and then headed to the office.</p>
+        <p>Despite having a full working day ahead, I managed to continue studying during the commute and completed another TOC lecture. After roughly seven hours at work, I continued studying again in the evening.</p>
+        <p>By the end of the day, I had completed one TOC lecture and four DBMS lectures.</p>
+        <p>Not an enormous number compared with some of my recent days, but considering that Monday was an office day, I was reasonably happy with how the day went.</p>
+
+        <h2>Starting the Second Chapter of TOC</h2>
+        <p>In Theory of Computation, I officially started the second chapter: Non-Deterministic Finite Automata (NFA).</p>
+        <p>The main concept I studied was the Subset Construction Algorithm, which is used to convert an NFA into an equivalent DFA.</p>
+        <p>The lecture was clear, and I didn't feel particularly stuck while going through it.</p>
+        <p>I also studied the distinction between regular and non-regular languages, including how to identify whether a language falls into one category or the other.</p>
+        <p>It felt good to move forward from the first chapter and start working through NFA concepts properly.</p>
+        <p>There is still a lot left in TOC, but at least the second chapter has now started.</p>
+
+        <h2>Four DBMS Lectures After Office</h2>
+        <p>DBMS was actually the bigger part of today's study session.</p>
+        <p>I completed four lectures covering normal forms, including:</p>
+        <ul>
+          <li>1NF</li>
+          <li>2NF</li>
+          <li>3NF</li>
+          <li>BCNF</li>
+          <li>Decomposition for 2NF, 3NF and BCNF</li>
+          <li>Partial dependency</li>
+          <li>Full dependency</li>
+        </ul>
+        <p>One thing I particularly focused on was understanding the conditions behind each normal form rather than simply memorizing their definitions.</p>
+        <p>For example, while studying 2NF, I revisited the idea that a non-prime attribute should not depend on only a proper part of a candidate key.</p>
+        <p>For 3NF, I connected the condition with the absence of problematic transitive dependencies and the formal condition involving a superkey or a prime attribute.</p>
+        <p>Then came BCNF, where the condition becomes stricter: for every non-trivial functional dependency X &rarr; Y, X must be a superkey.</p>
+        <p>I also went through partial and full functional dependencies.</p>
+        <p>These are the kinds of DBMS concepts where understanding the exact condition matters. One small misunderstanding can make an entire question go sideways, because apparently databases enjoy making simple-looking conditions unnecessarily precise.</p>
+
+        <h2>I Think I Finally Understand the Problem With My "Short Notes"</h2>
+        <p>Something else clicked for me today.</p>
+        <p>I've been calling the notes I'm currently making short notes.</p>
+        <p>But they're actually not short notes.</p>
+        <p>They're more like detailed revision notes.</p>
+        <p>And I think that's okay.</p>
+        <p>I remembered something my professor had said earlier: trying to create proper short notes while learning a subject for the first time can be counterproductive.</p>
+        <p>When I'm seeing a topic for the first time, I don't yet know:</p>
+        <ul>
+          <li>What I'll remember naturally.</li>
+          <li>What I'll forget repeatedly.</li>
+          <li>Which formulas or conditions I'll keep confusing.</li>
+          <li>Which concepts will actually be important for me.</li>
+          <li>What deserves a place in a final revision sheet.</li>
+        </ul>
+        <p>So if I try to create the perfect short notes right now, I end up writing almost everything.</p>
+        <p>Which means they stop being short notes.</p>
+        <p>I think the better approach for me is to create reasonably detailed notes during the initial learning and revision stages. After going through the subjects several times, I'll have a much better idea of what actually needs to survive in the final condensed notes.</p>
+        <p>The things I repeatedly forget or make mistakes on can then earn their permanent place on the short-note sheet.</p>
+        <p>That feels much more logical now.</p>
+
+        <h2>When My Eyes Said "Enough"</h2>
+        <p>The downside of trying to squeeze study into an office-day schedule is that the day can become very long.</p>
+        <p>I studied in the evening after work, continued after dinner, and eventually reached around 12:30&ndash;1:00 AM.</p>
+        <p>At that point, my eyes started burning.</p>
+        <p>I decided to take that as the signal to close the laptop and go to sleep.</p>
+        <p>I could have tried to squeeze in another lecture, but there isn't much value in pretending that productivity means ignoring every physical warning until the laptop becomes my tombstone.</p>
+        <p>I've already noticed that screen time is becoming a concern, so I don't want to make a habit of pushing through obvious discomfort just to say I studied for another hour.</p>
+
+        <h2>Tomorrow's Challenge: Four TOC Lectures</h2>
+        <p>Tuesday is another office day, and it's also my weekly fast for Hanumanji.</p>
+        <p>For studying, I've decided to focus entirely on TOC.</p>
+        <p>My target is lectures 2, 3, 4 and 5.</p>
+        <p>The slightly terrifying part is that each TOC lecture is approximately two hours long.</p>
+        <p>So four lectures means roughly eight hours of lecture content.</p>
+        <p>And this is on an office day.</p>
+        <p>We'll see how that goes.</p>
+        <p>I'm not planning to force DBMS into tomorrow's schedule. I had pushed DBMS on Monday because I was close to completing the first chapter and wanted to finish it properly.</p>
+        <p>From here, DBMS will return primarily to the weekend schedule.</p>
+        <p>For now, Tuesday belongs to NFA.</p>
+
+        <h2>Day 22: Keeping the Journey Moving</h2>
+        <p>Day 22 wasn't as intense as some of the previous study days, but it was still productive considering that I had a full office day.</p>
+        <p>I managed to complete five lectures in total, started NFA in TOC, pushed DBMS through normal forms and related dependencies, and also learned something important about my own note-making process.</p>
+        <p>Most importantly, I'm becoming more comfortable with the idea that not every piece of preparation has to be optimized immediately.</p>
+        <p>Some things need multiple passes before I know what actually deserves attention.</p>
+        <p>The same probably applies to short notes.</p>
+        <p>Right now, I'm learning.</p>
+        <p>Later, I'll compress.</p>
+        <p>And somewhere between those two stages, I'll hopefully figure out what is actually worth remembering for GATE CSE 2027.</p>
+        <p>Day 22 completed.</p>
+        <p>Tomorrow: four TOC lectures, approximately eight hours of lecture content, and an office day.</p>
+        <p>Let's see what Monday's ambition has done to Tuesday's sanity. &#128218;</p>
+      </div>
+      <nav class="article-nav" aria-label="Article navigation">
+        <a class="prev" href="/gate-cse-2027/journey/gate-cse-2027-day-21-eleven-lectures-endless-questions-and-a-sunday-of-sacrifices/"><span class="label">&larr; Previous</span>Day 21: Eleven Lectures, Endless Questions, and a Sunday of Sacrifices</a>
+        <a class="next" href="/gate-cse-2027/journey/gate-cse-2027-day-23-when-skipping-a-lecture-actually-made-sense/"><span class="label">Next &rarr;</span>Day 23: When Skipping a Lecture Actually Made Sense</a>
+      </nav>
+      <section class="comments-section" id="comments">
+        <div class="comments-header">
+          <h2>What do you think?</h2>
+          <p>Studying for GATE is less lonely when we're all figuring it out together.</p>
+        </div>
+
+        <div id="comment-auth">
+          <button id="google-signin" class="google-signin-btn">
+            Continue with Google
+          </button>
+        </div>
+
+        <div id="comment-form" hidden>
+          <div class="comment-user">
+            <img id="user-photo" src="" alt="" class="comment-avatar">
+            <div>
+              <strong id="user-name"></strong>
+              <button id="signout-btn" type="button">Sign out</button>
+            </div>
+          </div>
+
+          <textarea
+            id="comment-text"
+            placeholder="Share your thoughts..."
+            maxlength="1000"
+            rows="4"
+          ></textarea>
+
+          <button id="post-comment" class="post-comment-btn">
+            Post comment
+          </button>
+        </div>
+
+        <div id="comments-list">
+          <p class="comments-loading">Loading comments...</p>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </div>
+      <span class="copyright">&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span>
+    </div>
+    <p class="footer-note">Everything on this site reflects one student's personal preparation experience. For official GATE CSE information &mdash; eligibility, syllabus, exam dates &mdash; always check the official GATE authority website.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.querySelector('nav.primary');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if (!expanded) {
+      nav.style.cssText = 'display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;';
+    } else {
+      nav.style.cssText = '';
+    }
+  });
+</script>
+<script type="module">
+
+  import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+  import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    where,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+
+  // ==========================================
+  // FIREBASE CONFIG
+  // ==========================================
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+  authDomain: "megamocks.firebaseapp.com",
+  projectId: "megamocks",
+  storageBucket: "megamocks.firebasestorage.app",
+  messagingSenderId: "45418531344",
+  appId: "1:45418531344:web:cd6747bb79ca7840661895"
+};
+
+
+  // ==========================================
+  // INITIALIZE FIREBASE
+  // ==========================================
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const googleProvider = new GoogleAuthProvider();
+
+
+  // ==========================================
+  // CURRENT ARTICLE
+  // ==========================================
+
+  const articleSlug = "gate-cse-2027-journey-day-22";
+
+
+  // ==========================================
+  // ELEMENTS
+  // ==========================================
+
+  const signInButton = document.getElementById("google-signin");
+  const authSection = document.getElementById("comment-auth");
+  const commentForm = document.getElementById("comment-form");
+
+  const userPhoto = document.getElementById("user-photo");
+  const userName = document.getElementById("user-name");
+
+  const signOutButton = document.getElementById("signout-btn");
+
+  const commentText = document.getElementById("comment-text");
+  const postButton = document.getElementById("post-comment");
+
+  const commentsList = document.getElementById("comments-list");
+
+
+  // ==========================================
+  // GOOGLE SIGN IN
+  // ==========================================
+
+  signInButton.addEventListener("click", async () => {
+
+    try {
+
+      await signInWithPopup(auth, googleProvider);
+
+    } catch (error) {
+
+      console.error("Google sign-in error:", error);
+
+      alert("Unable to sign in with Google. Please try again.");
+
+    }
+
+  });
+
+
+  // ==========================================
+  // SIGN OUT
+  // ==========================================
+
+  signOutButton.addEventListener("click", async () => {
+
+    try {
+
+      await signOut(auth);
+
+    } catch (error) {
+
+      console.error("Sign-out error:", error);
+
+    }
+
+  });
+
+
+  // ==========================================
+  // AUTH STATE
+  // ==========================================
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      // User is logged in
+
+      authSection.hidden = true;
+      commentForm.hidden = false;
+
+      userName.textContent = user.displayName || "Google User";
+
+      userPhoto.src =
+        user.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      userPhoto.alt = user.displayName || "User";
+
+    } else {
+
+      // User is logged out
+
+      authSection.hidden = false;
+      commentForm.hidden = true;
+
+    }
+
+  });
+
+
+  // ==========================================
+  // POST COMMENT
+  // ==========================================
+
+  postButton.addEventListener("click", async () => {
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Please sign in first.");
+      return;
+    }
+
+    const text = commentText.value.trim();
+
+    if (!text) {
+      alert("Please write a comment first.");
+      return;
+    }
+
+    if (text.length > 1000) {
+      alert("Comment is too long.");
+      return;
+    }
+
+
+    postButton.disabled = true;
+    postButton.textContent = "Posting...";
+
+
+    try {
+
+      await addDoc(collection(db, "comments"), {
+
+        articleSlug: articleSlug,
+
+        uid: user.uid,
+
+        name: user.displayName || "Google User",
+
+        photoURL: user.photoURL || "",
+
+        text: text,
+
+        createdAt: serverTimestamp()
+
+      });
+
+      commentText.value = "";
+
+    } catch (error) {
+
+      console.error("Comment error:", error);
+
+      alert("Could not post your comment. Please try again.");
+
+    }
+
+
+    postButton.disabled = false;
+    postButton.textContent = "Post comment";
+
+  });
+
+
+  // ==========================================
+  // LOAD COMMENTS
+  // ==========================================
+
+  const commentsQuery = query(
+    collection(db, "comments"),
+    where("articleSlug", "==", articleSlug),
+    orderBy("createdAt", "desc")
+  );
+
+  function formatTimeAgo(date) {
+    const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    if (seconds < 60) return "just now";
+
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+    const weeks = Math.floor(days / 7);
+    if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+  }
+
+
+  onSnapshot(commentsQuery, (snapshot) => {
+
+    commentsList.innerHTML = "";
+
+
+    if (snapshot.empty) {
+
+      commentsList.innerHTML =
+        '<p class="no-comments">No comments yet. Be the first.</p>';
+
+      return;
+
+    }
+
+
+    snapshot.forEach((doc) => {
+
+      const comment = doc.data();
+
+
+      const articleComment = document.createElement("article");
+
+      articleComment.className = "comment";
+
+
+      const avatar = document.createElement("img");
+
+      avatar.className = "comment-avatar";
+
+      avatar.src =
+        comment.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      avatar.alt = comment.name || "User";
+
+
+      const content = document.createElement("div");
+
+      content.className = "comment-content";
+
+
+      const name = document.createElement("strong");
+name.textContent = comment.name || "Google User";
+
+      const timestamp = document.createElement("time");
+      timestamp.className = "comment-time";
+
+      if (comment.createdAt) {
+        timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+      }
+
+      const text = document.createElement("p");
+      text.textContent = comment.text;
+
+      content.appendChild(name);
+      content.appendChild(timestamp);
+      content.appendChild(text);
+
+      articleComment.appendChild(avatar);
+      articleComment.appendChild(content);
+
+
+      commentsList.appendChild(articleComment);
+
+    });
+
+  }, (error) => {
+
+    console.error("Could not load comments:", error);
+
+    commentsList.innerHTML =
+      '<p class="comments-error">Comments could not be loaded.</p>';
+
+  });
+
+</script>
+</body>
+</html>
