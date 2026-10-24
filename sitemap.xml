@@ -27,11 +27,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://megamocks.com/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-15-sometimes-the-longer-route-is-the-productive-one/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -277,30 +272,6 @@
     <loc>https://megamocks.com/gate-cse-2027/subjects/programming-in-c/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://megamocks.com/blog/gate-revision-schedule-that-actually-works/</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://megamocks.com/blog/mind-going-blank-in-gate-mock-tests/</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://megamocks.com/blog/false-confidence-after-reading-notes/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://megamocks.com/blog/biggest-time-wasters-gate-prep/</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://megamocks.com/about/</loc>

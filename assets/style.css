@@ -171,6 +171,7 @@ section.block:last-of-type { border-bottom: none; }
 
 /* ---------- About ---------- */
 .about-row { display: flex; gap: 26px; align-items: flex-start; max-width: var(--wide); }
+.about-row .prose { flex: 1; min-width: 0; }
 .avatar {
   width: 120px;
   aspect-ratio: 1 / 1;
@@ -231,6 +232,11 @@ footer.site { padding: 40px 0 60px; border-top: 1px solid var(--rule) }
   .article-row { flex-direction: column; gap: 4px; }
   .article-nav a { max-width: 100%; }
   .article-nav .next { text-align: left; margin-left: 0; }
+  .about-page { padding: 28px 0 44px; }
+  .about-page h1 { margin-bottom: 18px; }
+  .about-row { flex-direction: column; gap: 18px; }
+  .about-row .avatar { width: 104px; flex-basis: 104px; }
+  .about-page .prose h2 { margin-top: 26px; }
 }
 
 /* ---------- Comments ---------- */
