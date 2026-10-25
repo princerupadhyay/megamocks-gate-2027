@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 35 of My GATE CSE 2027 Journey: Ashtami Fasting, COA Fatigue, and the Compiler Design Problem | MegaMocks</title>
+<meta name="description" content="I completed three Cache Organization lectures and two DBMS Query Language lectures while observing an Ashtami fast. With a growing backlog and Compiler Design approaching, I'm trying to find a realistic way to complete my syllabus by 30 October without expecting myself to master a completely new subject in one attempt.">
+<link rel="canonical" href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-35-ashtami-fasting-coa-fatigue-and-the-compiler-design-problem/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 35 of My GATE CSE 2027 Journey: Ashtami Fasting, COA Fatigue, and the Compiler Design Problem | MegaMocks">
+<meta property="og:description" content="I completed three Cache Organization lectures and two DBMS Query Language lectures while observing an Ashtami fast. With a growing backlog and Compiler Design approaching, I'm trying to find a realistic way to complete my syllabus by 30 October without expecting myself to master a completely new subject in one attempt.">
+<meta property="og:url" content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-35-ashtami-fasting-coa-fatigue-and-the-compiler-design-problem/">
+<meta property="og:site_name" content="MegaMocks">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day 35 of My GATE CSE 2027 Journey: Ashtami Fasting, COA Fatigue, and the Compiler Design Problem | MegaMocks">
+<meta name="twitter:description" content="I completed three Cache Organization lectures and two DBMS Query Language lectures while observing an Ashtami fast. With a growing backlog and Compiler Design approaching, I'm trying to find a realistic way to complete my syllabus by 30 October without expecting myself to master a completely new subject in one attempt.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Day 35: Ashtami Fasting, COA Fatigue, and the Compiler Design Problem", "description": "Three Cache Organization and two DBMS lectures on an Ashtami fast, COA fatigue, a growing backlog, and a plan for tackling Compiler Design in two passes.", "author": {"@type": "Person", "name": "Prince", "url": "https://megamocks.com/about/"}, "datePublished": "2026-10-18", "dateModified": "2026-10-18", "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-35-ashtami-fasting-coa-fatigue-and-the-compiler-design-problem/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://megamocks.com/"}, {"@type": "ListItem", "position": 2, "name": "GATE CSE 2027", "item": "https://megamocks.com/gate-cse-2027/"}, {"@type": "ListItem", "position": 3, "name": "Journey", "item": "https://megamocks.com/gate-cse-2027/journey/"}, {"@type": "ListItem", "position": 4, "name": "Day 35", "item": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-35-ashtami-fasting-coa-fatigue-and-the-compiler-design-problem/"}]}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="/" class="wordmark"><span style="background-color: #9A4B34; border-radius: 5px; color: white; padding: 0px 5px">M</span>egaMocks<span class="dot">.</span></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/gate-cse-2027/journey/">Journey</a>
+      <a href="/gate-cse-2027/subjects/">Subjects</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="day-badge">Day 35 of prep</span>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+<div class="wrap crumb-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/">GATE CSE 2027</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/journey/">Journey</a><span class="crumb-sep">/</span><span aria-current="page">Day 35</span></nav></div>
+<section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <span class="kicker mono">Day 35 of my GATE CSE 2027 prep &middot; 18 October 2026</span>
+      <h1>Ashtami Fasting, COA Fatigue, and the Compiler Design Problem</h1>
+      <span class="mood-chip">Feeling: tired, a little anxious about the backlog, determined</span>
+      <div class="tag-row">
+          <a class="tag" href="/gate-cse-2027/subjects/computer-organization/">Computer Organization and Architecture</a>
+          <a class="tag" href="/gate-cse-2027/subjects/dbms/">Database Management Systems</a>
+        </div>
+    </div>
+  </section>
+  <section class="article-body">
+    <div class="wrap">
+      <div class="prose">
+        <p>Sunday started pretty well. It was Ashtami, and I was observing a fast on the last day of Navratri. I also had a substantial amount of time available for studying, so I wanted to make good use of the day.</p>
+        <p>My targets were straightforward: complete four lectures of Cache Organization from Computer Organization and Architecture (COA), cover three lectures of the new DBMS Query Language chapter, and continue moving towards my October syllabus-completion deadline.</p>
+        <p>I did make progress, but I couldn't complete everything I had planned. More importantly, I spent some time thinking about a new challenge that is approaching: Compiler Design.</p>
+
+        <h2>What I Studied Today: COA Cache Organization</h2>
+        <p>I started with COA and completed Cache Organization lectures 8, 9, and 10.</p>
+        <p>My original plan was to finish lectures 8, 9, 10, and 11. I wasn't avoiding the eleventh lecture because I expected it to be difficult. I actually started watching it before deciding to postpone it.</p>
+        <p>The problem was exhaustion.</p>
+        <p>Each lecture was roughly two hours long, and watching at 2x speed helped me move through the material faster. However, watching the lectures wasn't my only task. I also had to prepare short notes alongside them.</p>
+        <p>That combination takes time and concentration. By the time I reached the eleventh lecture, I had already spent around six to seven hours studying COA and making notes. I started feeling exhausted and realised that continuing with the same subject wasn't working well anymore.</p>
+        <p>So I decided to stop COA for the day.</p>
+        <p>I didn't complete all four planned lectures, but I did finish three of them. The eleventh lecture, which covers multi-level caching, was moved to the backlog.</p>
+
+        <h2>Switching to DBMS Was a Better Choice</h2>
+        <p>After feeling exhausted with COA, I switched to DBMS.</p>
+        <p>I had also planned to study the new Query Language chapter, covering lectures 1, 2, and 3. I managed to complete the first two lectures.</p>
+        <p>Interestingly, studying DBMS felt better than forcing myself to continue with COA.</p>
+        <p>At that point, continuing the same COA material was becoming mentally tiring. Switching to another subject gave me something different to work on instead of repeatedly pushing myself through a topic when my concentration was already dropping.</p>
+        <p>I didn't complete the third DBMS lecture either, but I was able to make progress in two subjects.</p>
+        <p>That was the academic side of my Sunday. I completed three COA lectures and two DBMS lectures, although both subjects still have unfinished work.</p>
+
+        <h2>The Backlog Is Growing, and I Need to Keep an Eye on It</h2>
+        <p>One thing I am becoming increasingly conscious of is my backlog.</p>
+        <p>I already have DBMS lectures pending from the Sunday when I was struggling with allergic rhinitis. Now, COA lecture 11 on multi-level caching has also been postponed, and I didn't complete today's third DBMS lecture.</p>
+        <p>I have kept three buffer days, from 28 to 30 October, for genuine emergencies. I don't want to reach the end of October with so much unfinished work that those three days are no longer enough.</p>
+        <p>My syllabus-completion deadline is 30 October, and I still want to stick to it.</p>
+        <p>I don't want every unfinished lecture to become a reason to change the schedule. At the same time, I need to keep track of the backlog instead of pretending that everything is going according to plan.</p>
+        <p>For now, the important thing is to make sure the pending work remains manageable.</p>
+
+        <h2>The Bigger Challenge: Compiler Design</h2>
+        <p>While thinking about the remaining syllabus, another concern came to mind: Compiler Design.</p>
+        <p>This is a subject I have never studied before. Not during my BSc in Computer Science, not during engineering, and not during my MCA.</p>
+        <p>That makes it different from subjects where I already have some background knowledge.</p>
+        <p>When I study a familiar topic, I can sometimes understand a new concept by connecting it to something I have learned previously. But with Compiler Design, I will have to build that understanding from the beginning.</p>
+        <p>The schedule I had in mind seemed particularly demanding, with around six or seven lectures planned for a day. I am not sure how realistic that is when I also need to understand the concepts properly, prepare notes, and manage my office work.</p>
+        <p>Watching a lecture is one thing. Understanding what is happening, connecting the concepts, and remembering them later is another.</p>
+        <p>I was genuinely confused about how I would manage it all without missing my October deadline.</p>
+
+        <h2>My Approach to Compiler Design</h2>
+        <p>After thinking about it, I have decided to approach Compiler Design in two stages.</p>
+        <p>First, I want to go through the entire subject at least once during October. I don't expect to understand every concept in great depth during the first pass.</p>
+        <p>That doesn't mean I want to study carelessly. I still need to understand the basic ideas and follow the lectures properly. But I also need to accept that some concepts will become clearer only when I revisit them.</p>
+        <p>During the second or third revision, I can return to the difficult topics, strengthen my understanding, and get deeper into the subject.</p>
+        <p>I think this is a more realistic way to approach a completely new subject than expecting myself to master everything the first time I encounter it.</p>
+        <p>I still intend to follow a tight and regular schedule for October. I haven't decided to abandon the deadline. I want to complete the syllabus by the end of the month, and I will do my best to make that happen.</p>
+
+        <h2>Completing COA Before Moving Ahead</h2>
+        <p>Before starting Compiler Design, I have two COA chapters remaining: Magnetic Disk and Pipelining.</p>
+        <p>I expect to complete them by Thursday or Friday. Once COA is finished, I will begin the first chapter of Compiler Design.</p>
+        <p>That gives me a clearer sequence to follow instead of worrying about every remaining subject simultaneously.</p>
+        <p>I also need to address my pending DBMS lectures and the postponed Cache Organization lecture. The challenge is to keep making progress on the current syllabus without allowing older work to accumulate beyond what I can recover during the available time.</p>
+
+        <h2>What I Realised Today</h2>
+        <p>Sunday reminded me that having plenty of time available doesn't automatically mean every planned task will get completed.</p>
+        <p>I was fasting, but I still had time to study. I completed five lectures across COA and DBMS, yet I couldn't finish all the lectures I had scheduled. Preparing notes alongside the lectures made the workload more demanding than simply watching them.</p>
+        <p>I also realised that Compiler Design will require a different approach because I am starting it without previous academic exposure.</p>
+        <p>My immediate goal is to complete one pass through the subject during October and build a stronger understanding through revision later. I don't need to know every detail perfectly on the first attempt, but I do need to make sure I have covered the subject and identified the concepts that require more work.</p>
+        <p>The deadline remains 30 October. The buffer days remain reserved for emergencies, and the backlog needs attention.</p>
+        <p><strong>Day 35 complete. Three COA lectures and two DBMS lectures completed, one COA lecture postponed, and a new challenge identified in Compiler Design. The plan is still to finish the syllabus by the end of October, one step at a time.</strong></p>
+      </div>
+      <nav class="article-nav" aria-label="Article navigation">
+        <a class="prev" href="/gate-cse-2027/journey/gate-cse-2027-day-34-four-cache-lectures-and-a-saturday-at-home/"><span class="label">&larr; Previous</span>Day 34: Four Cache Lectures and a Saturday at Home</a>
+        <a class="next" href="/gate-cse-2027/journey/gate-cse-2027-day-36-kanya-pujan-work-from-home-and-four-dbms-lectures/"><span class="label">Next &rarr;</span>Day 36: Kanya Pujan, Work From Home, and Four DBMS Lectures</a>
+      </nav>
+      <section class="comments-section" id="comments">
+        <div class="comments-header">
+          <h2>What do you think?</h2>
+          <p>Studying for GATE is less lonely when we're all figuring it out together.</p>
+        </div>
+
+        <div id="comment-auth">
+          <button id="google-signin" class="google-signin-btn">
+            Continue with Google
+          </button>
+        </div>
+
+        <div id="comment-form" hidden>
+          <div class="comment-user">
+            <img id="user-photo" src="" alt="" class="comment-avatar">
+            <div>
+              <strong id="user-name"></strong>
+              <button id="signout-btn" type="button">Sign out</button>
+            </div>
+          </div>
+
+          <textarea
+            id="comment-text"
+            placeholder="Share your thoughts..."
+            maxlength="1000"
+            rows="4"
+          ></textarea>
+
+          <button id="post-comment" class="post-comment-btn">
+            Post comment
+          </button>
+        </div>
+
+        <div id="comments-list">
+          <p class="comments-loading">Loading comments...</p>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </div>
+      <span class="copyright">&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span>
+    </div>
+    <p class="footer-note">Everything on this site reflects one student's personal preparation experience. For official GATE CSE information &mdash; eligibility, syllabus, exam dates &mdash; always check the official GATE authority website.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.querySelector('nav.primary');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if (!expanded) {
+      nav.style.cssText = 'display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;';
+    } else {
+      nav.style.cssText = '';
+    }
+  });
+</script>
+<script type="module">
+
+  import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+  import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    where,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+
+  // ==========================================
+  // FIREBASE CONFIG
+  // ==========================================
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+  authDomain: "megamocks.firebaseapp.com",
+  projectId: "megamocks",
+  storageBucket: "megamocks.firebasestorage.app",
+  messagingSenderId: "45418531344",
+  appId: "1:45418531344:web:cd6747bb79ca7840661895"
+};
+
+
+  // ==========================================
+  // INITIALIZE FIREBASE
+  // ==========================================
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const googleProvider = new GoogleAuthProvider();
+
+
+  // ==========================================
+  // CURRENT ARTICLE
+  // ==========================================
+
+  const articleSlug = "gate-cse-2027-journey-day-35";
+
+
+  // ==========================================
+  // ELEMENTS
+  // ==========================================
+
+  const signInButton = document.getElementById("google-signin");
+  const authSection = document.getElementById("comment-auth");
+  const commentForm = document.getElementById("comment-form");
+
+  const userPhoto = document.getElementById("user-photo");
+  const userName = document.getElementById("user-name");
+
+  const signOutButton = document.getElementById("signout-btn");
+
+  const commentText = document.getElementById("comment-text");
+  const postButton = document.getElementById("post-comment");
+
+  const commentsList = document.getElementById("comments-list");
+
+
+  // ==========================================
+  // GOOGLE SIGN IN
+  // ==========================================
+
+  signInButton.addEventListener("click", async () => {
+
+    try {
+
+      await signInWithPopup(auth, googleProvider);
+
+    } catch (error) {
+
+      console.error("Google sign-in error:", error);
+
+      alert("Unable to sign in with Google. Please try again.");
+
+    }
+
+  });
+
+
+  // ==========================================
+  // SIGN OUT
+  // ==========================================
+
+  signOutButton.addEventListener("click", async () => {
+
+    try {
+
+      await signOut(auth);
+
+    } catch (error) {
+
+      console.error("Sign-out error:", error);
+
+    }
+
+  });
+
+
+  // ==========================================
+  // AUTH STATE
+  // ==========================================
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      // User is logged in
+
+      authSection.hidden = true;
+      commentForm.hidden = false;
+
+      userName.textContent = user.displayName || "Google User";
+
+      userPhoto.src =
+        user.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      userPhoto.alt = user.displayName || "User";
+
+    } else {
+
+      // User is logged out
+
+      authSection.hidden = false;
+      commentForm.hidden = true;
+
+    }
+
+  });
+
+
+  // ==========================================
+  // POST COMMENT
+  // ==========================================
+
+  postButton.addEventListener("click", async () => {
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Please sign in first.");
+      return;
+    }
+
+    const text = commentText.value.trim();
+
+    if (!text) {
+      alert("Please write a comment first.");
+      return;
+    }
+
+    if (text.length > 1000) {
+      alert("Comment is too long.");
+      return;
+    }
+
+
+    postButton.disabled = true;
+    postButton.textContent = "Posting...";
+
+
+    try {
+
+      await addDoc(collection(db, "comments"), {
+
+        articleSlug: articleSlug,
+
+        uid: user.uid,
+
+        name: user.displayName || "Google User",
+
+        photoURL: user.photoURL || "",
+
+        text: text,
+
+        createdAt: serverTimestamp()
+
+      });
+
+      commentText.value = "";
+
+    } catch (error) {
+
+      console.error("Comment error:", error);
+
+      alert("Could not post your comment. Please try again.");
+
+    }
+
+
+    postButton.disabled = false;
+    postButton.textContent = "Post comment";
+
+  });
+
+
+  // ==========================================
+  // LOAD COMMENTS
+  // ==========================================
+
+  const commentsQuery = query(
+    collection(db, "comments"),
+    where("articleSlug", "==", articleSlug),
+    orderBy("createdAt", "desc")
+  );
+
+  function formatTimeAgo(date) {
+    const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    if (seconds < 60) return "just now";
+
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+    const weeks = Math.floor(days / 7);
+    if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+  }
+
+
+  onSnapshot(commentsQuery, (snapshot) => {
+
+    commentsList.innerHTML = "";
+
+
+    if (snapshot.empty) {
+
+      commentsList.innerHTML =
+        '<p class="no-comments">No comments yet. Be the first.</p>';
+
+      return;
+
+    }
+
+
+    snapshot.forEach((doc) => {
+
+      const comment = doc.data();
+
+
+      const articleComment = document.createElement("article");
+
+      articleComment.className = "comment";
+
+
+      const avatar = document.createElement("img");
+
+      avatar.className = "comment-avatar";
+
+      avatar.src =
+        comment.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      avatar.alt = comment.name || "User";
+
+
+      const content = document.createElement("div");
+
+      content.className = "comment-content";
+
+
+      const name = document.createElement("strong");
+name.textContent = comment.name || "Google User";
+
+      const timestamp = document.createElement("time");
+      timestamp.className = "comment-time";
+
+      if (comment.createdAt) {
+        timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+      }
+
+      const text = document.createElement("p");
+      text.textContent = comment.text;
+
+      content.appendChild(name);
+      content.appendChild(timestamp);
+      content.appendChild(text);
+
+      articleComment.appendChild(avatar);
+      articleComment.appendChild(content);
+
+
+      commentsList.appendChild(articleComment);
+
+    });
+
+  }, (error) => {
+
+    console.error("Could not load comments:", error);
+
+    commentsList.innerHTML =
+      '<p class="comments-error">Comments could not be loaded.</p>';
+
+  });
+
+</script>
+</body>
+</html>

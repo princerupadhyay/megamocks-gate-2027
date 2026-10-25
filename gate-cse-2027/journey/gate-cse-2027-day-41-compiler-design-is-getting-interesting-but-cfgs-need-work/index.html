@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 41 of My GATE CSE 2027 Journey: Compiler Design Is Getting Interesting, but CFGs Need Work | MegaMocks</title>
+<meta name="description" content="I completed four more Compiler Design lectures on Day 41 of my GATE CSE 2027 preparation. Lexical Analysis felt easy, but CFGs in Syntax Analysis reminded me that my TOC concepts need revision. With October 31 approaching, I am focusing on completing the syllabus before moving into more intensive question practice.">
+<link rel="canonical" href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-41-compiler-design-is-getting-interesting-but-cfgs-need-work/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 41 of My GATE CSE 2027 Journey: Compiler Design Is Getting Interesting, but CFGs Need Work | MegaMocks">
+<meta property="og:description" content="I completed four more Compiler Design lectures on Day 41 of my GATE CSE 2027 preparation. Lexical Analysis felt easy, but CFGs in Syntax Analysis reminded me that my TOC concepts need revision. With October 31 approaching, I am focusing on completing the syllabus before moving into more intensive question practice.">
+<meta property="og:url" content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-41-compiler-design-is-getting-interesting-but-cfgs-need-work/">
+<meta property="og:site_name" content="MegaMocks">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day 41 of My GATE CSE 2027 Journey: Compiler Design Is Getting Interesting, but CFGs Need Work | MegaMocks">
+<meta name="twitter:description" content="I completed four more Compiler Design lectures on Day 41 of my GATE CSE 2027 preparation. Lexical Analysis felt easy, but CFGs in Syntax Analysis reminded me that my TOC concepts need revision. With October 31 approaching, I am focusing on completing the syllabus before moving into more intensive question practice.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Day 41: Compiler Design Is Getting Interesting, but CFGs Need Work", "description": "Four more Compiler Design lectures, easy Lexical Analysis, CFGs flagged as a revision need from TOC, and a plate of very tasty samosas.", "author": {"@type": "Person", "name": "Prince", "url": "https://megamocks.com/about/"}, "datePublished": "2026-10-24", "dateModified": "2026-10-24", "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-41-compiler-design-is-getting-interesting-but-cfgs-need-work/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://megamocks.com/"}, {"@type": "ListItem", "position": 2, "name": "GATE CSE 2027", "item": "https://megamocks.com/gate-cse-2027/"}, {"@type": "ListItem", "position": 3, "name": "Journey", "item": "https://megamocks.com/gate-cse-2027/journey/"}, {"@type": "ListItem", "position": 4, "name": "Day 41", "item": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-41-compiler-design-is-getting-interesting-but-cfgs-need-work/"}]}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="/" class="wordmark"><span style="background-color: #9A4B34; border-radius: 5px; color: white; padding: 0px 5px">M</span>egaMocks<span class="dot">.</span></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/gate-cse-2027/journey/">Journey</a>
+      <a href="/gate-cse-2027/subjects/">Subjects</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="day-badge">Day 41 of prep</span>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+<div class="wrap crumb-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/">GATE CSE 2027</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/journey/">Journey</a><span class="crumb-sep">/</span><span aria-current="page">Day 41</span></nav></div>
+<section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <span class="kicker mono">Day 41 of my GATE CSE 2027 prep &middot; 24 October 2026</span>
+      <h1>Compiler Design Is Getting Interesting, but CFGs Need Work</h1>
+      <span class="mood-chip">Feeling: more confident, mildly worried about CFGs, well fed</span>
+      <div class="tag-row">
+          <a class="tag" href="/gate-cse-2027/subjects/compiler-design/">Compiler Design</a>
+          <a class="tag" href="/gate-cse-2027/subjects/theory-of-computation/">Theory of Computation</a>
+        </div>
+    </div>
+  </section>
+  <section class="article-body">
+    <div class="wrap">
+      <div class="prose">
+        <p>Saturday was another productive day in my GATE CSE 2027 preparation. After completing the first two lectures of Compiler Design on Friday, I felt a little more confident about the subject. That confidence encouraged me to continue with the next four lectures.</p>
+        <p>I completed Lectures 3, 4, 5, and 6, covering parts of Lexical Analysis and Syntax Analysis.</p>
+        <p>The beginning went smoothly, but things became a little more challenging when Context-Free Grammars entered the picture.</p>
+        <p>With October 31 approaching, I know I cannot spend unlimited time on every difficult concept right now. I need to complete the remaining syllabus first and then return to weaker areas during revision.</p>
+
+        <h2>Continuing with Compiler Design</h2>
+        <p>When I started Compiler Design on Friday, I was approaching it cautiously because I had never studied the subject during my bachelor's degree or MCA.</p>
+        <p>After completing the first two lectures, my confidence increased a little. So, on Saturday, I continued with the subject instead of spending too much time worrying about how difficult it might become.</p>
+        <p>I completed four more lectures.</p>
+        <p>Lexical Analysis felt pretty easy to me. I was comfortable following the concepts, and things were going well.</p>
+        <p>Then came Syntax Analysis.</p>
+
+        <h2>CFGs: A Reminder That TOC Needs Revision</h2>
+        <p>Syntax Analysis introduced concepts related to Context-Free Grammars (CFGs), which I had already encountered while studying Theory of Computation.</p>
+        <p>The problem is that I studied TOC only once, and that too earlier this month.</p>
+        <p>I haven't had enough time to revisit everything thoroughly, so my understanding of CFGs is not as strong as I would like it to be. When these concepts appeared again in Compiler Design, they felt a bit difficult.</p>
+        <p>This was an interesting experience because I had just completed TOC and moved on to another subject that uses some of the same concepts. Yet, studying something once doesn't automatically mean I will remember it comfortably when I encounter it again.</p>
+        <p>I need more revision and practice to make those concepts stick.</p>
+        <p>Still, I don't want to get stuck here for too long. My immediate goal is to complete the first pass of the syllabus. I can revisit CFGs and strengthen my understanding during the revision phase.</p>
+        <p>For now, I am moving forward while keeping this weakness in mind.</p>
+
+        <h2>The October 31 Deadline Is Getting Closer</h2>
+        <p>This is the part that keeps reminding me to stay focused.</p>
+        <p>October 31 is approaching, and I still have Compiler Design to complete along with the remaining chapters of DBMS, particularly the Query Language backlog.</p>
+        <p>I want to finish the syllabus by the end of October so that November can mark the beginning of a more intensive revision and question-practice phase.</p>
+        <p>My current approach is to complete the first pass of the remaining chapters rather than trying to master every topic immediately.</p>
+        <p>After that, I will have to work on improving my understanding through revision, GATE PYQs, and other practice questions.</p>
+        <p>I know that simply watching lectures isn't enough to prepare effectively for GATE CSE. Eventually, I need to be able to solve questions independently, remember the relevant concepts, and apply them correctly.</p>
+        <p>But with the deadline so close, I believe completing the syllabus first is the more practical approach.</p>
+        <p>There is still work to do, and I cannot pretend that everything is already on schedule. However, I want to keep moving forward instead of allowing one difficult topic to slow down the entire preparation.</p>
+
+        <h2>A Small Personal Moment: Samosas at Home</h2>
+        <p>Not everything about Saturday was related to studying.</p>
+        <p>My father was home because it was an office holiday for him. He brought some samosas, and I had a couple of them.</p>
+        <p>The samosas were small, but they were really, really tasty.</p>
+        <p>That's pretty much the entire story. No dramatic event, no special occasion, just my father being home and bringing something good to eat.</p>
+        <p>I wanted to include this little moment because my preparation journey isn't happening in isolation. There are ordinary days, family moments, food, work, and everything else that makes up life outside the syllabus.</p>
+        <p>Sometimes, a couple of tasty samosas are a perfectly good part of the day.</p>
+
+        <h2>Tomorrow: LL(1) Parsing</h2>
+        <p>For Sunday, my plan is to continue with Compiler Design Lectures 7, 8, 9, and 10, which should take me into LL(1) parsing.</p>
+        <p>I also need to prepare the notes for Lectures 5 and 6 because I haven't completed them yet.</p>
+        <p>That means Sunday's workload includes both new lectures and pending notes. I need to manage these carefully so that note-making doesn't become a backlog of its own.</p>
+        <p>Alongside Compiler Design, the remaining DBMS Query Language lectures are still on my list. With October 31 as the target, I need to keep both subjects moving.</p>
+
+        <h2>Day 41: Progress Without Pretending Everything Is Easy</h2>
+        <p>Saturday gave me another small confidence boost in Compiler Design. I completed four lectures, found Lexical Analysis relatively easy, and identified CFGs as an area that needs more attention.</p>
+        <p>The important thing is that I now have a clearer idea of where I stand. I don't need to understand every topic perfectly on the first attempt, but I do need to recognise the concepts that will require additional revision.</p>
+        <p>My immediate priority remains completing the remaining syllabus by October 31. After that, I want to focus more seriously on GATE PYQs, revision, and question-solving.</p>
+        <p>For now, Compiler Design is moving forward, although there is still plenty to cover.</p>
+        <p>And Saturday ended with a couple of very tasty samosas, which certainly didn't hurt.</p>
+        <p><strong>Day 41 complete. Four more Compiler Design lectures done, CFGs identified as a weak area, and the October deadline still in sight.</strong></p>
+      </div>
+      <nav class="article-nav" aria-label="Article navigation">
+        <a class="prev" href="/gate-cse-2027/journey/gate-cse-2027-day-40-compiler-design-begins/"><span class="label">&larr; Previous</span>Day 40: Compiler Design Begins!</a>
+        <span></span>
+      </nav>
+      <section class="comments-section" id="comments">
+        <div class="comments-header">
+          <h2>What do you think?</h2>
+          <p>Studying for GATE is less lonely when we're all figuring it out together.</p>
+        </div>
+
+        <div id="comment-auth">
+          <button id="google-signin" class="google-signin-btn">
+            Continue with Google
+          </button>
+        </div>
+
+        <div id="comment-form" hidden>
+          <div class="comment-user">
+            <img id="user-photo" src="" alt="" class="comment-avatar">
+            <div>
+              <strong id="user-name"></strong>
+              <button id="signout-btn" type="button">Sign out</button>
+            </div>
+          </div>
+
+          <textarea
+            id="comment-text"
+            placeholder="Share your thoughts..."
+            maxlength="1000"
+            rows="4"
+          ></textarea>
+
+          <button id="post-comment" class="post-comment-btn">
+            Post comment
+          </button>
+        </div>
+
+        <div id="comments-list">
+          <p class="comments-loading">Loading comments...</p>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </div>
+      <span class="copyright">&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span>
+    </div>
+    <p class="footer-note">Everything on this site reflects one student's personal preparation experience. For official GATE CSE information &mdash; eligibility, syllabus, exam dates &mdash; always check the official GATE authority website.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.querySelector('nav.primary');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if (!expanded) {
+      nav.style.cssText = 'display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;';
+    } else {
+      nav.style.cssText = '';
+    }
+  });
+</script>
+<script type="module">
+
+  import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+  import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    where,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+
+  // ==========================================
+  // FIREBASE CONFIG
+  // ==========================================
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+  authDomain: "megamocks.firebaseapp.com",
+  projectId: "megamocks",
+  storageBucket: "megamocks.firebasestorage.app",
+  messagingSenderId: "45418531344",
+  appId: "1:45418531344:web:cd6747bb79ca7840661895"
+};
+
+
+  // ==========================================
+  // INITIALIZE FIREBASE
+  // ==========================================
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const googleProvider = new GoogleAuthProvider();
+
+
+  // ==========================================
+  // CURRENT ARTICLE
+  // ==========================================
+
+  const articleSlug = "gate-cse-2027-journey-day-41";
+
+
+  // ==========================================
+  // ELEMENTS
+  // ==========================================
+
+  const signInButton = document.getElementById("google-signin");
+  const authSection = document.getElementById("comment-auth");
+  const commentForm = document.getElementById("comment-form");
+
+  const userPhoto = document.getElementById("user-photo");
+  const userName = document.getElementById("user-name");
+
+  const signOutButton = document.getElementById("signout-btn");
+
+  const commentText = document.getElementById("comment-text");
+  const postButton = document.getElementById("post-comment");
+
+  const commentsList = document.getElementById("comments-list");
+
+
+  // ==========================================
+  // GOOGLE SIGN IN
+  // ==========================================
+
+  signInButton.addEventListener("click", async () => {
+
+    try {
+
+      await signInWithPopup(auth, googleProvider);
+
+    } catch (error) {
+
+      console.error("Google sign-in error:", error);
+
+      alert("Unable to sign in with Google. Please try again.");
+
+    }
+
+  });
+
+
+  // ==========================================
+  // SIGN OUT
+  // ==========================================
+
+  signOutButton.addEventListener("click", async () => {
+
+    try {
+
+      await signOut(auth);
+
+    } catch (error) {
+
+      console.error("Sign-out error:", error);
+
+    }
+
+  });
+
+
+  // ==========================================
+  // AUTH STATE
+  // ==========================================
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      // User is logged in
+
+      authSection.hidden = true;
+      commentForm.hidden = false;
+
+      userName.textContent = user.displayName || "Google User";
+
+      userPhoto.src =
+        user.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      userPhoto.alt = user.displayName || "User";
+
+    } else {
+
+      // User is logged out
+
+      authSection.hidden = false;
+      commentForm.hidden = true;
+
+    }
+
+  });
+
+
+  // ==========================================
+  // POST COMMENT
+  // ==========================================
+
+  postButton.addEventListener("click", async () => {
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Please sign in first.");
+      return;
+    }
+
+    const text = commentText.value.trim();
+
+    if (!text) {
+      alert("Please write a comment first.");
+      return;
+    }
+
+    if (text.length > 1000) {
+      alert("Comment is too long.");
+      return;
+    }
+
+
+    postButton.disabled = true;
+    postButton.textContent = "Posting...";
+
+
+    try {
+
+      await addDoc(collection(db, "comments"), {
+
+        articleSlug: articleSlug,
+
+        uid: user.uid,
+
+        name: user.displayName || "Google User",
+
+        photoURL: user.photoURL || "",
+
+        text: text,
+
+        createdAt: serverTimestamp()
+
+      });
+
+      commentText.value = "";
+
+    } catch (error) {
+
+      console.error("Comment error:", error);
+
+      alert("Could not post your comment. Please try again.");
+
+    }
+
+
+    postButton.disabled = false;
+    postButton.textContent = "Post comment";
+
+  });
+
+
+  // ==========================================
+  // LOAD COMMENTS
+  // ==========================================
+
+  const commentsQuery = query(
+    collection(db, "comments"),
+    where("articleSlug", "==", articleSlug),
+    orderBy("createdAt", "desc")
+  );
+
+  function formatTimeAgo(date) {
+    const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    if (seconds < 60) return "just now";
+
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+    const weeks = Math.floor(days / 7);
+    if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+  }
+
+
+  onSnapshot(commentsQuery, (snapshot) => {
+
+    commentsList.innerHTML = "";
+
+
+    if (snapshot.empty) {
+
+      commentsList.innerHTML =
+        '<p class="no-comments">No comments yet. Be the first.</p>';
+
+      return;
+
+    }
+
+
+    snapshot.forEach((doc) => {
+
+      const comment = doc.data();
+
+
+      const articleComment = document.createElement("article");
+
+      articleComment.className = "comment";
+
+
+      const avatar = document.createElement("img");
+
+      avatar.className = "comment-avatar";
+
+      avatar.src =
+        comment.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      avatar.alt = comment.name || "User";
+
+
+      const content = document.createElement("div");
+
+      content.className = "comment-content";
+
+
+      const name = document.createElement("strong");
+name.textContent = comment.name || "Google User";
+
+      const timestamp = document.createElement("time");
+      timestamp.className = "comment-time";
+
+      if (comment.createdAt) {
+        timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+      }
+
+      const text = document.createElement("p");
+      text.textContent = comment.text;
+
+      content.appendChild(name);
+      content.appendChild(timestamp);
+      content.appendChild(text);
+
+      articleComment.appendChild(avatar);
+      articleComment.appendChild(content);
+
+
+      commentsList.appendChild(articleComment);
+
+    });
+
+  }, (error) => {
+
+    console.error("Could not load comments:", error);
+
+    commentsList.innerHTML =
+      '<p class="comments-error">Comments could not be loaded.</p>';
+
+  });
+
+</script>
+</body>
+</html>
