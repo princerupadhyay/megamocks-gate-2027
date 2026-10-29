@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 42 of My GATE CSE 2027 Journey: Compiler Design Is Testing My Patience | MegaMocks</title>
+<meta name="description" content="I completed three lengthy Compiler Design lectures on Day 42 of my GATE CSE 2027 preparation, but SLR, CLR, and the relationships between parsing methods left me struggling to keep up. With October 31 approaching, I'm questioning how to balance deep conceptual learning with syllabus completion, revision, and GATE PYQ practice.">
+<link rel="canonical" href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-42-compiler-design-is-testing-my-patience/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 42 of My GATE CSE 2027 Journey: Compiler Design Is Testing My Patience | MegaMocks">
+<meta property="og:description" content="I completed three lengthy Compiler Design lectures on Day 42 of my GATE CSE 2027 preparation, but SLR, CLR, and the relationships between parsing methods left me struggling to keep up. With October 31 approaching, I'm questioning how to balance deep conceptual learning with syllabus completion, revision, and GATE PYQ practice.">
+<meta property="og:url" content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-42-compiler-design-is-testing-my-patience/">
+<meta property="og:site_name" content="MegaMocks">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day 42 of My GATE CSE 2027 Journey: Compiler Design Is Testing My Patience | MegaMocks">
+<meta name="twitter:description" content="I completed three lengthy Compiler Design lectures on Day 42 of my GATE CSE 2027 preparation, but SLR, CLR, and the relationships between parsing methods left me struggling to keep up. With October 31 approaching, I'm questioning how to balance deep conceptual learning with syllabus completion, revision, and GATE PYQ practice.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Day 42: Compiler Design Is Testing My Patience", "description": "Three 2.5-hour Compiler Design lectures on LL(1), LR(0), SLR and CLR, pending notes cleared, and a frank look at balancing lecture depth against revision time.", "author": {"@type": "Person", "name": "Prince", "url": "https://megamocks.com/about/"}, "datePublished": "2026-10-25", "dateModified": "2026-10-25", "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-42-compiler-design-is-testing-my-patience/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://megamocks.com/"}, {"@type": "ListItem", "position": 2, "name": "GATE CSE 2027", "item": "https://megamocks.com/gate-cse-2027/"}, {"@type": "ListItem", "position": 3, "name": "Journey", "item": "https://megamocks.com/gate-cse-2027/journey/"}, {"@type": "ListItem", "position": 4, "name": "Day 42", "item": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-42-compiler-design-is-testing-my-patience/"}]}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="/" class="wordmark"><span style="background-color: #9A4B34; border-radius: 5px; color: white; padding: 0px 5px">M</span>egaMocks<span class="dot">.</span></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/gate-cse-2027/journey/">Journey</a>
+      <a href="/gate-cse-2027/subjects/">Subjects</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="day-badge">Day 42 of prep</span>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+<div class="wrap crumb-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/">GATE CSE 2027</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/journey/">Journey</a><span class="crumb-sep">/</span><span aria-current="page">Day 42</span></nav></div>
+<section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <span class="kicker mono">Day 42 of my GATE CSE 2027 prep &middot; 25 October 2026</span>
+      <h1>Compiler Design Is Testing My Patience</h1>
+      <span class="mood-chip">Feeling: exhausted, frustrated, still pushing through</span>
+      <div class="tag-row">
+          <a class="tag" href="/gate-cse-2027/subjects/compiler-design/">Compiler Design</a>
+        </div>
+    </div>
+  </section>
+  <section class="article-body">
+    <div class="wrap">
+      <div class="prose">
+        <p>Sunday was productive, but honestly, it was also exhausting.</p>
+        <p>I continued with Compiler Design and completed Lectures 7, 8, and 9. I also finished the pending notes for Lectures 5 and 6, so at least that backlog is cleared.</p>
+        <p>However, the parsing concepts are becoming increasingly difficult to follow, and the lecture lengths are starting to test my patience.</p>
+        <p>With October 31 approaching, I am beginning to think more seriously about how I should balance completing the syllabus with actually understanding what I study.</p>
+
+        <h2>Three Long Lectures of Compiler Design</h2>
+        <p>My Sunday started with some pending work from the previous day. I completed the notes for Compiler Design Lectures 5 and 6 before continuing with the next lectures.</p>
+        <p>After that, I completed Lectures 7, 8, and 9.</p>
+        <p>Each lecture was approximately 2.5 hours long.</p>
+        <p>Yes, each one.</p>
+        <p>By the time I had worked through all three, it felt like I had spent the day attending a Compiler Design marathon. The difference was that I couldn't even claim a medal at the finish line.</p>
+        <p>Still, I completed the entire lecture content. I didn't skip the difficult explanations just because they were taking time.</p>
+        <p>That was the productive part of the day. The difficult part was understanding everything that came toward the end.</p>
+
+        <h2>LL(1), LR(0), SLR and CLR: Things Started Getting Complicated</h2>
+        <p>The lectures covered parsing methods such as LL(1), LR(0), SLR(1), and CLR(1).</p>
+        <p>Initially, things were manageable. LL(1) and LR(0) felt understandable, and I could follow the explanations.</p>
+        <p>The difficulty increased when we moved toward SLR and CLR.</p>
+        <p>We weren't constructing parsing tables in these lectures. Instead, we were drawing DFAs, identifying states, and checking whether conflicts existed. Then the professor started explaining the relationships between the different parsing methods and grammar classes.</p>
+        <p>That was the point where things started going over my head.</p>
+        <p>It wasn't just about understanding one algorithm anymore. I was trying to keep track of several methods, their differences, the DFA states, possible conflicts, and the relationships between them.</p>
+        <p>I could follow parts of the explanation, but putting everything together was becoming difficult.</p>
+        <p>I don't know whether the main problem was that I was trying to absorb too many concepts at once or that the professor was going into more depth than I could comfortably process during my first pass.</p>
+        <p>Probably, I need to revisit these concepts more systematically instead of expecting everything to click immediately.</p>
+
+        <h2>Difficult Questions Versus Efficient GATE Preparation</h2>
+        <p>One thing worth mentioning is that the professor himself explained why he was teaching difficult questions.</p>
+        <p>His reasoning was that if we practised challenging problems during preparation, the easier questions in the actual GATE exam would feel much more straightforward. Ideally, we would be able to solve them quickly and confidently.</p>
+        <p>I understand the logic behind that approach.</p>
+        <p>Preparing for difficult questions can improve conceptual understanding and make familiar problems easier to handle. There is value in being challenged rather than studying only the simplest examples.</p>
+        <p>However, I also have a concern.</p>
+        <p><strong>Just because we need to complete the syllabus doesn't mean every lecture needs to become this long.</strong></p>
+        <p>I'm watching recorded lectures, so I have the flexibility to pause, rewind, and take breaks. I genuinely feel bad for students who attended these lectures live. Sitting through such long explanations in real time, especially when the concepts become increasingly complicated, must be exhausting.</p>
+        <p>I am already feeling the pressure while watching the recordings at my own pace.</p>
+        <p>With GATE CSE 2027 preparation, there are several subjects to complete, revise, and practise. Time spent understanding one topic in extreme depth is time that cannot be spent on another topic.</p>
+        <p>I am not saying that difficult questions are useless or that the professor's approach is necessarily wrong. I can understand why he wants students to develop strong conceptual foundations.</p>
+        <p>My concern is about finding the right balance between depth and efficiency.</p>
+        <p>At some point, preparation has to move beyond watching lectures. We need time to revise what we have learned, solve GATE PYQs, identify mistakes, and understand how questions are actually asked in the exam.</p>
+        <p>If I spend all my available time watching lectures, I might finish the syllabus without having enough time to practise using that knowledge.</p>
+        <p>That is something I need to avoid.</p>
+
+        <h2>What I Need to Do Next</h2>
+        <p>For now, I don't want to abandon the lectures or assume that the difficult concepts are unnecessary.</p>
+        <p>Instead, I need to complete the first pass of the syllabus while keeping track of the areas that require more attention.</p>
+        <p>The relationships between SLR and CLR are one such area. I haven't understood them comfortably yet, so I will need to revisit them during revision.</p>
+        <p>I also need to remember that learning a topic for the first time and revising it later are different experiences. When I return to these concepts after covering more of the subject, some of the connections may become easier to understand.</p>
+        <p>At least, that is what I am hoping for.</p>
+        <p>The immediate priority is still to complete the remaining syllabus by October 31. After that, I want to spend more time on revision and question practice rather than continuing to consume lectures without enough opportunities to test myself.</p>
+
+        <h2>Monday's Plan: One Lecture Is Enough</h2>
+        <p>For Monday, I have decided to complete only Compiler Design Lecture 10.</p>
+        <p>The lecture is approximately 3.5 hours long, and the professor has said that it will explore more relationships between SLR and CLR.</p>
+        <p>I don't want to overload the day by adding more lectures on top of that.</p>
+        <p>Three lectures of 2.5 hours each were already hectic on Sunday. Adding another lengthy lecture without allowing myself enough time to process the material would probably make things worse.</p>
+        <p>So, Monday's plan is straightforward: complete Lecture 10, pay attention to the relationships being discussed, and avoid expecting myself to master every difficult detail immediately.</p>
+        <p>I still have the October 31 deadline to consider, so I cannot spend unlimited time on one topic. But I also don't want to rush through everything so quickly that I remember almost nothing later.</p>
+        <p>Finding that balance is becoming an important part of my GATE preparation strategy.</p>
+
+        <h2>Day 42: Progress, Frustration, and a Reality Check</h2>
+        <p>Sunday was not a bad study day. I completed three lengthy Compiler Design lectures and cleared the pending notes for two earlier lectures.</p>
+        <p>At the same time, I realised that the parsing concepts are becoming difficult to process when several methods and their relationships are introduced together.</p>
+        <p>I also found myself questioning whether such long lectures are the most efficient way to prepare when the syllabus deadline is close.</p>
+        <p>I don't have a perfect solution yet. For now, I will continue with the planned lectures, keep track of my weak areas, and make revision and question practice a priority once the first pass is complete.</p>
+        <p>Tomorrow, it is just one lecture: 3.5 hours of SLR, CLR, and whatever additional relationships await me.</p>
+        <p><strong>Day 42 complete. Three lectures finished, pending notes cleared, and my patience with lengthy lectures officially under review.</strong></p>
+      </div>
+      <nav class="article-nav" aria-label="Article navigation">
+        <a class="prev" href="/gate-cse-2027/journey/gate-cse-2027-day-41-compiler-design-is-getting-interesting-but-cfgs-need-work/"><span class="label">&larr; Previous</span>Day 41: Compiler Design Is Getting Interesting, but CFGs Need Work</a>
+        <span></span>
+      </nav>
+      <section class="comments-section" id="comments">
+        <div class="comments-header">
+          <h2>What do you think?</h2>
+          <p>Studying for GATE is less lonely when we're all figuring it out together.</p>
+        </div>
+
+        <div id="comment-auth">
+          <button id="google-signin" class="google-signin-btn">
+            Continue with Google
+          </button>
+        </div>
+
+        <div id="comment-form" hidden>
+          <div class="comment-user">
+            <img id="user-photo" src="" alt="" class="comment-avatar">
+            <div>
+              <strong id="user-name"></strong>
+              <button id="signout-btn" type="button">Sign out</button>
+            </div>
+          </div>
+
+          <textarea
+            id="comment-text"
+            placeholder="Share your thoughts..."
+            maxlength="1000"
+            rows="4"
+          ></textarea>
+
+          <button id="post-comment" class="post-comment-btn">
+            Post comment
+          </button>
+        </div>
+
+        <div id="comments-list">
+          <p class="comments-loading">Loading comments...</p>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </div>
+      <span class="copyright">&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span>
+    </div>
+    <p class="footer-note">Everything on this site reflects one student's personal preparation experience. For official GATE CSE information &mdash; eligibility, syllabus, exam dates &mdash; always check the official GATE authority website.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.querySelector('nav.primary');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if (!expanded) {
+      nav.style.cssText = 'display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;';
+    } else {
+      nav.style.cssText = '';
+    }
+  });
+</script>
+<script type="module">
+
+  import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+  import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    where,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+
+  // ==========================================
+  // FIREBASE CONFIG
+  // ==========================================
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+  authDomain: "megamocks.firebaseapp.com",
+  projectId: "megamocks",
+  storageBucket: "megamocks.firebasestorage.app",
+  messagingSenderId: "45418531344",
+  appId: "1:45418531344:web:cd6747bb79ca7840661895"
+};
+
+
+  // ==========================================
+  // INITIALIZE FIREBASE
+  // ==========================================
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const googleProvider = new GoogleAuthProvider();
+
+
+  // ==========================================
+  // CURRENT ARTICLE
+  // ==========================================
+
+  const articleSlug = "gate-cse-2027-journey-day-42";
+
+
+  // ==========================================
+  // ELEMENTS
+  // ==========================================
+
+  const signInButton = document.getElementById("google-signin");
+  const authSection = document.getElementById("comment-auth");
+  const commentForm = document.getElementById("comment-form");
+
+  const userPhoto = document.getElementById("user-photo");
+  const userName = document.getElementById("user-name");
+
+  const signOutButton = document.getElementById("signout-btn");
+
+  const commentText = document.getElementById("comment-text");
+  const postButton = document.getElementById("post-comment");
+
+  const commentsList = document.getElementById("comments-list");
+
+
+  // ==========================================
+  // GOOGLE SIGN IN
+  // ==========================================
+
+  signInButton.addEventListener("click", async () => {
+
+    try {
+
+      await signInWithPopup(auth, googleProvider);
+
+    } catch (error) {
+
+      console.error("Google sign-in error:", error);
+
+      alert("Unable to sign in with Google. Please try again.");
+
+    }
+
+  });
+
+
+  // ==========================================
+  // SIGN OUT
+  // ==========================================
+
+  signOutButton.addEventListener("click", async () => {
+
+    try {
+
+      await signOut(auth);
+
+    } catch (error) {
+
+      console.error("Sign-out error:", error);
+
+    }
+
+  });
+
+
+  // ==========================================
+  // AUTH STATE
+  // ==========================================
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      // User is logged in
+
+      authSection.hidden = true;
+      commentForm.hidden = false;
+
+      userName.textContent = user.displayName || "Google User";
+
+      userPhoto.src =
+        user.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      userPhoto.alt = user.displayName || "User";
+
+    } else {
+
+      // User is logged out
+
+      authSection.hidden = false;
+      commentForm.hidden = true;
+
+    }
+
+  });
+
+
+  // ==========================================
+  // POST COMMENT
+  // ==========================================
+
+  postButton.addEventListener("click", async () => {
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Please sign in first.");
+      return;
+    }
+
+    const text = commentText.value.trim();
+
+    if (!text) {
+      alert("Please write a comment first.");
+      return;
+    }
+
+    if (text.length > 1000) {
+      alert("Comment is too long.");
+      return;
+    }
+
+
+    postButton.disabled = true;
+    postButton.textContent = "Posting...";
+
+
+    try {
+
+      await addDoc(collection(db, "comments"), {
+
+        articleSlug: articleSlug,
+
+        uid: user.uid,
+
+        name: user.displayName || "Google User",
+
+        photoURL: user.photoURL || "",
+
+        text: text,
+
+        createdAt: serverTimestamp()
+
+      });
+
+      commentText.value = "";
+
+    } catch (error) {
+
+      console.error("Comment error:", error);
+
+      alert("Could not post your comment. Please try again.");
+
+    }
+
+
+    postButton.disabled = false;
+    postButton.textContent = "Post comment";
+
+  });
+
+
+  // ==========================================
+  // LOAD COMMENTS
+  // ==========================================
+
+  const commentsQuery = query(
+    collection(db, "comments"),
+    where("articleSlug", "==", articleSlug),
+    orderBy("createdAt", "desc")
+  );
+
+  function formatTimeAgo(date) {
+    const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    if (seconds < 60) return "just now";
+
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+    const weeks = Math.floor(days / 7);
+    if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+  }
+
+
+  onSnapshot(commentsQuery, (snapshot) => {
+
+    commentsList.innerHTML = "";
+
+
+    if (snapshot.empty) {
+
+      commentsList.innerHTML =
+        '<p class="no-comments">No comments yet. Be the first.</p>';
+
+      return;
+
+    }
+
+
+    snapshot.forEach((doc) => {
+
+      const comment = doc.data();
+
+
+      const articleComment = document.createElement("article");
+
+      articleComment.className = "comment";
+
+
+      const avatar = document.createElement("img");
+
+      avatar.className = "comment-avatar";
+
+      avatar.src =
+        comment.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      avatar.alt = comment.name || "User";
+
+
+      const content = document.createElement("div");
+
+      content.className = "comment-content";
+
+
+      const name = document.createElement("strong");
+name.textContent = comment.name || "Google User";
+
+      const timestamp = document.createElement("time");
+      timestamp.className = "comment-time";
+
+      if (comment.createdAt) {
+        timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+      }
+
+      const text = document.createElement("p");
+      text.textContent = comment.text;
+
+      content.appendChild(name);
+      content.appendChild(timestamp);
+      content.appendChild(text);
+
+      articleComment.appendChild(avatar);
+      articleComment.appendChild(content);
+
+
+      commentsList.appendChild(articleComment);
+
+    });
+
+  }, (error) => {
+
+    console.error("Could not load comments:", error);
+
+    commentsList.innerHTML =
+      '<p class="comments-error">Comments could not be loaded.</p>';
+
+  });
+
+</script>
+</body>
+</html>
