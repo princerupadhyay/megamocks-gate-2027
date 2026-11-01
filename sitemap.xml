@@ -3,27 +3,62 @@
 
   <url>
     <loc>https://megamocks.com/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://megamocks.com/gate-cse-2027/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://megamocks.com/gate-cse-2027/journey/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://megamocks.com/gate-cse-2027/subjects/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://megamocks.com/gate-cse-2027/pyqs/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-49-the-november-revision-plan-is-ready/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-48-closing-october-with-four-subjects-completed/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-47-three-dbms-lectures-during-my-commute/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-46-compiler-design-is-finally-completed/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-45-a-surprisingly-easy-start-to-the-final-compiler-design-chapter/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
@@ -307,6 +342,7 @@
   </url>
   <url>
     <loc>https://megamocks.com/gate-cse-2027/subjects/dbms/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -322,16 +358,19 @@
   </url>
   <url>
     <loc>https://megamocks.com/gate-cse-2027/subjects/discrete-mathematics/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://megamocks.com/gate-cse-2027/subjects/theory-of-computation/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://megamocks.com/gate-cse-2027/subjects/compiler-design/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -347,6 +386,7 @@
   </url>
   <url>
     <loc>https://megamocks.com/about/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
