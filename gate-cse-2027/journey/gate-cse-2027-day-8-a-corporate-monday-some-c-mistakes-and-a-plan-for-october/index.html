@@ -136,9 +136,13 @@
         </div>
 
         <div id="comment-auth">
-          <button id="google-signin" class="google-signin-btn">
-            Continue with Google
-          </button>
+          <p>Sign in with Google or continue as a guest to comment.</p>
+          <label for="guest-name">Display name</label>
+          <input id="guest-name" type="text" maxlength="40" autocomplete="nickname" placeholder="Name shown with your comment" required>
+          <div class="comment-auth-actions">
+            <button id="guest-signin" class="google-signin-btn" type="button">Continue as Guest</button>
+            <button id="google-signin" class="google-signin-btn" type="button">Continue with Google</button>
+          </div>
         </div>
 
         <div id="comment-form" hidden>
@@ -189,8 +193,10 @@
         </div>
         <div class="journey-archive">
           <details class="journey-month">
-            <summary><span>November 2026</span><span class="journey-month-count">1 entry</span></summary>
+            <summary><span>November 2026</span><span class="journey-month-count">3 entries</span></summary>
             <div class="journey-month-list">
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-51-a-data-structures-test-without-revision/"><span class="title">Day 51: A Data Structures Test Without Revision</span><span class="when">3 Nov 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-50-november-begins-with-a-reality-check/"><span class="title">Day 50: November Begins with a Reality Check</span><span class="when">2 Nov 2026</span></a>
               <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-49-the-november-revision-plan-is-ready/"><span class="title">Day 49: The November Revision Plan Is Ready</span><span class="when">1 Nov 2026</span></a>
             </div>
           </details>
@@ -294,6 +300,7 @@
     getAuth,
     GoogleAuthProvider,
     signInWithPopup,
+    signInAnonymously,
     signOut,
     onAuthStateChanged
   } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
@@ -334,6 +341,9 @@
   const db = getFirestore(app);
 
   const googleProvider = new GoogleAuthProvider();
+  const guestNameInput = document.getElementById("guest-name");
+  const guestSignInButton = document.getElementById("guest-signin");
+  guestNameInput.value = localStorage.getItem("guestDisplayName") || "";
 
 
   // ==========================================
@@ -383,6 +393,35 @@
   });
 
 
+  guestSignInButton.addEventListener("click", async () => {
+    const displayName = guestNameInput.value.trim();
+
+    if (!displayName) {
+      alert("Please enter a display name.");
+      guestNameInput.focus();
+      return;
+    }
+
+    if (displayName.length > 40) {
+      alert("Display name must be 40 characters or fewer.");
+      guestNameInput.focus();
+      return;
+    }
+
+    guestSignInButton.disabled = true;
+    guestSignInButton.textContent = "Connecting...";
+
+    try {
+      localStorage.setItem("guestDisplayName", displayName);
+      await signInAnonymously(auth);
+    } catch (error) {
+      console.error("Guest sign-in error:", error);
+      alert("Unable to continue as a guest. Please try again.");
+    } finally {
+      guestSignInButton.disabled = false;
+      guestSignInButton.textContent = "Continue as Guest";
+    }
+  });
   // ==========================================
   // SIGN OUT
   // ==========================================
@@ -415,7 +454,7 @@
       authSection.hidden = true;
       commentForm.hidden = false;
 
-      userName.textContent = user.displayName || "Google User";
+      userName.textContent = user.displayName || (user.isAnonymous ? localStorage.getItem("guestDisplayName") || "Guest" : "Google User");
 
       userPhoto.src =
         user.photoURL ||
@@ -473,7 +512,7 @@
 
         uid: user.uid,
 
-        name: user.displayName || "Google User",
+        name: user.displayName || (user.isAnonymous ? localStorage.getItem("guestDisplayName") || "Guest" : "Google User"),
 
         photoURL: user.photoURL || "",
 

@@ -322,6 +322,38 @@ footer.site { padding: 40px 0 60px; border-top: 1px solid var(--rule) }
   background: var(--paper-raised);
 }
 
+#comment-auth > p {
+  margin: 0 0 12px;
+  color: var(--ink-faint);
+  font-size: 0.9rem;
+}
+
+#guest-name {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  padding: 10px 12px;
+}
+
+#guest-name:focus {
+  outline: none;
+  border-color: var(--amber);
+  box-shadow: 0 0 0 2px var(--amber-soft);
+}
+
+.comment-auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
 .google-signin-btn {
   appearance: none;
   border: 1px solid var(--rule-strong);
