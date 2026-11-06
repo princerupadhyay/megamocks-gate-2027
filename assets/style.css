@@ -193,6 +193,94 @@ section.block:last-of-type { border-bottom: none; }
 .article-body .prose p { margin: 0 0 16px; color: var(--ink); }
 .article-body .prose ul { padding-left: 20px; margin: 0 0 16px; color: var(--ink-soft); }
 .article-body .prose li { margin-bottom: 6px; }
+.test-result-card {
+  margin: 20px 0 26px;
+  overflow: hidden;
+  border: 1px solid var(--rule-strong);
+  border-radius: 10px;
+  background: var(--paper-raised);
+  box-shadow: 0 8px 22px rgba(33, 42, 62, 0.08);
+}
+.test-result-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--rule);
+  background: linear-gradient(115deg, var(--amber-soft), var(--paper-raised) 78%);
+}
+.test-result-card-header > div { min-width: 0; }
+.test-result-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--brick);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.test-result-card-header strong { font-size: 0.94rem; font-weight: 500; }
+.test-result-score {
+  flex: none;
+  color: var(--sage);
+  font-family: var(--font-mono);
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.test-result-table-wrap { overflow-x: auto; }
+.test-result-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.test-result-table th,
+.test-result-table td { padding: 9px 20px; text-align: left; }
+.test-result-table thead { background: rgba(218, 221, 212, 0.28); }
+.test-result-table th {
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.test-result-table tbody tr + tr { border-top: 1px solid rgba(218, 221, 212, 0.7); }
+.test-result-table tbody td:first-child { color: var(--ink-soft); }
+.test-result-table tbody td:last-child { color: var(--ink); font-weight: 500; }
+.test-result-table .score-row td:last-child,
+.test-result-table .percentage-row td:last-child { color: var(--sage); }
+.test-result-table .percentage-row { background: rgba(79, 107, 82, 0.06); }
+.test-result-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--rule);
+  background: rgba(218, 221, 212, 0.18);
+  color: var(--brick);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.test-result-pdf span { font-size: 1.15rem; }
+.test-result-pdf:hover { background: var(--amber-soft); color: var(--ink); }
+@media (max-width: 480px) {
+  .test-result-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+  }
+  .test-result-card-header strong { display: block; line-height: 1.45; }
+  .test-result-score {
+    padding: 3px 10px;
+    border: 1px solid rgba(79, 107, 82, 0.25);
+    border-radius: 20px;
+    background: rgba(79, 107, 82, 0.06);
+    font-size: 1.1rem;
+  }
+  .test-result-table { font-size: 0.88rem; }
+  .test-result-table th,
+  .test-result-table td { padding: 9px 14px; }
+  .test-result-pdf { padding: 13px 16px; }
+}
 .article-nav { display: flex; justify-content: space-between; gap: 16px; padding: 28px 0; border-top: 1px solid var(--rule); margin-top: 10px; flex-wrap: wrap; }
 .article-nav a { text-decoration: none; font-size: 0.92rem; color: var(--ink-soft); max-width: 46%; }
 .article-nav a:hover { color: var(--brick); }
@@ -310,6 +398,33 @@ footer.site { padding: 40px 0 60px; border-top: 1px solid var(--rule) }
   color: var(--ink-soft);
   font-size: 0.92rem;
   max-width: 52ch;
+}
+
+.sample-reaction {
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius-md);
+  background: var(--paper-raised);
+}
+
+.sample-reaction-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.sample-reaction p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.sample-reaction strong {
+  color: var(--ink);
+  font-weight: 500;
 }
 
 
