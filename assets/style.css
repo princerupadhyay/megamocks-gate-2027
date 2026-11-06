@@ -258,7 +258,7 @@ footer.site { padding: 40px 0 60px; border-top: 1px solid var(--rule) }
   .status-cell:nth-child(3), .status-cell:nth-child(4) { border-top: 1px solid var(--rule); }
   .subject-grid { grid-template-columns: repeat(2, 1fr); }
   .topic-list { grid-template-columns: 1fr; }
-  .journey-home-layout, .journey-content-layout { grid-template-columns: 1fr; gap: 36px; }
+  .journey-home-layout, .journey-content-layout { grid-template-columns: 1fr; gap: 0px; padding-bottom: 30px; }
 }
 @media (max-width: 700px) {
   nav.primary { display: none; }
