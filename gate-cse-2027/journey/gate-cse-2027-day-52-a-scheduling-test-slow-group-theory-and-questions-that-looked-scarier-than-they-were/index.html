@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 52 of My GATE CSE 2027 Journey: A Scheduling Test, Slow Group Theory, and Questions That Looked Scarier Than They Were | MegaMocks</title>
+<meta name="description" content="Day 52 included a TOC warm-up, completion of Group Theory Lecture 1, and an Operating Systems topic-wise test that scored 16/25. The score mattered less than the analysis behind it, revealing slow recall, premature skipping, unrevised concepts, and the difference between genuinely understanding an answer and simply getting it correct.">
+<link rel="canonical" href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-52-a-scheduling-test-slow-group-theory-and-questions-that-looked-scarier-than-they-were/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 52 of My GATE CSE 2027 Journey: A Scheduling Test, Slow Group Theory, and Questions That Looked Scarier Than They Were | MegaMocks">
+<meta property="og:description" content="Day 52 included a TOC warm-up, completion of Group Theory Lecture 1, and an Operating Systems topic-wise test that scored 16/25. The score mattered less than the analysis behind it, revealing slow recall, premature skipping, unrevised concepts, and the difference between genuinely understanding an answer and simply getting it correct.">
+<meta property="og:url" content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-52-a-scheduling-test-slow-group-theory-and-questions-that-looked-scarier-than-they-were/">
+<meta property="og:site_name" content="MegaMocks">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day 52 of My GATE CSE 2027 Journey: A Scheduling Test, Slow Group Theory, and Questions That Looked Scarier Than They Were | MegaMocks">
+<meta name="twitter:description" content="Day 52 included a TOC warm-up, completion of Group Theory Lecture 1, and an Operating Systems topic-wise test that scored 16/25. The score mattered less than the analysis behind it, revealing slow recall, premature skipping, unrevised concepts, and the difference between genuinely understanding an answer and simply getting it correct.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Day 52: A Scheduling Test, Slow Group Theory, and Questions That Looked Scarier Than They Were", "description": "A TOC warm-up, slow but steady Group Theory, and a 64% Operating Systems scheduling test full of lessons about speed and skipped questions.", "author": {"@type": "Person", "name": "Prince", "url": "https://megamocks.com/about/"}, "datePublished": "2026-11-04", "dateModified": "2026-11-04", "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-52-a-scheduling-test-slow-group-theory-and-questions-that-looked-scarier-than-they-were/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://megamocks.com/"}, {"@type": "ListItem", "position": 2, "name": "GATE CSE 2027", "item": "https://megamocks.com/gate-cse-2027/"}, {"@type": "ListItem", "position": 3, "name": "Journey", "item": "https://megamocks.com/gate-cse-2027/journey/"}, {"@type": "ListItem", "position": 4, "name": "Day 52", "item": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-52-a-scheduling-test-slow-group-theory-and-questions-that-looked-scarier-than-they-were/"}]}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="/" class="wordmark"><span style="background-color: #9A4B34; border-radius: 5px; color: white; padding: 0px 5px">M</span>egaMocks<span class="dot">.</span></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/gate-cse-2027/journey/">Journey</a>
+      <a href="/gate-cse-2027/subjects/">Subjects</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="day-badge">Day 52 of prep</span>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+<div class="wrap crumb-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/">GATE CSE 2027</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/journey/">Journey</a><span class="crumb-sep">/</span><span aria-current="page">Day 52</span></nav></div>
+<div class="wrap journey-content-layout journey-post-layout">
+<div class="journey-main-content">
+<section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <span class="kicker mono">Day 52 of my GATE CSE 2027 prep &middot; 4 November 2026</span>
+      <h1>A Scheduling Test, Slow Group Theory, and Questions That Looked Scarier Than They Were</h1>
+      <span class="mood-chip">Feeling: patient, analytical, honest about being slow</span>
+      <div class="tag-row">
+          <a class="tag" href="/gate-cse-2027/subjects/operating-systems/">Operating Systems</a>
+          <a class="tag" href="/gate-cse-2027/subjects/discrete-mathematics/">Discrete Mathematics</a>
+          <a class="tag" href="/gate-cse-2027/subjects/theory-of-computation/">Theory of Computation</a>
+        </div>
+    </div>
+  </section>
+  <section class="article-body">
+    <div class="wrap">
+      <div class="prose">
+        <p>Day 52 of my GATE CSE 2027 preparation was mostly about two things: continuing my work in <strong>Discrete Mathematics</strong> and taking another topic-wise test.</p>
+        <p>The interesting part of the day was not really the final test score.</p>
+        <p>It was understanding <em>why</em> I got certain questions right, why I got others wrong, and why I skipped a few questions that turned out to be much easier than they initially looked.</p>
+        <p>Apparently, my brain has developed a habit of occasionally seeing mathematical notation and immediately assuming the question is planning something personal against me.</p>
+
+        <h2>A Small TOC Warm-up</h2>
+        <p>I had postponed my TOC warm-up from the previous plan, so I completed it today.</p>
+        <p>The warm-up was scheduled for around <strong>30 minutes</strong>, and I spent approximately that amount of time revising <strong>about half of the first chapter of Theory of Computation</strong>.</p>
+        <p>I haven't solved questions from that portion yet. Instead, I plan to use the <strong>Sunday flexi slot</strong> from my November schedule to practise the relevant questions.</p>
+        <p>I think this separation works well for now.</p>
+        <p>The warm-up refreshed the concepts without turning into another full-length revision session. With the number of subjects I am currently juggling, every 30-minute task has the potential to suddenly become a three-hour adventure if I'm not careful.</p>
+
+        <h2>Completing Group Theory Lecture 1</h2>
+        <p>I also continued with <strong>Group Theory</strong> in Discrete Mathematics.</p>
+        <p>Group Theory has been moving slowly for me, and I'm deliberately not trying to force myself through it just to match the original schedule.</p>
+        <p>For GATE CSE preparation, <strong>Discrete Mathematics is important</strong>, and I would rather spend additional time understanding it properly than rush through a lecture and later discover that I remember absolutely nothing except the lecture thumbnail.</p>
+        <p>By the end of the day, I had:</p>
+        <ul>
+          <li>Completed <strong>Group Theory Lecture 1</strong></li>
+          <li>Started <strong>Group Theory Lecture 2</strong></li>
+        </ul>
+        <p>The notes for Group Theory are still pending.</p>
+        <p>That is something I need to watch carefully. I already learned during my Compiler Design preparation that completing lectures while allowing notes to accumulate can create an unnecessary backlog later.</p>
+        <p>The November schedule is also moving slower than expected because I have <strong>topic-wise tests scheduled regularly</strong>, and I need revision time for those tests as well.</p>
+        <p>So for now, my approach is simple: adjust the schedule when necessary rather than rushing through Discrete Mathematics and Engineering Mathematics.</p>
+        <p>Even if these subjects take longer, I want the understanding to stay.</p>
+
+        <hr>
+
+        <h2>Operating Systems Topic Wise Test 1</h2>
+        <p>The major test of the day was:</p>
+        <p><strong>GO Classes CS Test Series | Operating Systems | Topic Wise Test 1</strong></p>
+        <p>My final result was:</p>
+        <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr><th>Metric</th><th>Result</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Score</td><td><strong>16/25</strong></td></tr>
+            <tr><td>Percentage</td><td><strong>64%</strong></td></tr>
+            <tr><td>Correct</td><td><strong>9</strong></td></tr>
+            <tr><td>Wrong</td><td><strong>3</strong></td></tr>
+            <tr><td>Skipped</td><td><strong>3</strong></td></tr>
+            <tr><td>Attempted</td><td><strong>12/15</strong></td></tr>
+            <tr><td>Time Taken</td><td><strong>45 minutes</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p><a class="test-result-pdf" href="/assets/OS-I.pdf" target="_blank" rel="noopener">View my Operating Systems Topic Wise Test 1 result <span aria-hidden="true">&rarr;</span></a></p>
+        <p>The test mainly involved <strong>CPU scheduling</strong>, although some questions also touched related Operating Systems concepts such as threads, process states, locks, and system calls.</p>
+        <p>I had revised scheduling concepts, but I hadn't revised all of those surrounding topics.</p>
+        <p>That distinction became important during the test.</p>
+
+        <h2>My Scheduling Concepts Were Better Than My Speed</h2>
+        <p>One thing became clear after analysing the entire test.</p>
+        <p>I still understand most of the CPU scheduling concepts.</p>
+        <p>I correctly solved several questions involving:</p>
+        <ul>
+          <li>SRTF</li>
+          <li>FCFS</li>
+          <li>Priority Scheduling</li>
+          <li>Scheduling order</li>
+          <li>Waiting time</li>
+          <li>Turnaround time</li>
+        </ul>
+        <p>The problem was that I was <strong>slow</strong>.</p>
+        <p>I had not practised scheduling problems for some time, so even when I knew the concept, I spent much longer than expected creating timelines and verifying calculations.</p>
+        <p>For example, I solved some SRTF questions independently, but they still took several minutes.</p>
+        <p>I don't think getting a correct answer slowly is automatically a bad thing.</p>
+        <p>The progression should ideally be:</p>
+        <blockquote>
+          <p><strong>Correct but slow &rarr; Correct and faster</strong></p>
+        </blockquote>
+        <p>Trying to jump directly to speed without accuracy is just an efficient way of producing wrong answers.</p>
+        <p>So the goal now is to restore speed through practice.</p>
+
+        <h2>A Reminder About Blocked and Ready States</h2>
+        <p>One of my mistakes involved process/thread state transitions.</p>
+        <p>I incorrectly connected an event such as I/O completion directly to the Running state.</p>
+        <p>The important sequence is:</p>
+        <p><strong>Blocked &rarr; Ready &rarr; Running</strong></p>
+        <p>When I/O completes or a thread is woken up, it becomes <strong>Ready</strong>.</p>
+        <p>It still needs to be selected by the scheduler before it can become <strong>Running</strong>.</p>
+        <p>This mistake was partly because I had revised scheduling but hadn't recently revised related concepts involving process states, locks, and semaphores.</p>
+        <p>The test was a useful reminder that subjects do not always stay neatly inside the chapter boundaries we create in our notes.</p>
+        <p>How inconvenient of Operating Systems to connect its own concepts.</p>
+
+        <h2>What Threads Actually Share</h2>
+        <p>Another question asked what is shared between threads of the same process.</p>
+        <p>I was confident about the <strong>Code/Text segment</strong> because I remembered the standard process memory layout:</p>
+        <ul>
+          <li>Stack</li>
+          <li>Heap</li>
+          <li>Data segment</li>
+          <li>Text/Code segment</li>
+        </ul>
+        <p>But I wasn't confident about the Heap.</p>
+        <p>The correct idea is that threads in the same process share the process address space, including:</p>
+        <ul>
+          <li><strong>Heap</strong></li>
+          <li><strong>Code/Text</strong></li>
+        </ul>
+        <p>However, each thread has its own:</p>
+        <ul>
+          <li><strong>Stack</strong></li>
+          <li><strong>Register context</strong></li>
+        </ul>
+        <p>This wasn't a completely unknown concept. I simply hadn't connected my understanding of process memory layout with the concept of multiple threads inside the same process.</p>
+
+        <h2>My Favourite Kind of Mistake: Off-by-One</h2>
+        <p>One of the most painful mistakes came from a FIFO scheduling question.</p>
+        <p>I spent almost eight minutes solving it.</p>
+        <p>My overall approach was fine.</p>
+        <p>Then I made a silly timeline mistake.</p>
+        <p>I treated the final time at which a process was executing as its completion time.</p>
+        <p>For example, if a process executed during:</p>
+        <p><strong>1 &rarr; 2</strong><br>
+        <strong>2 &rarr; 3</strong><br>
+        <strong>3 &rarr; 4</strong></p>
+        <p>I treated the completion time as <strong>3</strong> because that was the last execution slot shown.</p>
+        <p>But the process actually completes at <strong>4</strong>, at the end of its final execution interval.</p>
+        <p>That one mistake propagated through the calculation, and I ended up getting <strong>1 instead of 5</strong>.</p>
+        <p>A nearly eight-minute calculation defeated by one tiny timeline mistake.</p>
+        <p>A beautiful example of why GATE preparation occasionally feels like arguing with a calculator that has developed emotions.</p>
+        <p>The correct takeaway is simple:</p>
+        <blockquote>
+          <p><strong>The completion time is the end of the final execution interval, not the beginning of it.</strong></p>
+        </blockquote>
+
+        <h2>The Round Robin Question I Thought Was Too Long</h2>
+        <p>One Round Robin question had service times given in seconds and a time slice of <strong>10 milliseconds</strong>.</p>
+        <p>I knew how to perform Round Robin scheduling.</p>
+        <p>But when I saw the tiny time quantum compared with the service times, I started imagining an enormous number of cycles:</p>
+        <p><code>P1 &rarr; P2 &rarr; P3 &rarr; P1 &rarr; P2 &rarr; P3...</code></p>
+        <p>and decided it would take too much time.</p>
+        <p>So I skipped it.</p>
+        <p>After analysing the question later, I realised there was a better way to think about it.</p>
+        <p>Instead of manually simulating every 10 ms time slice, the problem could be reasoned about using the approximate CPU share received by continuously active processes.</p>
+        <p>The lesson wasn't that I didn't know Round Robin.</p>
+        <p>The lesson was:</p>
+        <blockquote>
+          <p><strong>Knowing an algorithm and recognising the fastest way to analyse a particular question are two different skills.</strong></p>
+        </blockquote>
+
+        <h2>The Question I Skipped Because It Looked Mathematical</h2>
+        <p>Another question involved variables such as:</p>
+        <ul>
+          <li>Number of jobs</li>
+          <li>Burst length</li>
+          <li>Time slice</li>
+        </ul>
+        <p>It was worth two marks.</p>
+        <p>I looked at the expression, assumed it would be difficult, and skipped it.</p>
+        <p>After the test, I solved it in under two minutes.</p>
+        <p>This was probably one of the most useful moments of the entire analysis.</p>
+        <p>I had made a decision about the difficulty of the question <strong>before actually analysing the underlying idea</strong>.</p>
+        <p>This isn't the first time I've done that either.</p>
+        <p>During the previous Data Structures test, I had skipped a mutual recursion question because it looked difficult, only to later realise it was manageable.</p>
+        <p>So I think there is a pattern here.</p>
+        <p>Sometimes I need to give a scary-looking question a short but genuine attempt before deciding whether it deserves to be skipped.</p>
+        <p>The notation is not always the enemy.</p>
+        <p>Sometimes it's just wearing glasses and trying to look intelligent.</p>
+
+        <h2>A Correct Answer That I Don't Fully Trust</h2>
+        <p>One question introduced a scheduling algorithm called <strong>Least Used First (LUF)</strong>.</p>
+        <p>I had never previously practised this algorithm.</p>
+        <p>I spent more than nine minutes working through the question and somehow got the correct final answer.</p>
+        <p>However, there was a problem.</p>
+        <p>My Gantt chart was different from the official solution.</p>
+        <p>I also couldn't confidently remember whether I had consistently applied the LUF rule correctly throughout the calculation.</p>
+        <p>So although the answer was correct, I don't want to count it as a solid demonstration of understanding.</p>
+        <p>This is something I've become more conscious about during these topic-wise tests.</p>
+        <p>A correct answer can happen because of:</p>
+        <ul>
+          <li>genuine independent understanding,</li>
+          <li>remembering a previously seen question,</li>
+          <li>guessing,</li>
+          <li>external confirmation,</li>
+          <li>or pure luck.</li>
+        </ul>
+        <p>The final score doesn't tell you which one happened.</p>
+        <p>The analysis does.</p>
+
+        <h2>Another Correct Answer I Had Seen Before</h2>
+        <p>One of the fastest answers in the test took me only around 24 seconds.</p>
+        <p>But that speed wasn't because I had suddenly become a scheduling genius.</p>
+        <p>I had already solved that exact question before and remembered the answer pattern.</p>
+        <p>So I used that memory and selected the option.</p>
+        <p>Again, the answer was correct.</p>
+        <p>But I shouldn't treat that as proof that I could independently solve the same pattern from scratch in 24 seconds.</p>
+        <p>This is why I want to keep analysing my tests rather than simply recording marks.</p>
+        <p>The number is useful.</p>
+        <p>The story behind the number is much more useful.</p>
+
+        <h2>What the 64% Actually Means</h2>
+        <p>My final score was <strong>16/25, or 64%</strong>.</p>
+        <p>But after going through every question, I don't think the correct interpretation is simply:</p>
+        <blockquote>
+          <p>&ldquo;I know 64% of Operating Systems.&rdquo;</p>
+        </blockquote>
+        <p>That would be terrible analysis.</p>
+        <p>The actual picture is more specific.</p>
+
+        <h3>What was working</h3>
+        <ul>
+          <li>My CPU scheduling concepts were mostly still present.</li>
+          <li>I could solve several SRTF, FCFS, and Priority Scheduling questions independently.</li>
+          <li>Accuracy was generally reasonable when I gave myself enough time.</li>
+        </ul>
+
+        <h3>What needs improvement</h3>
+        <ul>
+          <li>I am currently <strong>slow because I am out of practice</strong>.</li>
+          <li>Some related OS concepts had not been revised.</li>
+          <li>I sometimes judge questions as difficult too early.</li>
+          <li>Timeline calculations need more careful attention.</li>
+          <li>A correct answer should not automatically be treated as proof of mastery.</li>
+        </ul>
+
+        <hr>
+
+        <h2>What Day 52 Taught Me</h2>
+        <p>The biggest lesson from today's test was very similar to what I discovered during the previous Data Structures test.</p>
+        <p><strong>Revision affects speed and confidence, not just whether I remember a concept at all.</strong></p>
+        <p>My scheduling knowledge hasn't disappeared.</p>
+        <p>But without recent practice, familiar problems take longer, timelines feel less automatic, and I spend more time checking myself.</p>
+        <p>There is also another pattern I need to fix:</p>
+        <blockquote>
+          <p><strong>Don't let the appearance of a question decide whether I can solve it.</strong></p>
+        </blockquote>
+        <p>A complicated expression may be easy once the core idea is identified.</p>
+        <p>A simple-looking question can contain a silly trap.</p>
+        <p>The only reasonable approach is to actually analyse the question.</p>
+        <p>Meanwhile, Group Theory is moving slowly, and I'm okay with that.</p>
+        <p>I don't want to rush Discrete Mathematics or Engineering Mathematics just to satisfy a schedule.</p>
+        <p>The November plan is useful, but it is still a plan.</p>
+        <p>It can be adjusted.</p>
+        <p>Understanding the subjects properly while managing daily tests is going to take time, and for now, I would rather accept that than pretend speed is progress.</p>
+
+        <hr>
+
+        <h2>Tomorrow</h2>
+        <p>The next steps are:</p>
+        <ul>
+          <li>Continue <strong>Group Theory Lecture 2</strong></li>
+          <li>Keep track of the pending <strong>Group Theory notes</strong></li>
+          <li>Continue following the November schedule while adjusting it where necessary</li>
+          <li>Build more speed through repeated practice</li>
+          <li>Avoid prematurely skipping questions just because they look complicated</li>
+          <li>Continue using test analysis to distinguish between <strong>real understanding and lucky correctness</strong></li>
+        </ul>
+        <p>Day 52 was not a spectacular high-score day.</p>
+        <p>But it was a useful one.</p>
+        <p>And honestly, discovering exactly <em>why</em> I was slow felt more valuable than pretending that <strong>64%</strong> was the entire story. 📚⏱️</p>
+      </div>
+      <nav class="article-nav" aria-label="Article navigation">
+        <a class="prev" href="/gate-cse-2027/journey/gate-cse-2027-day-51-a-data-structures-test-without-revision/"><span class="label">&larr; Previous</span>Day 51: A Data Structures Test Without Revision</a>
+        <a class="next" href="/gate-cse-2027/journey/gate-cse-2027-day-53-my-birthday-gift-was-2-67-25-in-algorithms/"><span class="label">Next &rarr;</span>Day 53: My Birthday Gift Was 2.67/25 in Algorithms</a>
+      </nav>
+      <section class="block related-posts" aria-labelledby="related-posts-heading">
+        <div class="wrap">
+          <div class="block-head"><h2 id="related-posts-heading">Related Posts</h2></div>
+          <div class="article-list">
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-51-a-data-structures-test-without-revision/"><span class="title">Day 51: A Data Structures Test Without Revision</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-53-my-birthday-gift-was-2-67-25-in-algorithms/"><span class="title">Day 53: My Birthday Gift Was 2.67/25 in Algorithms</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="comments-section" id="comments">
+        <div class="comments-header">
+          <h2>What do you think?</h2>
+          <p>Studying for GATE is less lonely when we're all figuring it out together.</p>
+        </div>
+
+        <div id="comment-auth">
+          <p>Sign in with Google or continue as a guest to comment.</p>
+          <label for="guest-name">Display name</label>
+          <input id="guest-name" type="text" maxlength="40" autocomplete="nickname" placeholder="Name shown with your comment" required>
+          <div class="comment-auth-actions">
+            <button id="guest-signin" class="google-signin-btn" type="button">Continue as Guest</button>
+            <button id="google-signin" class="google-signin-btn" type="button">Continue with Google</button>
+          </div>
+        </div>
+
+        <div id="comment-form" hidden>
+          <div class="comment-user">
+            <img id="user-photo" src="" alt="" class="comment-avatar">
+            <div>
+              <strong id="user-name"></strong>
+              <button id="signout-btn" type="button">Sign out</button>
+            </div>
+          </div>
+
+          <textarea
+            id="comment-text"
+            placeholder="Share your thoughts..."
+            maxlength="1000"
+            rows="4"
+          ></textarea>
+
+          <button id="post-comment" class="post-comment-btn">
+            Post comment
+          </button>
+        </div>
+
+        <div id="comments-list">
+          <p class="comments-loading">Loading comments...</p>
+        </div>
+      </section>
+    </div>
+  </section>
+  </div>
+  <aside class="journey-sidebar" aria-label="Journey search and archive">
+    <section class="journey-search" aria-labelledby="journey-search-h">
+      <h2 id="journey-search-h">Search MegaMocks</h2>
+      <p>Search journey entries, subjects, and other pages on the site.</p>
+      <form action="https://www.google.com/search" method="get" role="search">
+        <label for="journey-site-search">Search journeys and other pages</label>
+        <div class="journey-search-row">
+          <input id="journey-site-search" type="search" name="q" placeholder="What are you looking for?" required>
+          <button type="submit" class="btn-primary">Search</button>
+        </div>
+        <input type="hidden" name="sitesearch" value="megamocks.com">
+      </form>
+    </section>
+    <div class="journey-sidebar-archive">
+      <div class="block-head">
+        <h2 id="journey-archive-h">Journey Archive</h2>
+        <a href="/gate-cse-2027/journey/" class="see-all">Full archive &rarr;</a>
+      </div>
+      <div class="journey-archive">
+        <details class="journey-month" open>
+          <summary><span>November 2026</span><span class="journey-month-count">6 entries</span></summary>
+          <div class="journey-month-list">
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-54-from-2-67-25-to-72-in-c-programming/"><span class="title">Day 54: From 2.67/25 to 72% in C Programming</span><span class="when">6 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-53-my-birthday-gift-was-2-67-25-in-algorithms/"><span class="title">Day 53: My Birthday Gift Was 2.67/25 in Algorithms</span><span class="when">5 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-52-a-scheduling-test-slow-group-theory-and-questions-that-looked-scarier-than-they-were/"><span class="title">Day 52: A Scheduling Test, Slow Group Theory, and Questions That Looked Scarier Than They Were</span><span class="when">4 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-51-a-data-structures-test-without-revision/"><span class="title">Day 51: A Data Structures Test Without Revision</span><span class="when">3 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-50-november-begins-with-a-reality-check/"><span class="title">Day 50: November Begins with a Reality Check</span><span class="when">2 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-49-the-november-revision-plan-is-ready/"><span class="title">Day 49: The November Revision Plan Is Ready</span><span class="when">1 Nov 2026</span></a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </aside>
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </div>
+      <span class="copyright">&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span>
+    </div>
+    <p class="footer-note">Everything on this site reflects one student's personal preparation experience. For official GATE CSE information &mdash; eligibility, syllabus, exam dates &mdash; always check the official GATE authority website.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.querySelector('nav.primary');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if (!expanded) {
+      nav.style.cssText = 'display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;';
+    } else {
+      nav.style.cssText = '';
+    }
+  });
+</script>
+<script type="module">
+
+  import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+  import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signInAnonymously,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    where,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+
+  // ==========================================
+  // FIREBASE CONFIG
+  // ==========================================
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+  authDomain: "megamocks.firebaseapp.com",
+  projectId: "megamocks",
+  storageBucket: "megamocks.firebasestorage.app",
+  messagingSenderId: "45418531344",
+  appId: "1:45418531344:web:cd6747bb79ca7840661895"
+};
+
+
+  // ==========================================
+  // INITIALIZE FIREBASE
+  // ==========================================
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const googleProvider = new GoogleAuthProvider();
+  const guestNameInput = document.getElementById("guest-name");
+  const guestSignInButton = document.getElementById("guest-signin");
+  guestNameInput.value = localStorage.getItem("guestDisplayName") || "";
+
+
+  // ==========================================
+  // CURRENT ARTICLE
+  // ==========================================
+
+  const articleSlug = "gate-cse-2027-journey-day-52";
+
+
+  // ==========================================
+  // ELEMENTS
+  // ==========================================
+
+  const signInButton = document.getElementById("google-signin");
+  const authSection = document.getElementById("comment-auth");
+  const commentForm = document.getElementById("comment-form");
+
+  const userPhoto = document.getElementById("user-photo");
+  const userName = document.getElementById("user-name");
+
+  const signOutButton = document.getElementById("signout-btn");
+
+  const commentText = document.getElementById("comment-text");
+  const postButton = document.getElementById("post-comment");
+
+  const commentsList = document.getElementById("comments-list");
+
+
+  // ==========================================
+  // GOOGLE SIGN IN
+  // ==========================================
+
+  signInButton.addEventListener("click", async () => {
+
+    try {
+
+      await signInWithPopup(auth, googleProvider);
+
+    } catch (error) {
+
+      console.error("Google sign-in error:", error);
+
+      alert("Unable to sign in with Google. Please try again.");
+
+    }
+
+  });
+
+  guestSignInButton.addEventListener("click", async () => {
+    const displayName = guestNameInput.value.trim();
+
+    if (!displayName) {
+      alert("Please enter a display name.");
+      guestNameInput.focus();
+      return;
+    }
+
+    if (displayName.length > 40) {
+      alert("Display name must be 40 characters or fewer.");
+      guestNameInput.focus();
+      return;
+    }
+
+    guestSignInButton.disabled = true;
+    guestSignInButton.textContent = "Connecting...";
+
+    try {
+      localStorage.setItem("guestDisplayName", displayName);
+      await signInAnonymously(auth);
+    } catch (error) {
+      console.error("Guest sign-in error:", error);
+      alert("Unable to continue as a guest. Please try again.");
+    } finally {
+      guestSignInButton.disabled = false;
+      guestSignInButton.textContent = "Continue as Guest";
+    }
+  });
+
+
+  // ==========================================
+  // SIGN OUT
+  // ==========================================
+
+  signOutButton.addEventListener("click", async () => {
+
+    try {
+
+      await signOut(auth);
+
+    } catch (error) {
+
+      console.error("Sign-out error:", error);
+
+    }
+
+  });
+
+
+  // ==========================================
+  // AUTH STATE
+  // ==========================================
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      // User is logged in
+
+      authSection.hidden = true;
+      commentForm.hidden = false;
+
+      userName.textContent = user.displayName || (user.isAnonymous ? localStorage.getItem("guestDisplayName") || "Guest" : "Google User");
+
+      userPhoto.src =
+        user.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      userPhoto.alt = user.displayName || "User";
+
+    } else {
+
+      // User is logged out
+
+      authSection.hidden = false;
+      commentForm.hidden = true;
+
+    }
+
+  });
+
+
+  // ==========================================
+  // POST COMMENT
+  // ==========================================
+
+  postButton.addEventListener("click", async () => {
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Please sign in first.");
+      return;
+    }
+
+    const text = commentText.value.trim();
+
+    if (!text) {
+      alert("Please write a comment first.");
+      return;
+    }
+
+    if (text.length > 1000) {
+      alert("Comment is too long.");
+      return;
+    }
+
+
+    postButton.disabled = true;
+    postButton.textContent = "Posting...";
+
+
+    try {
+
+      await addDoc(collection(db, "comments"), {
+
+        articleSlug: articleSlug,
+
+        uid: user.uid,
+
+        name: user.displayName || (user.isAnonymous ? localStorage.getItem("guestDisplayName") || "Guest" : "Google User"),
+
+        photoURL: user.photoURL || "",
+
+        text: text,
+
+        createdAt: serverTimestamp()
+
+      });
+
+      commentText.value = "";
+
+    } catch (error) {
+
+      console.error("Comment error:", error);
+
+      alert("Could not post your comment. Please try again.");
+
+    }
+
+
+    postButton.disabled = false;
+    postButton.textContent = "Post comment";
+
+  });
+
+
+  // ==========================================
+  // LOAD COMMENTS
+  // ==========================================
+
+  const commentsQuery = query(
+    collection(db, "comments"),
+    where("articleSlug", "==", articleSlug),
+    orderBy("createdAt", "desc")
+  );
+
+  function formatTimeAgo(date) {
+    const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    if (seconds < 60) return "just now";
+
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+    const weeks = Math.floor(days / 7);
+    if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+  }
+
+
+  onSnapshot(commentsQuery, (snapshot) => {
+
+    commentsList.innerHTML = "";
+
+
+    if (snapshot.empty) {
+
+      commentsList.innerHTML =
+        '<p class="no-comments">No comments yet. Be the first.</p>';
+
+      return;
+
+    }
+
+
+    snapshot.forEach((doc) => {
+
+      const comment = doc.data();
+
+
+      const articleComment = document.createElement("article");
+
+      articleComment.className = "comment";
+
+
+      const avatar = document.createElement("img");
+
+      avatar.className = "comment-avatar";
+
+      avatar.src =
+        comment.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      avatar.alt = comment.name || "User";
+
+
+      const content = document.createElement("div");
+
+      content.className = "comment-content";
+
+
+      const name = document.createElement("strong");
+name.textContent = comment.name || "Google User";
+
+      const timestamp = document.createElement("time");
+      timestamp.className = "comment-time";
+
+      if (comment.createdAt) {
+        timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+      }
+
+      const text = document.createElement("p");
+      text.textContent = comment.text;
+
+      content.appendChild(name);
+      content.appendChild(timestamp);
+      content.appendChild(text);
+
+      articleComment.appendChild(avatar);
+      articleComment.appendChild(content);
+
+
+      commentsList.appendChild(articleComment);
+
+    });
+
+  }, (error) => {
+
+    console.error("Could not load comments:", error);
+
+    commentsList.innerHTML =
+      '<p class="comments-error">Comments could not be loaded.</p>';
+
+  });
+
+</script>
+</body>
+</html>

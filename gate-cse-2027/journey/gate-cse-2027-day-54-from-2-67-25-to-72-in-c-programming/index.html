@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 54 of My GATE CSE 2027 Journey: From 2.67/25 to 72% in C Programming | MegaMocks</title>
+<meta name="description" content="After receiving a brutal 2.67/25 birthday gift from my Algorithms test, I pushed myself to attempt another topic-wise test the next day. This time, C Programming gave me 18/25, but the detailed analysis showed that my lost marks were mostly due to rushing, incomplete verification, and missing small details rather than major conceptual weaknesses.">
+<link rel="canonical" href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-54-from-2-67-25-to-72-in-c-programming/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 54 of My GATE CSE 2027 Journey: From 2.67/25 to 72% in C Programming | MegaMocks">
+<meta property="og:description" content="After receiving a brutal 2.67/25 birthday gift from my Algorithms test, I pushed myself to attempt another topic-wise test the next day. This time, C Programming gave me 18/25, but the detailed analysis showed that my lost marks were mostly due to rushing, incomplete verification, and missing small details rather than major conceptual weaknesses.">
+<meta property="og:url" content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-54-from-2-67-25-to-72-in-c-programming/">
+<meta property="og:site_name" content="MegaMocks">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day 54 of My GATE CSE 2027 Journey: From 2.67/25 to 72% in C Programming | MegaMocks">
+<meta name="twitter:description" content="After receiving a brutal 2.67/25 birthday gift from my Algorithms test, I pushed myself to attempt another topic-wise test the next day. This time, C Programming gave me 18/25, but the detailed analysis showed that my lost marks were mostly due to rushing, incomplete verification, and missing small details rather than major conceptual weaknesses.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Day 54: From 2.67/25 to 72% in C Programming", "description": "Group Theory Lecture 2 done, and an 18/25 C Programming test, my first topic-wise score above 70%, with a clear breakdown of where the marks were lost.", "author": {"@type": "Person", "name": "Prince", "url": "https://megamocks.com/about/"}, "datePublished": "2026-11-06", "dateModified": "2026-11-06", "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-54-from-2-67-25-to-72-in-c-programming/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://megamocks.com/"}, {"@type": "ListItem", "position": 2, "name": "GATE CSE 2027", "item": "https://megamocks.com/gate-cse-2027/"}, {"@type": "ListItem", "position": 3, "name": "Journey", "item": "https://megamocks.com/gate-cse-2027/journey/"}, {"@type": "ListItem", "position": 4, "name": "Day 54", "item": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-54-from-2-67-25-to-72-in-c-programming/"}]}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="/" class="wordmark"><span style="background-color: #9A4B34; border-radius: 5px; color: white; padding: 0px 5px">M</span>egaMocks<span class="dot">.</span></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/gate-cse-2027/journey/">Journey</a>
+      <a href="/gate-cse-2027/subjects/">Subjects</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="day-badge">Day 54 of prep</span>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+<div class="wrap crumb-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/">GATE CSE 2027</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/journey/">Journey</a><span class="crumb-sep">/</span><span aria-current="page">Day 54</span></nav></div>
+<div class="wrap journey-content-layout journey-post-layout">
+<div class="journey-main-content">
+<section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <span class="kicker mono">Day 54 of my GATE CSE 2027 prep &middot; 6 November 2026</span>
+      <h1>From 2.67/25 to 72% in C Programming</h1>
+      <span class="mood-chip">Feeling: relieved, encouraged, more careful</span>
+      <div class="tag-row">
+          <a class="tag" href="/gate-cse-2027/subjects/programming-in-c/">Programming in C</a>
+          <a class="tag" href="/gate-cse-2027/subjects/discrete-mathematics/">Discrete Mathematics</a>
+        </div>
+    </div>
+  </section>
+  <section class="article-body">
+    <div class="wrap">
+      <div class="prose">
+        <p>Yesterday, I got <strong>2.67/25 in an Algorithms topic-wise test</strong>.</p>
+        <p>Today, I gave another test.</p>
+        <p>Considering what happened the previous day, convincing myself to sit for another topic-wise test could have been difficult. A bad test has a strange ability to make you question whether attempting another one is a good idea or whether you should simply disappear into a cave and study formulas for six months.</p>
+        <p>Fortunately, today's subject was <strong>C Programming</strong>, which is one of my stronger subjects.</p>
+        <p>And this time, things went considerably better.</p>
+        <p>I scored:</p>
+
+        <h2><strong>18/25 &mdash; 72%</strong></h2>
+        <p>My first topic-wise test score above 70%. 🎉</p>
+        <p>The result was:</p>
+        <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr><th>Metric</th><th>Result</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Score</td><td><strong>18/25</strong></td></tr>
+            <tr><td>Percentage</td><td><strong>72%</strong></td></tr>
+            <tr><td>Correct</td><td><strong>11</strong></td></tr>
+            <tr><td>Wrong</td><td><strong>2</strong></td></tr>
+            <tr><td>Skipped</td><td><strong>2</strong></td></tr>
+            <tr><td>Duration</td><td><strong>45 minutes</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p><a class="test-result-pdf" href="/assets/C-II.pdf" target="_blank" rel="noopener">View my C Programming Topic Wise Test 2 result <span aria-hidden="true">&rarr;</span></a></p>
+        <p>The difference between yesterday's Algorithms test and today's C Programming test was also a useful reminder: <strong>a score means nothing without analysing why it happened</strong>.</p>
+
+        <hr>
+
+        <h2>Completing Group Theory Lecture 2</h2>
+        <p>Before the test, I continued my Discrete Mathematics preparation and completed <strong>Group Theory Lecture 2</strong>. ✅</p>
+        <p>The lecture itself is now complete, but the <strong>notes are still pending</strong>.</p>
+        <p>I probably won't get enough time to complete those notes today, so the plan is to finish them by Saturday.</p>
+        <p>I've learned from previous experience that pending notes can quietly become a backlog if I keep moving forward without dealing with them. So Lecture 2 notes are now something I want to close as soon as possible.</p>
+
+        <hr>
+
+        <h2>C Programming Topic Wise Test 2</h2>
+        <p>After yesterday's Algorithms test, I wasn't exactly overflowing with confidence about giving another test.</p>
+        <p>But C Programming is one of the subjects where I generally feel more comfortable, so I decided to go ahead.</p>
+        <p>And thankfully, the test became a much better experience.</p>
+        <p>The most interesting part wasn't just the <strong>72% score</strong>.</p>
+        <p>It was analysing <strong>how</strong> I solved each question and, more importantly, <strong>why I lost the marks that I lost</strong>.</p>
+
+        <hr>
+
+        <h2>Some Questions Took Time for Verification, Not Because I Was Stuck</h2>
+        <p>One thing I noticed while analysing the test was that the raw time spent on a question doesn't always tell the full story.</p>
+        <p>For example, there were questions that showed more than two or four minutes of time, but I had actually understood the solution much earlier.</p>
+        <p>The remaining time was spent:</p>
+        <ul>
+          <li>verifying options,</li>
+          <li>tracing again,</li>
+          <li>checking whether I had missed something,</li>
+          <li>or making sure the answer I was about to mark was actually correct.</li>
+        </ul>
+
+        <h3>Question 7 was a good example</h3>
+        <p>The recorded time was more than two minutes.</p>
+        <p>But I had actually solved the key part in around <strong>20 seconds</strong>.</p>
+        <p>I calculated one distinguishing output and checked the options. Only one option matched it.</p>
+        <p>At that point, there was no need to trace the entire program unnecessarily.</p>
+        <p>The rest of the time was simply spent checking whether I had interpreted everything correctly.</p>
+        <p>Sometimes solving the whole question is unnecessary when one condition can eliminate every other option.</p>
+        <p>A small reminder that in an exam, <strong>smart elimination is also a solution method</strong>.</p>
+
+        <hr>
+
+        <h2>The First Mistake: Testing Only One Example</h2>
+        <p>One of my incorrect answers was a question about checking whether a function correctly identifies an odd positive integer.</p>
+        <p>The correct answer involved options <strong>A and C</strong>.</p>
+        <p>I marked:</p>
+        <p><strong>A, B and C.</strong></p>
+        <p>The reason was embarrassingly simple.</p>
+        <p>I left the question for later, and by the time I returned to it, I didn't have much time.</p>
+        <p>So I tested the function using <strong>3</strong>, an odd number.</p>
+        <p>For that particular value, option B appeared to work.</p>
+        <p>And I marked it.</p>
+        <p>The problem was that the function was supposed to work for <strong>all positive odd integers</strong>.</p>
+        <p>I never tested:</p>
+        <ul>
+          <li>5</li>
+          <li>7</li>
+          <li>9</li>
+        </ul>
+        <p>If I had tested even one more value, I would have immediately seen that option B failed.</p>
+        <p>This wasn't really a lack of understanding about odd numbers or integer division.</p>
+        <p>It was a <strong>rushed verification mistake</strong>.</p>
+        <p>One example supporting an option does not prove that the option works universally.</p>
+        <p>Apparently, 5 was waiting quietly in the background to expose my answer. 😭</p>
+
+        <hr>
+
+        <h2>The Best Question of the Test: Question 12</h2>
+        <p>Question 12 was probably my favourite question after analysing the entire test.</p>
+        <p>Ironically, I skipped it during the actual exam.</p>
+        <p>The question involved an array declared with <strong>10 elements</strong>, but only <strong>9 values</strong> were explicitly given.</p>
+        <p>I didn't know what value I was supposed to consider for the remaining element at index 9.</p>
+        <p>That missing concept stopped me from properly attempting the question.</p>
+        <p>Later, during the analysis, I learned the rule:</p>
+        <blockquote>
+          <p>If an array is declared with a fixed size and fewer initialiser values are provided, the remaining elements are automatically initialised to zero.</p>
+        </blockquote>
+        <p>So:</p>
+        <pre><code>int a[10] = {4, 10, 5, 6, 9, 3, 1, 20, 7};</code></pre>
+        <p>also has:</p>
+        <pre><code>a[9] = 0</code></pre>
+        <p>That was the only major concept I was missing.</p>
+        <p>Once I understood it, the rest of the question became much clearer.</p>
+        <p>The recursive logic involved comparisons and moving through the array using pointer arithmetic. I didn't get the correct answer immediately during analysis because of a silly tracing mistake, but after that, I was clear about the entire mechanism.</p>
+        <p>This was probably the most valuable thing I learned from today's test.</p>
+        <p>Sometimes one tiny missing language rule can prevent you from even starting a question whose remaining logic you are perfectly capable of understanding.</p>
+
+        <hr>
+
+        <h2>The Most Painful Mistake: Missing a Nested Function Call</h2>
+        <p>Question 13 was probably the most frustrating mistake of the test.</p>
+        <p>The expression contained:</p>
+        <pre><code>GOClasses(GOClasses(i))</code></pre>
+        <p>During the test, I somehow missed the fact that there was a function call <strong>inside another function call</strong>.</p>
+        <p>I effectively solved only:</p>
+        <pre><code>GOClasses(i)</code></pre>
+        <p>instead of taking that result and passing it again into:</p>
+        <pre><code>GOClasses(...)</code></pre>
+        <p>The annoying part?</p>
+        <p>I checked my answer twice.</p>
+        <p>And still missed it.</p>
+        <p>So my calculations were being checked carefully, but I was calculating the wrong thing from the beginning.</p>
+        <p>During the test analysis, once I properly read the expression and included the outer function call, I solved the question correctly.</p>
+        <p>Those were probably two marks I should have taken.</p>
+        <p>The lesson here is very simple:</p>
+
+        <h3>Before tracing a complicated expression, understand the structure first.</h3>
+        <p>For a nested call, I should mentally rewrite it as:</p>
+        <pre><code>Step 1: Solve the inner function call.
+Step 2: Pass its result into the outer function.</code></pre>
+        <p>That would have prevented the entire mistake.</p>
+
+        <hr>
+
+        <h2>Accuracy Matters More Than Looking Fast</h2>
+        <p>A few recursion questions took me longer than expected.</p>
+        <p>For example, the mutually recursive functions question required careful tracing, and I spent almost six minutes getting the answer.</p>
+        <p>Could I be faster?</p>
+        <p>Definitely.</p>
+        <p>But for now, I would rather be:</p>
+        <blockquote>
+          <p><strong>Slow and correct</strong></p>
+        </blockquote>
+        <p>than:</p>
+        <blockquote>
+          <p><strong>Fast and confidently wrong.</strong></p>
+        </blockquote>
+        <p>Speed can improve with repeated practice.</p>
+        <p>Accuracy is what gives the speed a purpose.</p>
+        <p>The same happened in several other questions. I knew the likely answer but still solved the question from scratch because I wanted to make sure my memory wasn't fooling me.</p>
+        <p>Human memory is surprisingly confident for something that can be completely wrong.</p>
+
+        <hr>
+
+        <h2>Understanding What the Question Is Actually Asking</h2>
+        <p>Another interesting question involved three functions:</p>
+        <ul>
+          <li><code>a()</code></li>
+          <li><code>b()</code></li>
+          <li><code>c()</code></li>
+        </ul>
+        <p>Each function returned <code>1</code>.</p>
+        <p>Initially, I thought:</p>
+        <blockquote>
+          <p>No matter what order the functions are evaluated in, the final numerical value will always be 3.</p>
+        </blockquote>
+        <p>That was true.</p>
+        <p>But then I noticed the actual question was asking about the possible <strong>outcomes</strong> on different compilers.</p>
+        <p>The functions were also printing their respective letters.</p>
+        <p>Because the order of evaluation was unspecified, the printed output could appear in different orders:</p>
+        <ul>
+          <li><code>abc</code></li>
+          <li><code>acb</code></li>
+          <li><code>bac</code></li>
+          <li><code>bca</code></li>
+          <li><code>cab</code></li>
+          <li><code>cba</code></li>
+        </ul>
+        <p>So the answer was:</p>
+
+        <h3><strong>3! = 6 possible outcomes</strong></h3>
+        <p>The concept itself was easy. The important part was understanding what the question meant by the word <strong>&ldquo;outcomes.&rdquo;</strong></p>
+        <p>GATE questions are often like that.</p>
+        <p>The technical concept stands there looking harmless while the wording quietly steals two minutes from your life.</p>
+
+        <hr>
+
+        <h2>What My 72% Actually Means</h2>
+        <p>The most useful thing about analysing today's test is that I can now clearly separate my mistakes.</p>
+        <p>My two incorrect answers were mainly caused by:</p>
+
+        <h3>1. Rushed verification</h3>
+        <p>I tested only one example when the condition was supposed to work generally.</p>
+
+        <h3>2. Missing a detail while reading</h3>
+        <p>I completely missed the nested function call in Question 13.</p>
+        <p>The two skipped questions also gave me useful information:</p>
+        <ul>
+          <li>One exposed some uncertainty about <code>static</code> and <code>extern</code> linkage across multiple files.</li>
+          <li>The other exposed one missing concept about partial array initialisation.</li>
+        </ul>
+        <p>The important part is that this test <strong>did not reveal a major weakness in my C Programming fundamentals</strong>.</p>
+        <p>That was a big difference compared to yesterday's Algorithms test.</p>
+        <p>Yesterday, the <strong>2.67/25</strong> score exposed a genuine conceptual gap in my understanding of Divide and Conquer.</p>
+        <p>Today's test showed something else.</p>
+        <p>My C concepts were mostly there.</p>
+        <p>The bigger danger was:</p>
+        <blockquote>
+          <p><strong>Rushing, incomplete verification, and occasionally not reading every part of an expression carefully enough.</strong></p>
+        </blockquote>
+        <p>And honestly, that's a much more manageable problem.</p>
+
+        <hr>
+
+        <h2>Computer Networks Got Postponed</h2>
+        <p>The original plan also included a short <strong>Computer Networks warm-up recall</strong>.</p>
+        <p>I didn't get to it.</p>
+        <p>So CN has been postponed to:</p>
+        <ul>
+          <li><strong>Saturday</strong>, if I get time, or</li>
+          <li><strong>Sunday</strong> as a backup.</li>
+        </ul>
+        <p>The plan was only to skim notes, recall important concepts, and update the error log if necessary. No new material was planned.</p>
+        <p>Sometimes the schedule doesn't get completed exactly as written.</p>
+        <p>Shocking news. A spreadsheet has once again discovered that humans have limited hours and energy. 😭</p>
+
+        <hr>
+
+        <h2>Today's Small Win</h2>
+        <p>My biggest win today was simply giving another test after yesterday's terrible Algorithms result.</p>
+        <p>Yesterday:</p>
+        <h3><strong>2.67/25 in Algorithms</strong></h3>
+        <p>Today:</p>
+        <h3><strong>18/25 in C Programming</strong></h3>
+        <p>That doesn't erase yesterday's problem.</p>
+        <p>The Divide and Conquer gap still needs to be fixed.</p>
+        <p>But it does remind me not to let one terrible test convince me that my entire preparation is terrible.</p>
+        <p>Different subjects can reveal completely different things.</p>
+        <p>One test can expose a conceptual gap.</p>
+        <p>Another can expose careless mistakes.</p>
+        <p>The score alone doesn't tell the whole story.</p>
+        <p>The analysis does.</p>
+
+        <hr>
+
+        <h2>Tomorrow</h2>
+        <p>The immediate plan is:</p>
+        <ul>
+          <li>Complete <strong>Group Theory Lecture 2 notes</strong>.</li>
+          <li>Try to complete the postponed <strong>Computer Networks warm-up recall</strong>.</li>
+          <li>If Saturday gets too busy, move the CN recall to Sunday.</li>
+          <li>Continue the November revision and testing schedule without letting one subject's bad result define everything else.</li>
+        </ul>
+        <p>Day 54 was a much better day than Day 53.</p>
+        <p>Not because everything was perfect.</p>
+        <p>I still lost marks that I shouldn't have lost.</p>
+        <p>I still skipped two questions.</p>
+        <p>And I still have pending notes.</p>
+        <p>But after the birthday gift of <strong>2.67/25 in Algorithms</strong>, scoring <strong>18/25 and crossing 70% for the first time in my topic-wise tests</strong> felt like a useful reset.</p>
+        <p>One bad test exposed a weakness.</p>
+        <p>The next test reminded me that weaknesses are not the entire story. 📚📈</p>
+      </div>
+      <nav class="article-nav" aria-label="Article navigation">
+        <a class="prev" href="/gate-cse-2027/journey/gate-cse-2027-day-53-my-birthday-gift-was-2-67-25-in-algorithms/"><span class="label">&larr; Previous</span>Day 53: My Birthday Gift Was 2.67/25 in Algorithms</a>
+        <span></span>
+      </nav>
+      <section class="block related-posts" aria-labelledby="related-posts-heading">
+        <div class="wrap">
+          <div class="block-head"><h2 id="related-posts-heading">Related Posts</h2></div>
+          <div class="article-list">
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-53-my-birthday-gift-was-2-67-25-in-algorithms/"><span class="title">Day 53: My Birthday Gift Was 2.67/25 in Algorithms</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-50-november-begins-with-a-reality-check/"><span class="title">Day 50: November Begins with a Reality Check</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="comments-section" id="comments">
+        <div class="comments-header">
+          <h2>What do you think?</h2>
+          <p>Studying for GATE is less lonely when we're all figuring it out together.</p>
+        </div>
+
+        <div id="comment-auth">
+          <p>Sign in with Google or continue as a guest to comment.</p>
+          <label for="guest-name">Display name</label>
+          <input id="guest-name" type="text" maxlength="40" autocomplete="nickname" placeholder="Name shown with your comment" required>
+          <div class="comment-auth-actions">
+            <button id="guest-signin" class="google-signin-btn" type="button">Continue as Guest</button>
+            <button id="google-signin" class="google-signin-btn" type="button">Continue with Google</button>
+          </div>
+        </div>
+
+        <div id="comment-form" hidden>
+          <div class="comment-user">
+            <img id="user-photo" src="" alt="" class="comment-avatar">
+            <div>
+              <strong id="user-name"></strong>
+              <button id="signout-btn" type="button">Sign out</button>
+            </div>
+          </div>
+
+          <textarea
+            id="comment-text"
+            placeholder="Share your thoughts..."
+            maxlength="1000"
+            rows="4"
+          ></textarea>
+
+          <button id="post-comment" class="post-comment-btn">
+            Post comment
+          </button>
+        </div>
+
+        <div id="comments-list">
+          <p class="comments-loading">Loading comments...</p>
+        </div>
+      </section>
+    </div>
+  </section>
+  </div>
+  <aside class="journey-sidebar" aria-label="Journey search and archive">
+    <section class="journey-search" aria-labelledby="journey-search-h">
+      <h2 id="journey-search-h">Search MegaMocks</h2>
+      <p>Search journey entries, subjects, and other pages on the site.</p>
+      <form action="https://www.google.com/search" method="get" role="search">
+        <label for="journey-site-search">Search journeys and other pages</label>
+        <div class="journey-search-row">
+          <input id="journey-site-search" type="search" name="q" placeholder="What are you looking for?" required>
+          <button type="submit" class="btn-primary">Search</button>
+        </div>
+        <input type="hidden" name="sitesearch" value="megamocks.com">
+      </form>
+    </section>
+    <div class="journey-sidebar-archive">
+      <div class="block-head">
+        <h2 id="journey-archive-h">Journey Archive</h2>
+        <a href="/gate-cse-2027/journey/" class="see-all">Full archive &rarr;</a>
+      </div>
+      <div class="journey-archive">
+        <details class="journey-month" open>
+          <summary><span>November 2026</span><span class="journey-month-count">6 entries</span></summary>
+          <div class="journey-month-list">
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-54-from-2-67-25-to-72-in-c-programming/"><span class="title">Day 54: From 2.67/25 to 72% in C Programming</span><span class="when">6 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-53-my-birthday-gift-was-2-67-25-in-algorithms/"><span class="title">Day 53: My Birthday Gift Was 2.67/25 in Algorithms</span><span class="when">5 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-52-a-scheduling-test-slow-group-theory-and-questions-that-looked-scarier-than-they-were/"><span class="title">Day 52: A Scheduling Test, Slow Group Theory, and Questions That Looked Scarier Than They Were</span><span class="when">4 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-51-a-data-structures-test-without-revision/"><span class="title">Day 51: A Data Structures Test Without Revision</span><span class="when">3 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-50-november-begins-with-a-reality-check/"><span class="title">Day 50: November Begins with a Reality Check</span><span class="when">2 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-49-the-november-revision-plan-is-ready/"><span class="title">Day 49: The November Revision Plan Is Ready</span><span class="when">1 Nov 2026</span></a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </aside>
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </div>
+      <span class="copyright">&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span>
+    </div>
+    <p class="footer-note">Everything on this site reflects one student's personal preparation experience. For official GATE CSE information &mdash; eligibility, syllabus, exam dates &mdash; always check the official GATE authority website.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.querySelector('nav.primary');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if (!expanded) {
+      nav.style.cssText = 'display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;';
+    } else {
+      nav.style.cssText = '';
+    }
+  });
+</script>
+<script type="module">
+
+  import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+  import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signInAnonymously,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    where,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+
+  // ==========================================
+  // FIREBASE CONFIG
+  // ==========================================
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+  authDomain: "megamocks.firebaseapp.com",
+  projectId: "megamocks",
+  storageBucket: "megamocks.firebasestorage.app",
+  messagingSenderId: "45418531344",
+  appId: "1:45418531344:web:cd6747bb79ca7840661895"
+};
+
+
+  // ==========================================
+  // INITIALIZE FIREBASE
+  // ==========================================
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const googleProvider = new GoogleAuthProvider();
+  const guestNameInput = document.getElementById("guest-name");
+  const guestSignInButton = document.getElementById("guest-signin");
+  guestNameInput.value = localStorage.getItem("guestDisplayName") || "";
+
+
+  // ==========================================
+  // CURRENT ARTICLE
+  // ==========================================
+
+  const articleSlug = "gate-cse-2027-journey-day-54";
+
+
+  // ==========================================
+  // ELEMENTS
+  // ==========================================
+
+  const signInButton = document.getElementById("google-signin");
+  const authSection = document.getElementById("comment-auth");
+  const commentForm = document.getElementById("comment-form");
+
+  const userPhoto = document.getElementById("user-photo");
+  const userName = document.getElementById("user-name");
+
+  const signOutButton = document.getElementById("signout-btn");
+
+  const commentText = document.getElementById("comment-text");
+  const postButton = document.getElementById("post-comment");
+
+  const commentsList = document.getElementById("comments-list");
+
+
+  // ==========================================
+  // GOOGLE SIGN IN
+  // ==========================================
+
+  signInButton.addEventListener("click", async () => {
+
+    try {
+
+      await signInWithPopup(auth, googleProvider);
+
+    } catch (error) {
+
+      console.error("Google sign-in error:", error);
+
+      alert("Unable to sign in with Google. Please try again.");
+
+    }
+
+  });
+
+  guestSignInButton.addEventListener("click", async () => {
+    const displayName = guestNameInput.value.trim();
+
+    if (!displayName) {
+      alert("Please enter a display name.");
+      guestNameInput.focus();
+      return;
+    }
+
+    if (displayName.length > 40) {
+      alert("Display name must be 40 characters or fewer.");
+      guestNameInput.focus();
+      return;
+    }
+
+    guestSignInButton.disabled = true;
+    guestSignInButton.textContent = "Connecting...";
+
+    try {
+      localStorage.setItem("guestDisplayName", displayName);
+      await signInAnonymously(auth);
+    } catch (error) {
+      console.error("Guest sign-in error:", error);
+      alert("Unable to continue as a guest. Please try again.");
+    } finally {
+      guestSignInButton.disabled = false;
+      guestSignInButton.textContent = "Continue as Guest";
+    }
+  });
+
+
+  // ==========================================
+  // SIGN OUT
+  // ==========================================
+
+  signOutButton.addEventListener("click", async () => {
+
+    try {
+
+      await signOut(auth);
+
+    } catch (error) {
+
+      console.error("Sign-out error:", error);
+
+    }
+
+  });
+
+
+  // ==========================================
+  // AUTH STATE
+  // ==========================================
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      // User is logged in
+
+      authSection.hidden = true;
+      commentForm.hidden = false;
+
+      userName.textContent = user.displayName || (user.isAnonymous ? localStorage.getItem("guestDisplayName") || "Guest" : "Google User");
+
+      userPhoto.src =
+        user.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      userPhoto.alt = user.displayName || "User";
+
+    } else {
+
+      // User is logged out
+
+      authSection.hidden = false;
+      commentForm.hidden = true;
+
+    }
+
+  });
+
+
+  // ==========================================
+  // POST COMMENT
+  // ==========================================
+
+  postButton.addEventListener("click", async () => {
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Please sign in first.");
+      return;
+    }
+
+    const text = commentText.value.trim();
+
+    if (!text) {
+      alert("Please write a comment first.");
+      return;
+    }
+
+    if (text.length > 1000) {
+      alert("Comment is too long.");
+      return;
+    }
+
+
+    postButton.disabled = true;
+    postButton.textContent = "Posting...";
+
+
+    try {
+
+      await addDoc(collection(db, "comments"), {
+
+        articleSlug: articleSlug,
+
+        uid: user.uid,
+
+        name: user.displayName || (user.isAnonymous ? localStorage.getItem("guestDisplayName") || "Guest" : "Google User"),
+
+        photoURL: user.photoURL || "",
+
+        text: text,
+
+        createdAt: serverTimestamp()
+
+      });
+
+      commentText.value = "";
+
+    } catch (error) {
+
+      console.error("Comment error:", error);
+
+      alert("Could not post your comment. Please try again.");
+
+    }
+
+
+    postButton.disabled = false;
+    postButton.textContent = "Post comment";
+
+  });
+
+
+  // ==========================================
+  // LOAD COMMENTS
+  // ==========================================
+
+  const commentsQuery = query(
+    collection(db, "comments"),
+    where("articleSlug", "==", articleSlug),
+    orderBy("createdAt", "desc")
+  );
+
+  function formatTimeAgo(date) {
+    const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    if (seconds < 60) return "just now";
+
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+    const weeks = Math.floor(days / 7);
+    if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+  }
+
+
+  onSnapshot(commentsQuery, (snapshot) => {
+
+    commentsList.innerHTML = "";
+
+
+    if (snapshot.empty) {
+
+      commentsList.innerHTML =
+        '<p class="no-comments">No comments yet. Be the first.</p>';
+
+      return;
+
+    }
+
+
+    snapshot.forEach((doc) => {
+
+      const comment = doc.data();
+
+
+      const articleComment = document.createElement("article");
+
+      articleComment.className = "comment";
+
+
+      const avatar = document.createElement("img");
+
+      avatar.className = "comment-avatar";
+
+      avatar.src =
+        comment.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      avatar.alt = comment.name || "User";
+
+
+      const content = document.createElement("div");
+
+      content.className = "comment-content";
+
+
+      const name = document.createElement("strong");
+name.textContent = comment.name || "Google User";
+
+      const timestamp = document.createElement("time");
+      timestamp.className = "comment-time";
+
+      if (comment.createdAt) {
+        timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+      }
+
+      const text = document.createElement("p");
+      text.textContent = comment.text;
+
+      content.appendChild(name);
+      content.appendChild(timestamp);
+      content.appendChild(text);
+
+      articleComment.appendChild(avatar);
+      articleComment.appendChild(content);
+
+
+      commentsList.appendChild(articleComment);
+
+    });
+
+  }, (error) => {
+
+    console.error("Could not load comments:", error);
+
+    commentsList.innerHTML =
+      '<p class="comments-error">Comments could not be loaded.</p>';
+
+  });
+
+</script>
+</body>
+</html>
