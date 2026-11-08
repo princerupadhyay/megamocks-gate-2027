@@ -193,6 +193,7 @@ section.block:last-of-type { border-bottom: none; }
 .article-body .prose p { margin: 0 0 16px; color: var(--ink); }
 .article-body .prose ul { padding-left: 20px; margin: 0 0 16px; color: var(--ink-soft); }
 .article-body .prose li { margin-bottom: 6px; }
+.article-body .prose pre { max-width: 100%; overflow-x: auto; }
 .test-result-card {
   margin: 20px 0 26px;
   overflow: hidden;
@@ -360,6 +361,7 @@ footer.site { padding: 40px 0 60px; border-top: 1px solid var(--rule) }
   .article-row { flex-direction: column; gap: 4px; }
   .article-nav a { max-width: 100%; }
   .article-nav .next { text-align: left; margin-left: 0; }
+  .article-body .prose pre { white-space: pre-wrap; overflow-wrap: anywhere; }
   .about-page { padding: 28px 0 44px; }
   .about-page h1 { margin-bottom: 18px; }
   .about-row { flex-direction: column; gap: 18px; }
