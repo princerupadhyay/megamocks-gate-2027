@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 57 of My GATE CSE 2027 Journey: Back After Diwali With Pointers, Padding and Parsing | MegaMocks</title>
+<meta name="description" content="After taking two days off for Diwali, I returned to my GATE CSE 2027 preparation with Propositional Logic, a deep dive into C Programming memory concepts, and LL(1) parser practice. Day 57 was less about collecting study hours and more about questioning confusing concepts until the reasoning finally started making sense.">
+<link rel="canonical" href="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-57-back-after-diwali-with-pointers-padding-and-parsing/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 57 of My GATE CSE 2027 Journey: Back After Diwali With Pointers, Padding and Parsing | MegaMocks">
+<meta property="og:description" content="After taking two days off for Diwali, I returned to my GATE CSE 2027 preparation with Propositional Logic, a deep dive into C Programming memory concepts, and LL(1) parser practice. Day 57 was less about collecting study hours and more about questioning confusing concepts until the reasoning finally started making sense.">
+<meta property="og:url" content="https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-57-back-after-diwali-with-pointers-padding-and-parsing/">
+<meta property="og:site_name" content="MegaMocks">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day 57 of My GATE CSE 2027 Journey: Back After Diwali With Pointers, Padding and Parsing | MegaMocks">
+<meta name="twitter:description" content="After taking two days off for Diwali, I returned to my GATE CSE 2027 preparation with Propositional Logic, a deep dive into C Programming memory concepts, and LL(1) parser practice. Day 57 was less about collecting study hours and more about questioning confusing concepts until the reasoning finally started making sense.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Day 57: Back After Diwali With Pointers, Padding and Parsing", "description": "Back after a two-day Diwali break with Propositional Logic notes, dangling pointers and structure padding in C, and LL(1) parsing practised two ways.", "author": {"@type": "Person", "name": "Prince", "url": "https://megamocks.com/about/"}, "datePublished": "2026-11-09", "dateModified": "2026-11-09", "mainEntityOfPage": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-57-back-after-diwali-with-pointers-padding-and-parsing/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://megamocks.com/"}, {"@type": "ListItem", "position": 2, "name": "GATE CSE 2027", "item": "https://megamocks.com/gate-cse-2027/"}, {"@type": "ListItem", "position": 3, "name": "Journey", "item": "https://megamocks.com/gate-cse-2027/journey/"}, {"@type": "ListItem", "position": 4, "name": "Day 57", "item": "https://megamocks.com/gate-cse-2027/journey/gate-cse-2027-day-57-back-after-diwali-with-pointers-padding-and-parsing/"}]}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="/" class="wordmark"><span style="background-color: #9A4B34; border-radius: 5px; color: white; padding: 0px 5px">M</span>egaMocks<span class="dot">.</span></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/gate-cse-2027/journey/">Journey</a>
+      <a href="/gate-cse-2027/subjects/">Subjects</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="day-badge">Day 57 of prep</span>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+<div class="wrap crumb-wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/">GATE CSE 2027</a><span class="crumb-sep">/</span><a href="/gate-cse-2027/journey/">Journey</a><span class="crumb-sep">/</span><span aria-current="page">Day 57</span></nav></div>
+<div class="wrap journey-content-layout journey-post-layout">
+<div class="journey-main-content">
+<section class="page-hero">
+    <div class="wrap page-hero-inner">
+      <span class="kicker mono">Day 57 of my GATE CSE 2027 prep &middot; 9 November 2026</span>
+      <h1>Back After Diwali With Pointers, Padding and Parsing</h1>
+      <span class="mood-chip">Feeling: refreshed after Diwali, curious, glad to be back</span>
+      <div class="tag-row">
+          <a class="tag" href="/gate-cse-2027/subjects/discrete-mathematics/">Discrete Mathematics</a>
+          <a class="tag" href="/gate-cse-2027/subjects/programming-in-c/">Programming in C</a>
+          <a class="tag" href="/gate-cse-2027/subjects/compiler-design/">Compiler Design</a>
+        </div>
+    </div>
+  </section>
+  <section class="article-body">
+    <div class="wrap">
+      <div class="prose">
+        <p>First of all, Happy Diwali to everyone reading this! 🪔✨</p>
+        <p>I also owe this blog a small apology.</p>
+        <p>There are no Day 55 and Day 56 entries.</p>
+        <p>The reason is wonderfully simple: I didn't study on Saturday and Sunday because of Diwali.</p>
+        <p>So instead of pretending that I woke up at 5 AM during the festival to solve GATE PYQs between crackers and sweets, I'm just going to document what actually happened. I took two days off.</p>
+        <p>And on Monday, I was back.</p>
+        <p>Day 57 became a combination of Discrete Mathematics, C Programming question analysis, and Compiler Design practice. It was one of those days where I spent less time collecting completed chapters and more time stopping at confusing concepts until they actually started making sense.</p>
+        <p>Honestly, those days can be more useful than they initially look.</p>
+
+        <hr>
+
+        <h2>Back to Discrete Mathematics: Completing Propositional Logic</h2>
+        <p>The first thing I worked on was Propositional Logic from Discrete Mathematics.</p>
+        <p>I completed the portion and also made notes for it.</p>
+        <p>The topics I covered included:</p>
+        <ul>
+          <li>Basics of Logic</li>
+          <li>Propositional Logic</li>
+          <li>Types of Propositions</li>
+          <li>Logical Connectives</li>
+          <li>Truth Tables</li>
+          <li>Operator Precedence</li>
+          <li>Tautology</li>
+          <li>Contradiction</li>
+          <li>Contingency</li>
+        </ul>
+        <p>For operator precedence, I revised:</p>
+        <p>NOT &rarr; AND &rarr; OR &rarr; Implication &rarr; Bi-implication</p>
+        <p>Making the notes alongside the revision was important because I don't want this to become another chapter that I technically completed once and then have to rediscover later as if someone secretly changed the syllabus.</p>
+        <p>So the Propositional Logic portion is now revised and documented in my notes. ✅</p>
+
+        <hr>
+
+        <h2>C Programming: When One Pointer Question Turns Into a Full Investigation</h2>
+        <p>The biggest part of today's study session was analysing C Programming questions.</p>
+        <p>And some of these questions became much more interesting than simply checking whether my answer was correct.</p>
+        <p>There were questions involving:</p>
+        <ul>
+          <li>Dynamic memory allocation</li>
+          <li><code>malloc()</code></li>
+          <li><code>free()</code></li>
+          <li>Dangling pointers</li>
+          <li>Pointer arithmetic</li>
+          <li>Pointer subtraction</li>
+          <li>Structure alignment</li>
+          <li>Internal and external padding</li>
+        </ul>
+        <p>Instead of quickly looking at the correct options and moving on, I wanted to understand why things were happening.</p>
+        <p>That led to some genuinely useful discussions. For more subject-wise question practice, see the site's <a href="/gate-cse-2027/pyqs/">PYQ notes</a>.</p>
+        <div class="test-result-card">
+          <div class="test-result-card-header">
+            <div>
+              <span class="test-result-label">Practice test result</span>
+              <strong>GO Classes &middot; C Programming Topic Wise Test 3</strong>
+            </div>
+            <span class="test-result-score">38.7%</span>
+          </div>
+          <div class="test-result-table-wrap">
+            <table class="test-result-table">
+              <thead><tr><th>Metric</th><th>Result</th></tr></thead>
+              <tbody>
+                <tr class="score-row"><td>Score</td><td>9.67/25</td></tr>
+                <tr class="percentage-row"><td>Percentage</td><td>38.7%</td></tr>
+                <tr><td>Total questions</td><td>15</td></tr>
+                <tr><td>Attempted</td><td>12</td></tr>
+                <tr><td>Correct</td><td>6</td></tr>
+                <tr><td>Wrong</td><td>6</td></tr>
+                <tr><td>Skipped</td><td>3</td></tr>
+                <tr><td>Time taken</td><td>44 minutes</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a class="test-result-pdf" href="/assets/C-III.pdf" target="_blank" rel="noopener">View my C Programming Topic Wise Test 3 result <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <hr>
+
+        <h2>What Happens to Other Pointers After <code>free()</code>?</h2>
+        <p>One of the most important concepts I clarified today involved multiple pointers pointing inside the same dynamically allocated memory block.</p>
+        <p>Suppose we have:</p>
+        <pre><code>int *p1 = malloc(2 * sizeof(int));
+int *p2 = p1 + 1;</code></pre>
+        <p>Initially, the memory looks something like this:</p>
+        <pre><code>[ int ][ int ]
+  &uarr;       &uarr;
+ p1      p2</code></pre>
+        <p>Now if we do:</p>
+        <pre><code>free(p1);</code></pre>
+        <p>The important thing is that <code>free()</code> releases the entire allocated block, not just the first integer.</p>
+        <p>That means both pointers are now related to memory that has already been freed.</p>
+        <p>So:</p>
+        <ul>
+          <li><code>p1</code> becomes dangling.</li>
+          <li><code>p2</code> also becomes dangling.</li>
+        </ul>
+        <p>This was an important clarification for me because <code>p2</code> still physically contains an address value.</p>
+        <p>But that address no longer gives me valid access to an allocated memory block.</p>
+        <p>The simplest rule I took from this was:</p>
+        <blockquote>
+          <p>When an allocated memory block is freed, every pointer pointing anywhere inside that particular block becomes invalid for accessing that allocation.</p>
+        </blockquote>
+        <p>That distinction helped clear up several parts of the question.</p>
+
+        <hr>
+
+        <h2>Pointer Arithmetic Does Not Bring Freed Memory Back From the Dead</h2>
+        <p>Another interesting point came up while thinking about pointer arithmetic.</p>
+        <p>Suppose <code>p2</code> originally points to the second element:</p>
+        <pre><code>[ int ][ int ]
+  &uarr;       &uarr;
+ p1      p2</code></pre>
+        <p>After:</p>
+        <pre><code>free(p1);</code></pre>
+        <p>doing:</p>
+        <pre><code>p2 -= 1;</code></pre>
+        <p>can change the address value stored in <code>p2</code>.</p>
+        <p>But it does not magically recreate the allocated memory.</p>
+        <p>The memory block has already been freed.</p>
+        <p>Apparently pointer arithmetic is powerful, but not powerful enough to resurrect heap memory. A disappointing limitation of modern technology. 😭</p>
+
+        <hr>
+
+        <h2>Questioning the Memory Leak Explanation</h2>
+        <p>One part of the discussion became particularly interesting.</p>
+        <p>There was a situation where the original pointer to allocated memory was overwritten, but another pointer was still pointing somewhere inside the allocated block.</p>
+        <p>Instead of accepting the label "memory leak" immediately, I stopped and questioned it:</p>
+        <p>If another pointer still points inside the allocated memory, is the memory really completely unreachable?</p>
+        <p>That question led to a deeper discussion about:</p>
+        <ul>
+          <li>The original pointer returned by <code>malloc()</code></li>
+          <li>Pointers pointing inside an allocated block</li>
+          <li>Whether pointer arithmetic could reconstruct the starting address</li>
+          <li>The requirement that <code>free()</code> must receive the appropriate pointer value</li>
+        </ul>
+        <p>This was probably one of the best moments of today's analysis.</p>
+        <p>Not because the question itself was easy, but because I didn't just memorise a label.</p>
+        <p>I actually tried to understand what every pointer was doing.</p>
+        <p>That's something I want to continue during my GATE CSE preparation.</p>
+
+        <hr>
+
+        <h2>Structure Padding: Why Is the Compiler Wasting My Memory?</h2>
+        <p>Another question involved structure alignment and padding.</p>
+        <p>The question introduced two terms:</p>
+        <p><strong><code>K</code></strong></p>
+        <p><code>K</code> represents the size and alignment requirement of an individual primitive data type.</p>
+        <p>For example:</p>
+        <ul>
+          <li><code>char</code> &rarr; 1</li>
+          <li><code>short</code> &rarr; 2</li>
+          <li><code>int</code> &rarr; 4</li>
+          <li>pointer &rarr; 8</li>
+        </ul>
+        <p><strong><code>Kmax</code></strong></p>
+        <p><code>Kmax</code> is the largest primitive element size present in the structure.</p>
+        <p>The useful distinction I learned was:</p>
+        <blockquote>
+          <p>K applies to an individual member.</p>
+        </blockquote>
+        <blockquote>
+          <p>Kmax applies to the structure-level alignment requirement.</p>
+        </blockquote>
+        <p>The compiler may insert padding between members so that the next member starts at an appropriate address.</p>
+        <p>For example, if an 8-byte aligned member needs to start at an address divisible by 8 but the current position is 4, padding may be inserted before it.</p>
+        <p>The question also distinguished between:</p>
+        <ul>
+          <li>Internal padding: padding between structure members.</li>
+          <li>External padding: padding added at the end of the structure.</li>
+        </ul>
+        <p>Initially, I asked where the alignment rule was actually written in the question.</p>
+        <p>That turned out to be a useful question because the exact wording mattered.</p>
+        <p>Another reminder that before applying some rule from memory, I should first check what the question is actually giving me.</p>
+
+        <hr>
+
+        <h2>A Silly Pointer Subtraction Mistake</h2>
+        <p>Not every mistake today was deeply philosophical.</p>
+        <p>One pointer subtraction question was actually something I understood, but I made a silly calculation mistake.</p>
+        <p>The pointers were pointing to arrays.</p>
+        <p>So the important size was:</p>
+        <pre><code>Size of pointed-to array
+=
+Number of elements &times; sizeof(int)</code></pre>
+        <p>For example:</p>
+        <pre><code>int (*p)[2];</code></pre>
+        <p>points to an array of two integers.</p>
+        <p>So the pointed-to size is:</p>
+        <pre><code>2 &times; 4 = 8 bytes</code></pre>
+        <p>Therefore, pointer subtraction works according to the size of that entire pointed-to type.</p>
+        <p>I had the right overall approach but made a mistake while calculating the size.</p>
+        <p>So I marked that one mentally as:</p>
+        <blockquote>
+          <p>Concept understood. Calculation briefly betrayed me.</p>
+        </blockquote>
+        <p>A very common partnership during competitive exams.</p>
+
+        <hr>
+
+        <h2>Compiler Design: Practising LL(1) Parsers in Two Different Ways</h2>
+        <p>Later, I moved to Compiler Design.</p>
+        <p>I practised:</p>
+        <ul>
+          <li>Lexical Analysis</li>
+          <li>Parsing Basics</li>
+          <li>LL(1) Parser questions</li>
+        </ul>
+        <p>The LL(1) practice was particularly useful because I solved questions using two different methods.</p>
+
+        <hr>
+
+        <h3>Method 1: The Tabular Method</h3>
+        <p>This was the method taught by my professor.</p>
+        <p>The general approach I practised was:</p>
+        <ol>
+          <li>Check the grammar.</li>
+          <li>Look for ambiguity.</li>
+          <li>Check for left recursion.</li>
+          <li>Check for common prefixes and left factoring requirements.</li>
+          <li>Find FIRST sets.</li>
+          <li>Use FOLLOW sets appropriately when epsilon is involved.</li>
+          <li>Construct the LL(1) parsing table.</li>
+          <li>Check for conflicts.</li>
+        </ol>
+        <p>The final test is simple:</p>
+        <blockquote>
+          <p>If a parsing table cell receives more than one production, there is a conflict.</p>
+        </blockquote>
+        <p>And therefore:</p>
+        <p>The grammar is not LL(1).</p>
+
+        <hr>
+
+        <h3>Method 2: The Conflict-Based Shortcut</h3>
+        <p>The second approach was faster.</p>
+        <p>Instead of always constructing the complete table, I checked for conflicts directly.</p>
+        <p>The main things involved were:</p>
+        <p><strong>FIRST-FIRST conflicts</strong></p>
+        <p>Different alternatives should not compete for the same lookahead symbol.</p>
+        <p><strong>FIRST-FOLLOW conflicts</strong></p>
+        <p>When epsilon is involved, FIRST and FOLLOW relationships must also be checked carefully.</p>
+        <p>So instead of building the entire table every time, this method helps identify whether a conflict exists.</p>
+        <p>If there is a conflict:</p>
+        <p>Not LL(1). ❌</p>
+        <p>If the required conflicts are absent:</p>
+        <p>LL(1). ✅</p>
+
+        <hr>
+
+        <h3>Why Practising Both Methods Helped</h3>
+        <p>The best part was that I didn't just learn a second random method.</p>
+        <p>I solved the questions using both approaches.</p>
+        <p>The tabular method gave me a structured and familiar way of checking the grammar.</p>
+        <p>The shortcut method gave me a faster way to understand why conflicts occur.</p>
+        <p>That made the concept feel less like:</p>
+        <blockquote>
+          <p>"Follow these steps and fill some boxes."</p>
+        </blockquote>
+        <p>And more like:</p>
+        <blockquote>
+          <p>"Check whether the parser can uniquely decide which production to use."</p>
+        </blockquote>
+        <p>That connection is something I wanted.</p>
+
+        <hr>
+
+        <h2>A Small Diwali Break, Then Back to Work</h2>
+        <p>Day 55 and Day 56 don't have blog entries because I didn't study on those days.</p>
+        <p>It was Diwali, and I took the break.</p>
+        <p>Now I'm back on Day 57 and continuing the GATE CSE 2027 preparation.</p>
+        <p>I don't think every missing study day needs an excuse disguised as productivity.</p>
+        <p>Sometimes you study.</p>
+        <p>Sometimes you celebrate a festival.</p>
+        <p>Then Monday arrives and suddenly you're discussing dangling pointers and LL(1) conflicts again.</p>
+        <p>Human civilisation continues somehow. 😭📚</p>
+
+        <hr>
+
+        <h2>What I Realized Today</h2>
+        <p>Today's biggest lesson was about not accepting an answer without understanding the reasoning behind it.</p>
+        <p>The C Programming questions became much more useful because I kept asking:</p>
+        <ul>
+          <li>What exactly is this pointer pointing to?</li>
+          <li>What happens after the memory is freed?</li>
+          <li>Does another pointer still provide access?</li>
+          <li>What does the question's wording actually specify?</li>
+        </ul>
+        <p>Similarly, practising LL(1) using two different methods helped me understand the same concept from two directions.</p>
+        <p>One method constructs the table.</p>
+        <p>The other looks directly for conflicts.</p>
+        <p>For my GATE preparation, I think this is important.</p>
+        <p>I don't just want to remember that an answer is correct.</p>
+        <p>I want to understand why the other reasoning fails.</p>
+        <p>That's usually where the actual conceptual clarity hides.</p>
+
+        <hr>
+
+        <h2>Tomorrow</h2>
+        <p>The plan is to continue the November revision schedule and keep working on the conceptual gaps that appeared during today's C Programming analysis.</p>
+        <p>I'll also continue Compiler Design revision and practice.</p>
+        <p>For now, Day 57 ended with:</p>
+        <ul>
+          <li>Propositional Logic completed and noted ✅</li>
+          <li>C Programming concepts analysed in depth 🧠</li>
+          <li>Structure padding becoming slightly less mysterious 📦</li>
+          <li>LL(1) grammars practised through two different methods 📚</li>
+        </ul>
+        <p>Not a bad way to return after Diwali.</p>
+        <p>And once again:</p>
+        <p>🪔 Happy Diwali to everyone reading this! 🪔</p>
+        <p>I hope your celebrations were peaceful, your sweets were excellent, and your preparation schedule survived better than mine did over the weekend. 😭❤️</p>
+      </div>
+      <nav class="article-nav" aria-label="Article navigation">
+        <a class="prev" href="/gate-cse-2027/journey/gate-cse-2027-day-54-from-2-67-25-to-72-in-c-programming/"><span class="label">&larr; Previous</span>Day 54: From 2.67/25 to 72% in C Programming</a>
+        <span></span>
+      </nav>
+      <section class="block related-posts" aria-labelledby="related-posts-heading">
+        <div class="block-head"><h2 id="related-posts-heading">Related Posts</h2></div>
+        <div class="article-list">
+          <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-54-from-2-67-25-to-72-in-c-programming/"><span class="title">Day 54: From 2.67/25 to 72% in C Programming</span></a>
+          <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-53-my-birthday-gift-was-2-67-25-in-algorithms/"><span class="title">Day 53: My Birthday Gift Was 2.67/25 in Algorithms</span></a>
+          <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-52-a-scheduling-test-slow-group-theory-and-questions-that-looked-scarier-than-they-were/"><span class="title">Day 52: A Scheduling Test, Slow Group Theory, and Questions That Looked Scarier Than They Were</span></a>
+        </div>
+      </section>
+      <section class="comments-section" id="comments">
+        <div class="comments-header">
+          <h2>What do you think?</h2>
+          <p>Studying for GATE is less lonely when we're all figuring it out together.</p>
+        </div>
+
+        <div id="comment-auth">
+          <p>Sign in with Google or continue as a guest to comment.</p>
+          <label for="guest-name">Display name</label>
+          <input id="guest-name" type="text" maxlength="40" autocomplete="nickname" placeholder="Name shown with your comment" required>
+          <div class="comment-auth-actions">
+            <button id="guest-signin" class="google-signin-btn" type="button">Continue as Guest</button>
+            <button id="google-signin" class="google-signin-btn" type="button">Continue with Google</button>
+          </div>
+        </div>
+
+        <div id="comment-form" hidden>
+          <div class="comment-user">
+            <img id="user-photo" src="" alt="" class="comment-avatar">
+            <div>
+              <strong id="user-name"></strong>
+              <button id="signout-btn" type="button">Sign out</button>
+            </div>
+          </div>
+
+          <textarea
+            id="comment-text"
+            placeholder="Share your thoughts..."
+            maxlength="1000"
+            rows="4"
+          ></textarea>
+
+          <button id="post-comment" class="post-comment-btn">
+            Post comment
+          </button>
+        </div>
+
+        <div id="comments-list">
+          <p class="comments-loading">Loading comments...</p>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>
+<aside class="journey-sidebar" aria-label="Journey search and archive">
+    <section class="journey-search" aria-labelledby="journey-search-h">
+      <h2 id="journey-search-h">Search MegaMocks</h2>
+      <p>Search journey entries, subjects, and other pages on the site.</p>
+      <form action="https://www.google.com/search" method="get" role="search">
+        <label for="journey-site-search">Search journeys and other pages</label>
+        <div class="journey-search-row">
+          <input id="journey-site-search" type="search" name="q" placeholder="What are you looking for?" required>
+          <button type="submit" class="btn-primary">Search</button>
+        </div>
+        <input type="hidden" name="sitesearch" value="megamocks.com">
+      </form>
+    </section>
+    <div class="journey-sidebar-archive">
+      <div class="block-head">
+        <h2 id="journey-archive-h">Journey Archive</h2>
+        <a href="/gate-cse-2027/journey/" class="see-all">Full archive &rarr;</a>
+      </div>
+      <div class="journey-archive">
+        <details class="journey-month" open>
+          <summary><span>November 2026</span><span class="journey-month-count">7 entries</span></summary>
+          <div class="journey-month-list">
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-57-back-after-diwali-with-pointers-padding-and-parsing/"><span class="title">Day 57: Back After Diwali With Pointers, Padding and Parsing</span><span class="when">9 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-54-from-2-67-25-to-72-in-c-programming/"><span class="title">Day 54: From 2.67/25 to 72% in C Programming</span><span class="when">6 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-53-my-birthday-gift-was-2-67-25-in-algorithms/"><span class="title">Day 53: My Birthday Gift Was 2.67/25 in Algorithms</span><span class="when">5 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-52-a-scheduling-test-slow-group-theory-and-questions-that-looked-scarier-than-they-were/"><span class="title">Day 52: A Scheduling Test, Slow Group Theory, and Questions That Looked Scarier Than They Were</span><span class="when">4 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-51-a-data-structures-test-without-revision/"><span class="title">Day 51: A Data Structures Test Without Revision</span><span class="when">3 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-50-november-begins-with-a-reality-check/"><span class="title">Day 50: November Begins with a Reality Check</span><span class="when">2 Nov 2026</span></a>
+            <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-49-the-november-revision-plan-is-ready/"><span class="title">Day 49: The November Revision Plan Is Ready</span><span class="when">1 Nov 2026</span></a>
+          </div>
+        </details>
+        <details class="journey-month">
+            <summary><span>October 2026</span><span class="journey-month-count">31 entries</span></summary>
+            <div class="journey-month-list">
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-48-closing-october-with-four-subjects-completed/"><span class="title">Day 48: Closing October with Four Subjects Completed!</span><span class="when">31 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-47-three-dbms-lectures-during-my-commute/"><span class="title">Day 47: Three DBMS Lectures During My Commute!</span><span class="when">30 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-46-compiler-design-is-finally-completed/"><span class="title">Day 46: Compiler Design Is Finally Completed!</span><span class="when">29 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-45-a-surprisingly-easy-start-to-the-final-compiler-design-chapter/"><span class="title">Day 45: A Surprisingly Easy Start to the Final Compiler Design Chapter</span><span class="when">28 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-44-six-hours-of-lectures-difficult-concepts-and-an-early-night/"><span class="title">Day 44: Six Hours of Lectures, Difficult Concepts, and an Early Night</span><span class="when">27 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-43-i-finished-the-lecture-but-understood-almost-nothing/"><span class="title">Day 43: I Finished the Lecture, but Understood Almost Nothing</span><span class="when">26 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-42-compiler-design-is-testing-my-patience/"><span class="title">Day 42: Compiler Design Is Testing My Patience</span><span class="when">25 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-41-compiler-design-is-getting-interesting-but-cfgs-need-work/"><span class="title">Day 41: Compiler Design Is Getting Interesting, but CFGs Need Work</span><span class="when">24 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-40-compiler-design-begins/"><span class="title">Day 40: Compiler Design Begins!</span><span class="when">23 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-39-coa-is-finally-complete/"><span class="title">Day 39: COA Is Finally Complete!</span><span class="when">22 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-38-magnetic-disk-completed-pipelining-begins/"><span class="title">Day 38: Magnetic Disk Completed, Pipelining Begins</span><span class="when">21 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-37-dussehra-family-time-and-a-planned-break-from-studying/"><span class="title">Day 37: Dussehra, Family Time, and a Planned Break From Studying</span><span class="when">20 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-36-kanya-pujan-work-from-home-and-four-dbms-lectures/"><span class="title">Day 36: Kanya Pujan, Work From Home, and Four DBMS Lectures</span><span class="when">19 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-35-ashtami-fasting-coa-fatigue-and-the-compiler-design-problem/"><span class="title">Day 35: Ashtami Fasting, COA Fatigue, and the Compiler Design Problem</span><span class="when">18 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-34-four-cache-lectures-and-a-saturday-at-home/"><span class="title">Day 34: Four Cache Lectures and a Saturday at Home</span><span class="when">17 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-33-when-the-office-became-a-study-room/"><span class="title">Day 33: When the Office Became a Study Room</span><span class="when">16 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-32-io-organization-and-protecting-my-buffer-days/"><span class="title">Day 32: I/O Organization and Protecting My Buffer Days</span><span class="when">15 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-31-coa-progress-and-slowly-clearing-the-dbms-backlog/"><span class="title">Day 31: COA Progress and Slowly Clearing the DBMS Backlog</span><span class="when">14 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-30-six-coa-lectures-a-new-dbms-chapter-and-navratri-distractions/"><span class="title">Day 30: Six COA Lectures, a New DBMS Chapter, and Navratri Distractions</span><span class="when">13 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-29-six-coa-lectures-a-full-workday-and-navratri-distractions/"><span class="title">Day 29: Six COA Lectures, a Full Workday, and Navratri Distractions</span><span class="when">12 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-28-when-allergies-ruined-my-sunday-study-plan/"><span class="title">Day 28: When Allergies Ruined My Sunday Study Plan</span><span class="when">11 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-27-six-dbms-lectures-and-the-confusion-between-three-schedules/"><span class="title">Day 27: Six DBMS Lectures and the Confusion Between Three Schedules</span><span class="when">10 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-26-toc-is-complete-but-four-topics-need-another-look/"><span class="title">Day 26: TOC Is Complete, But Four Topics Need Another Look</span><span class="when">9 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-25-seven-hours-of-toc-and-a-very-tired-pair-of-eyes/"><span class="title">Day 25: Seven Hours of TOC and a Very Tired Pair of Eyes</span><span class="when">8 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-24-five-toc-lectures-on-an-exhausting-day/"><span class="title">Day 24: Five TOC Lectures on an Exhausting Day</span><span class="when">7 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-23-when-skipping-a-lecture-actually-made-sense/"><span class="title">Day 23: When Skipping a Lecture Actually Made Sense</span><span class="when">6 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-22-five-lectures-an-office-day-and-rethinking-short-notes/"><span class="title">Day 22: Five Lectures, an Office Day, and Rethinking Short Notes</span><span class="when">5 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-21-eleven-lectures-endless-questions-and-a-sunday-of-sacrifices/"><span class="title">Day 21: Eleven Lectures, Endless Questions, and a Sunday of Sacrifices</span><span class="when">4 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-20-eleven-lectures-dbms-revision-and-homemade-aloo-puri/"><span class="title">Day 20: Eleven Lectures, DBMS Revision, and Homemade Aloo-Puri</span><span class="when">3 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-19-eight-toc-lectures-20-questions-and-gandhi-jayanti-reflections/"><span class="title">Day 19: Eight TOC Lectures, 20 Questions, and Gandhi Jayanti Reflections</span><span class="when">2 Oct 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-18-nine-lectures-a-heavy-office-day-and-octobers-first-test/"><span class="title">Day 18: Nine Lectures, a Heavy Office Day, and October's First Test</span><span class="when">1 Oct 2026</span></a>
+            </div>
+          </details>
+        <details class="journey-month">
+            <summary><span>September 2026</span><span class="journey-month-count">17 entries</span></summary>
+            <div class="journey-month-list">
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-17-four-lectures-two-mistakes-and-a-different-kind-of-prioritisation/"><span class="title">Day 17: Four Lectures, Two Mistakes, and a Different Kind of Prioritisation</span><span class="when">30 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-16-knowing-the-answer-isnt-enough/"><span class="title">Day 16: Knowing the Answer Isn't Enough</span><span class="when">29 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-15-sometimes-the-longer-route-is-the-productive-one/"><span class="title">Day 15: Sometimes the Longer Route Is the Productive One</span><span class="when">28 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-14-two-boxes-checked-one-left-empty/"><span class="title">Day 14: Two Boxes Checked, One Left Empty</span><span class="when">27 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-13-the-countdown-to-october-has-started/"><span class="title">Day 13: The Countdown to October Has Started</span><span class="when">26 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-12-13-algorithm-questions-and-an-indian-rupee80-charger/"><span class="title">Day 12: 13 Algorithm Questions and an &#8377;80 Charger</span><span class="when">25 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-11-a-tiring-day-that-still-ended-with-10-of-11/"><span class="title">Day 11: A Tiring Day That Still Ended With 10/11</span><span class="when">24 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-10-keeping-the-old-subjects-alive/"><span class="title">Day 10: Keeping the Old Subjects Alive</span><span class="when">23 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-9-studying-between-office-work/"><span class="title">Day 9: Studying Between Office Work</span><span class="when">22 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-8-a-corporate-monday-some-c-mistakes-and-a-plan-for-october/"><span class="title">Day 8: A Corporate Monday, Some C Mistakes, and a Plan for October</span><span class="when">21 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-7-a-slow-sunday-and-my-struggle-with-test-time-management/"><span class="title">Day 7: A Slow Sunday and My Struggle With Test Time Management</span><span class="when">20 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-6-a-weekend-without-studying/"><span class="title">Day 6: A Weekend Without Studying</span><span class="when">19 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-5-tcp-timers-a-data-structures-test-and-an-unexpected-algorithm-revision/"><span class="title">Day 5: TCP Timers, a Data Structures Test, and an Unexpected Algorithm Revision</span><span class="when">18 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-4-a-60-score-tcp-diagrams-and-one-wrong-ai-answer/"><span class="title">Day 4: A 60% Score, TCP Diagrams, and One Wrong AI Answer</span><span class="when">17 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-3-one-test-one-lecture-and-a-little-more-self-control/"><span class="title">Day 3: One Test, One Lecture, and a Little More Self-Control</span><span class="when">16 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-2-not-everything-goes-according-to-plan/"><span class="title">Day 2: DFA Done, But Not Everything Goes According to Plan</span><span class="when">15 Sep 2026</span></a>
+              <a class="article-row" href="/gate-cse-2027/journey/gate-cse-2027-day-1-learning-to-trust-my-own-answers/"><span class="title">Day 1: Learning to Trust My Own Answers</span><span class="when">14 Sep 2026</span></a>
+            </div>
+          </details>
+      </div>
+    </div>
+  </aside>
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
+      </div>
+      <span class="copyright">&copy; 2026 MegaMocks. A personal GATE CSE prep journal.</span>
+    </div>
+    <p class="footer-note">Everything on this site reflects one student's personal preparation experience. For official GATE CSE information &mdash; eligibility, syllabus, exam dates &mdash; always check the official GATE authority website.</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.querySelector('nav.primary');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if (!expanded) {
+      nav.style.cssText = 'display:flex;flex-direction:column;gap:14px;position:absolute;top:64px;left:0;right:0;background:var(--paper-raised);padding:20px 24px;border-bottom:1px solid var(--rule);z-index:30;';
+    } else {
+      nav.style.cssText = '';
+    }
+  });
+</script>
+<script type="module">
+
+  import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+  import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signInAnonymously,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    where,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+
+  // ==========================================
+  // FIREBASE CONFIG
+  // ==========================================
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyCLXDitpYt5NFLAKw1Lnyqm-WcYgkpdh6I",
+  authDomain: "megamocks.firebaseapp.com",
+  projectId: "megamocks",
+  storageBucket: "megamocks.firebasestorage.app",
+  messagingSenderId: "45418531344",
+  appId: "1:45418531344:web:cd6747bb79ca7840661895"
+};
+
+
+  // ==========================================
+  // INITIALIZE FIREBASE
+  // ==========================================
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const googleProvider = new GoogleAuthProvider();
+  const guestNameInput = document.getElementById("guest-name");
+  const guestSignInButton = document.getElementById("guest-signin");
+  guestNameInput.value = localStorage.getItem("guestDisplayName") || "";
+
+
+  // ==========================================
+  // CURRENT ARTICLE
+  // ==========================================
+
+  const articleSlug = "gate-cse-2027-journey-day-57";
+
+
+  // ==========================================
+  // ELEMENTS
+  // ==========================================
+
+  const signInButton = document.getElementById("google-signin");
+  const authSection = document.getElementById("comment-auth");
+  const commentForm = document.getElementById("comment-form");
+
+  const userPhoto = document.getElementById("user-photo");
+  const userName = document.getElementById("user-name");
+
+  const signOutButton = document.getElementById("signout-btn");
+
+  const commentText = document.getElementById("comment-text");
+  const postButton = document.getElementById("post-comment");
+
+  const commentsList = document.getElementById("comments-list");
+
+
+  // ==========================================
+  // GOOGLE SIGN IN
+  // ==========================================
+
+  signInButton.addEventListener("click", async () => {
+
+    try {
+
+      await signInWithPopup(auth, googleProvider);
+
+    } catch (error) {
+
+      console.error("Google sign-in error:", error);
+
+      alert("Unable to sign in with Google. Please try again.");
+
+    }
+
+  });
+
+  guestSignInButton.addEventListener("click", async () => {
+    const displayName = guestNameInput.value.trim();
+
+    if (!displayName) {
+      alert("Please enter a display name.");
+      guestNameInput.focus();
+      return;
+    }
+
+    if (displayName.length > 40) {
+      alert("Display name must be 40 characters or fewer.");
+      guestNameInput.focus();
+      return;
+    }
+
+    guestSignInButton.disabled = true;
+    guestSignInButton.textContent = "Connecting...";
+
+    try {
+      localStorage.setItem("guestDisplayName", displayName);
+      await signInAnonymously(auth);
+    } catch (error) {
+      console.error("Guest sign-in error:", error);
+      alert("Unable to continue as a guest. Please try again.");
+    } finally {
+      guestSignInButton.disabled = false;
+      guestSignInButton.textContent = "Continue as Guest";
+    }
+  });
+
+
+  // ==========================================
+  // SIGN OUT
+  // ==========================================
+
+  signOutButton.addEventListener("click", async () => {
+
+    try {
+
+      await signOut(auth);
+
+    } catch (error) {
+
+      console.error("Sign-out error:", error);
+
+    }
+
+  });
+
+
+  // ==========================================
+  // AUTH STATE
+  // ==========================================
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      // User is logged in
+
+      authSection.hidden = true;
+      commentForm.hidden = false;
+
+      userName.textContent = user.displayName || (user.isAnonymous ? localStorage.getItem("guestDisplayName") || "Guest" : "Google User");
+
+      userPhoto.src =
+        user.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      userPhoto.alt = user.displayName || "User";
+
+    } else {
+
+      // User is logged out
+
+      authSection.hidden = false;
+      commentForm.hidden = true;
+
+    }
+
+  });
+
+
+  // ==========================================
+  // POST COMMENT
+  // ==========================================
+
+  postButton.addEventListener("click", async () => {
+
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert("Please sign in first.");
+      return;
+    }
+
+    const text = commentText.value.trim();
+
+    if (!text) {
+      alert("Please write a comment first.");
+      return;
+    }
+
+    if (text.length > 1000) {
+      alert("Comment is too long.");
+      return;
+    }
+
+
+    postButton.disabled = true;
+    postButton.textContent = "Posting...";
+
+
+    try {
+
+      await addDoc(collection(db, "comments"), {
+
+        articleSlug: articleSlug,
+
+        uid: user.uid,
+
+        name: user.displayName || (user.isAnonymous ? localStorage.getItem("guestDisplayName") || "Guest" : "Google User"),
+
+        photoURL: user.photoURL || "",
+
+        text: text,
+
+        createdAt: serverTimestamp()
+
+      });
+
+      commentText.value = "";
+
+    } catch (error) {
+
+      console.error("Comment error:", error);
+
+      alert("Could not post your comment. Please try again.");
+
+    }
+
+
+    postButton.disabled = false;
+    postButton.textContent = "Post comment";
+
+  });
+
+
+  // ==========================================
+  // LOAD COMMENTS
+  // ==========================================
+
+  const commentsQuery = query(
+    collection(db, "comments"),
+    where("articleSlug", "==", articleSlug),
+    orderBy("createdAt", "desc")
+  );
+
+  function formatTimeAgo(date) {
+    const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    if (seconds < 60) return "just now";
+
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `${days} day${days === 1 ? "" : "s"} ago`;
+
+    const weeks = Math.floor(days / 7);
+    if (weeks < 5) return `${weeks} week${weeks === 1 ? "" : "s"} ago`;
+
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+  }
+
+
+  onSnapshot(commentsQuery, (snapshot) => {
+
+    commentsList.innerHTML = "";
+
+
+    if (snapshot.empty) {
+
+      commentsList.innerHTML =
+        '<p class="no-comments">No comments yet. Be the first.</p>';
+
+      return;
+
+    }
+
+
+    snapshot.forEach((doc) => {
+
+      const comment = doc.data();
+
+
+      const articleComment = document.createElement("article");
+
+      articleComment.className = "comment";
+
+
+      const avatar = document.createElement("img");
+
+      avatar.className = "comment-avatar";
+
+      avatar.src =
+        comment.photoURL ||
+        "https://ui-avatars.com/api/?name=User";
+
+      avatar.alt = comment.name || "User";
+
+
+      const content = document.createElement("div");
+
+      content.className = "comment-content";
+
+
+      const name = document.createElement("strong");
+name.textContent = comment.name || "Google User";
+
+      const timestamp = document.createElement("time");
+      timestamp.className = "comment-time";
+
+      if (comment.createdAt) {
+        timestamp.textContent = formatTimeAgo(comment.createdAt.toDate());
+      }
+
+      const text = document.createElement("p");
+      text.textContent = comment.text;
+
+      content.appendChild(name);
+      content.appendChild(timestamp);
+      content.appendChild(text);
+
+      articleComment.appendChild(avatar);
+      articleComment.appendChild(content);
+
+
+      commentsList.appendChild(articleComment);
+
+    });
+
+  }, (error) => {
+
+    console.error("Could not load comments:", error);
+
+    commentsList.innerHTML =
+      '<p class="comments-error">Comments could not be loaded.</p>';
+
+  });
+
+</script>
+</body>
+</html>
